@@ -28,3 +28,11 @@
 - Tag: `v0.1.0`
 - Title: `v0.1.0 - Final Exam Study Coach`
 - Body: use `docs/release-notes-v0.1.0.md`
+
+## Push command
+
+After creating an empty GitHub repository, run from `github_release`:
+
+```powershell
+.\scripts\publish_to_github.ps1 -RemoteUrl "https://github.com/<owner>/final-exam-study-coach.git"
+```
