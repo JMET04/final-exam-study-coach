@@ -36,3 +36,5 @@ After creating an empty GitHub repository, run from `github_release`:
 ```powershell
 .\scripts\publish_to_github.ps1 -RemoteUrl "https://github.com/<owner>/final-exam-study-coach.git"
 ```
+
+If local GitHub authentication is not available, use `docs/github-web-upload-guide.md`.
