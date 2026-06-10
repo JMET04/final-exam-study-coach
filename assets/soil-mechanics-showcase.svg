@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="820" viewBox="0 0 1400 820">
+  <defs>
+    <style>
+      .bg { fill: #eef3f1; }
+      .hero { fill: #255347; }
+      .title { font: 800 46px "Microsoft YaHei", "Noto Sans CJK SC", Arial, sans-serif; fill: #fff; }
+      .sub { font: 400 24px "Microsoft YaHei", "Noto Sans CJK SC", Arial, sans-serif; fill: #e9f4ef; }
+      .card { fill: #fff; stroke: #dce5df; stroke-width: 2; rx: 18; }
+      .h2 { font: 800 25px "Microsoft YaHei", "Noto Sans CJK SC", Arial, sans-serif; fill: #255347; }
+      .p { font: 400 18px "Microsoft YaHei", "Noto Sans CJK SC", Arial, sans-serif; fill: #31453c; }
+      .small { font: 700 16px "Microsoft YaHei", "Noto Sans CJK SC", Arial, sans-serif; fill: #60766d; }
+      .num { font: 900 28px Arial, sans-serif; fill: #fff; }
+      .solid { fill: #9a6a36; }
+      .water { fill: #65b8de; }
+      .air { fill: #e8efeb; }
+      .green { fill: #2c7a63; }
+      .blue { fill: #346c9b; }
+      .gold { fill: #8b7136; }
+      .red { fill: #8b4e3a; }
+      .line { fill: none; stroke-width: 5; stroke-linecap: round; }
+    </style>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#17251f" flood-opacity=".16"/>
+    </filter>
+  </defs>
+  <rect class="bg" width="1400" height="820"/>
+  <rect class="hero" width="1400" height="190"/>
+  <text class="title" x="70" y="78">土力学基本原理动画入口</text>
+  <text class="sub" x="70" y="122">先用具象动画建立知识骨架，再进入公式、例题和定时检测。</text>
+  <text class="sub" x="70" y="156">三相组成 · 有效应力 · 达西渗流 · 莫尔-库伦强度</text>
+
+  <g filter="url(#shadow)">
+    <rect class="card" x="70" y="230" width="300" height="500"/>
+    <circle class="green" cx="115" cy="280" r="24"/><text class="num" x="115" y="289" text-anchor="middle">1</text>
+    <text class="h2" x="95" y="335">三相组成</text>
+    <rect x="115" y="380" width="210" height="250" rx="10" fill="#f7faf8" stroke="#31453c" stroke-width="4"/>
+    <rect class="air" x="115" y="380" width="210" height="72"/>
+    <rect class="water" x="115" y="452" width="210" height="86"/>
+    <rect class="solid" x="115" y="538" width="210" height="92"/>
+    <text class="p" x="220" y="425" text-anchor="middle">气 Va</text>
+    <text class="p" x="220" y="505" text-anchor="middle">水 Vw</text>
+    <text class="p" x="220" y="592" text-anchor="middle" fill="#fff">土粒 Vs</text>
+    <text class="small" x="95" y="675">e / n / Sr / w 从图里长出来</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect class="card" x="400" y="230" width="300" height="500"/>
+    <circle class="blue" cx="445" cy="280" r="24"/><text class="num" x="445" y="289" text-anchor="middle">2</text>
+    <text class="h2" x="425" y="335">有效应力</text>
+    <line class="line" x1="455" y1="610" x2="645" y2="390" stroke="#2c7a63"/>
+    <line class="line" x1="455" y1="630" x2="645" y2="520" stroke="#346c9b"/>
+    <line class="line" x1="455" y1="650" x2="645" y2="450" stroke="#8b7136"/>
+    <line x1="455" y1="660" x2="455" y2="370" stroke="#60766d" stroke-width="3"/>
+    <line x1="445" y1="650" x2="660" y2="650" stroke="#60766d" stroke-width="3"/>
+    <text class="p" x="425" y="390">σ</text>
+    <text class="p" x="425" y="432">u</text>
+    <text class="p" x="425" y="474">σ'</text>
+    <text class="small" x="425" y="675">拖动水位，看 σ' = σ - u</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect class="card" x="730" y="230" width="300" height="500"/>
+    <circle class="gold" cx="775" cy="280" r="24"/><text class="num" x="775" y="289" text-anchor="middle">3</text>
+    <text class="h2" x="755" y="335">达西渗流</text>
+    <path class="line" d="M780 450 C830 405 910 405 970 450" stroke="#65b8de"/>
+    <path class="line" d="M780 500 C840 465 915 465 970 500" stroke="#65b8de"/>
+    <path class="line" d="M780 550 C835 595 915 595 970 550" stroke="#65b8de"/>
+    <polygon points="960,438 995,450 960,462" fill="#65b8de"/>
+    <polygon points="960,488 995,500 960,512" fill="#65b8de"/>
+    <polygon points="960,538 995,550 960,562" fill="#65b8de"/>
+    <text class="p" x="790" y="625">q = k · i · A</text>
+    <text class="small" x="755" y="675">水头差驱动流量变化</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect class="card" x="1060" y="230" width="270" height="500"/>
+    <circle class="red" cx="1105" cy="280" r="24"/><text class="num" x="1105" y="289" text-anchor="middle">4</text>
+    <text class="h2" x="1085" y="335">莫尔-库伦</text>
+    <line x1="1105" y1="630" x2="1280" y2="630" stroke="#60766d" stroke-width="3"/>
+    <line x1="1105" y1="630" x2="1105" y2="390" stroke="#60766d" stroke-width="3"/>
+    <line class="line" x1="1110" y1="580" x2="1280" y2="420" stroke="#8b4e3a"/>
+    <circle cx="1192" cy="545" r="72" fill="none" stroke="#346c9b" stroke-width="6"/>
+    <circle cx="1210" cy="528" r="4" fill="#8b4e3a"/>
+    <text class="p" x="1115" y="388">τ</text>
+    <text class="p" x="1270" y="655">σ</text>
+    <text class="small" x="1085" y="675">圆与包线相切就是破坏边界</text>
+  </g>
+</svg>

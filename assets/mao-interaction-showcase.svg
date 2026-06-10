@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="820" viewBox="0 0 1400 820">
+  <defs>
+    <style>
+      .bg { fill: #f7f5ef; }
+      .title { font: 800 42px "Microsoft YaHei", "Noto Sans CJK SC", Arial, sans-serif; fill: #1f2933; }
+      .sub { font: 400 22px "Microsoft YaHei", "Noto Sans CJK SC", Arial, sans-serif; fill: #52606d; }
+      .panel { fill: #fffdf7; stroke: #e4d8c7; stroke-width: 2; rx: 22; }
+      .user { fill: #e8f1ff; stroke: #b8cff6; stroke-width: 2; rx: 18; }
+      .coach { fill: #fff; stroke: #e2e8f0; stroke-width: 2; rx: 18; }
+      .check { fill: #e8f6ef; stroke: #b6dfc8; stroke-width: 2; rx: 18; }
+      .h2 { font: 800 26px "Microsoft YaHei", "Noto Sans CJK SC", Arial, sans-serif; fill: #a23b2a; }
+      .text { font: 400 20px "Microsoft YaHei", "Noto Sans CJK SC", Arial, sans-serif; fill: #334e68; }
+      .strong { font: 800 20px "Microsoft YaHei", "Noto Sans CJK SC", Arial, sans-serif; fill: #1f2933; }
+      .tag { font: 800 16px "Microsoft YaHei", "Noto Sans CJK SC", Arial, sans-serif; fill: #fff; }
+      .chip { fill: #a23b2a; rx: 12; }
+      .line { stroke: #d69e2e; stroke-width: 5; fill: none; stroke-linecap: round; }
+      .node { fill: #fff7ed; stroke: #d69e2e; stroke-width: 3; rx: 16; }
+    </style>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#1f2933" flood-opacity=".13"/>
+    </filter>
+  </defs>
+  <rect class="bg" width="1400" height="820"/>
+  <text class="title" x="70" y="76">毛思互动带学展示</text>
+  <text class="sub" x="70" y="114">脱敏示例：先总图，再分块讲解，每一块都做回忆检测和纠错。</text>
+
+  <g filter="url(#shadow)">
+    <rect class="panel" x="70" y="160" width="570" height="590"/>
+    <text class="h2" x="105" y="210">课程总图</text>
+    <path class="line" d="M355 360 C260 310 210 265 165 235"/>
+    <path class="line" d="M355 380 C250 390 210 445 160 500"/>
+    <path class="line" d="M415 380 C505 410 540 475 570 545"/>
+    <rect class="node" x="285" y="305" width="170" height="105"/>
+    <text class="strong" x="370" y="350" text-anchor="middle">毛泽东思想</text>
+    <text class="text" x="370" y="382" text-anchor="middle">核心框架</text>
+    <rect class="node" x="105" y="220" width="180" height="80"/>
+    <text class="text" x="195" y="253" text-anchor="middle">主要内容</text>
+    <text class="text" x="195" y="280" text-anchor="middle">革命/建设</text>
+    <rect class="node" x="105" y="490" width="190" height="82"/>
+    <text class="text" x="200" y="523" text-anchor="middle">活的灵魂</text>
+    <text class="text" x="200" y="550" text-anchor="middle">实事求是等</text>
+    <rect class="node" x="490" y="540" width="115" height="78"/>
+    <text class="text" x="548" y="573" text-anchor="middle">历史</text>
+    <text class="text" x="548" y="600" text-anchor="middle">地位</text>
+    <text class="sub" x="105" y="675">先让学生看懂知识骨架，再进入考点。</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect class="panel" x="690" y="160" width="640" height="590"/>
+    <text class="h2" x="725" y="210">对话式带学</text>
+    <rect class="user" x="725" y="245" width="520" height="70"/>
+    <text class="strong" x="755" y="274">学生</text>
+    <text class="text" x="755" y="300">我想先看这门课的思维导图。</text>
+    <rect class="coach" x="780" y="340" width="510" height="95"/>
+    <text class="strong" x="810" y="372">学习秘书</text>
+    <text class="text" x="810" y="402">先看大框架：主要内容、活的灵魂、历史地位。</text>
+    <rect class="user" x="725" y="462" width="520" height="70"/>
+    <text class="strong" x="755" y="491">学生</text>
+    <text class="text" x="755" y="517">科学指南，精神财富，第一次历史性飞跃。</text>
+    <rect class="check" x="780" y="558" width="510" height="125"/>
+    <text class="strong" x="810" y="590">回忆检测</text>
+    <text class="text" x="810" y="620">回答正确，继续进入新民主主义革命理论。</text>
+    <text class="text" x="810" y="650">下一步：总路线、基本纲领、三大法宝。</text>
+    <rect class="chip" x="725" y="700" width="120" height="32"/>
+    <text class="tag" x="785" y="722" text-anchor="middle">主动回忆</text>
+    <rect class="chip" x="860" y="700" width="120" height="32"/>
+    <text class="tag" x="920" y="722" text-anchor="middle">短块推进</text>
+    <rect class="chip" x="995" y="700" width="120" height="32"/>
+    <text class="tag" x="1055" y="722" text-anchor="middle">及时纠错</text>
+  </g>
+</svg>

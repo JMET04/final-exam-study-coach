@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>有效应力原理 — 交互式演示</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: "Microsoft YaHei", "PingFang SC", system-ui, sans-serif; background: #f0f4f8; color: #1a202c; min-height: 100vh; }
+.header { background: linear-gradient(135deg, #1e3a5f, #2d5a87); color: #fff; padding: 20px 24px; text-align: center; }
+.header h1 { font-size: 24px; margin-bottom: 4px; }
+.header p { font-size: 14px; opacity: 0.85; }
+.container { max-width: 1000px; margin: 0 auto; padding: 20px; display: grid; grid-template-columns: 320px 1fr; gap: 20px; }
+@media (max-width: 768px) { .container { grid-template-columns: 1fr; } }
+.controls { background: #fff; border-radius: 12px; padding: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+.controls h3 { font-size: 16px; color: #2d5a87; margin-bottom: 12px; border-bottom: 2px solid #e2e8f0; padding-bottom: 8px; }
+.control-group { margin-bottom: 14px; }
+.control-group label { display: block; font-size: 13px; font-weight: 600; margin-bottom: 4px; color: #4a5568; }
+.control-group input[type=range] { width: 100%; margin: 4px 0; }
+.control-group .val { display: inline-block; background: #edf2f7; padding: 2px 8px; border-radius: 4px; font-size: 12px; color: #2d5a87; font-weight: 600; min-width: 50px; text-align: center; }
+.soil-row { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; }
+.soil-row input { width: 48px; padding: 3px 6px; border: 1px solid #cbd5e0; border-radius: 4px; font-size: 13px; text-align: center; }
+.soil-row span { font-size: 12px; color: #718096; }
+.canvas-area { background: #fff; border-radius: 12px; padding: 16px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+canvas { display: block; width: 100%; }
+.legend { display: flex; gap: 16px; flex-wrap: wrap; margin-top: 10px; justify-content: center; }
+.legend-item { display: flex; align-items: center; gap: 6px; font-size: 13px; }
+.legend-dot { width: 14px; height: 14px; border-radius: 3px; }
+.readings { background: #fff; border-radius: 12px; padding: 16px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); margin-top: 16px; }
+.readings table { width: 100%; border-collapse: collapse; font-size: 13px; }
+.readings th { background: #edf2f7; padding: 8px; text-align: left; color: #2d5a87; }
+.readings td { padding: 8px; border-bottom: 1px solid #e2e8f0; }
+.questions { background: #fffbe6; border: 1px solid #f6e05e; border-radius: 8px; padding: 14px; margin-top: 16px; }
+.questions h4 { color: #975a16; margin-bottom: 6px; font-size: 14px; }
+.questions ul { margin-left: 18px; font-size: 13px; color: #744210; }
+.questions li { margin-bottom: 4px; }
+.obs-point { position: relative; }
+</style>
+</head>
+<body>
+<div class="header">
+  <h1>有效应力原理 · 土层应力分布</h1>
+  <p>σ' = σ − u &nbsp;|&nbsp; 可拖动地下水位 &nbsp;|&nbsp; 观察标注点实时变化</p>
+</div>
+
+<div class="container">
+  <div class="controls">
+    <h3>土层参数设置</h3>
+    <div class="control-group">
+      <label>地下水位深度 <span class="val" id="wtVal">3.0 m</span></label>
+      <input type="range" id="wtSlider" min="0.5" max="9.5" step="0.1" value="3.0">
+    </div>
+
+    <h3 style="margin-top:16px;">土层配置</h3>
+    <div class="soil-row">
+      <span style="flex:1; font-size:13px;">第1层 细砂</span>
+      <span>γ=</span><input id="g1_nat" value="18" onchange="redraw()">
+      <span>γ_sat=</span><input id="g1_sat" value="20" onchange="redraw()">
+      <span>厚:</span><input id="h1" value="3" onchange="redraw()"><span>m</span>
+    </div>
+    <div class="soil-row">
+      <span style="flex:1; font-size:13px;">第2层 黏土</span>
+      <span>γ=</span><input id="g2_nat" value="18.5" onchange="redraw()">
+      <span>γ_sat=</span><input id="g2_sat" value="19.5" onchange="redraw()">
+      <span>厚:</span><input id="h2" value="4" onchange="redraw()"><span>m</span>
+    </div>
+    <div class="soil-row">
+      <span style="flex:1; font-size:13px;">第3层 砂砾</span>
+      <span>γ=</span><input id="g3_nat" value="19" onchange="redraw()">
+      <span>γ_sat=</span><input id="g3_sat" value="21" onchange="redraw()">
+      <span>厚:</span><input id="h3" value="3" onchange="redraw()"><span>m</span>
+    </div>
+
+    <h3 style="margin-top:16px;">观察点 &amp; 标注</h3>
+    <p style="font-size:12px; color:#718096; margin-bottom:8px;">以下深度显示该点的 σ、u、σ'</p>
+    <div id="obsPoints"></div>
+
+    <div class="questions" style="margin-top:14px;">
+      <h4>思考题</h4>
+      <ul>
+        <li>拖动水位线上下移动，有效应力曲线如何变化？</li>
+        <li>水位面处孔压是否始终为零？</li>
+        <li>哪条曲线在土层界面处有斜率突变？为什么？</li>
+        <li>毛细饱和区的孔压是正还是负？</li>
+      </ul>
+    </div>
+  </div>
+
+  <div>
+    <div class="canvas-area">
+      <canvas id="mainCanvas" width="660" height="520"></canvas>
+      <div class="legend">
+        <div class="legend-item"><div class="legend-dot" style="background:#e53e3e;"></div>总应力 σ</div>
+        <div class="legend-item"><div class="legend-dot" style="background:#3182ce;"></div>孔隙水压力 u</div>
+        <div class="legend-item"><div class="legend-dot" style="background:#38a169;"></div>有效应力 σ'</div>
+      </div>
+    </div>
+    <div class="readings">
+      <table>
+        <thead><tr><th>深度 (m)</th><th>总应力 σ (kPa)</th><th>孔压 u (kPa)</th><th>有效应力 σ' (kPa)</th></tr></thead>
+        <tbody id="readingsBody"></tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<script>
+const canvas = document.getElementById('mainCanvas');
+const ctx = canvas.getContext('2d');
+const W = canvas.width, H = canvas.height;
+
+// Layout constants
+const MARGIN = { top: 30, right: 180, bottom: 30, left: 70 };
+const PW = W - MARGIN.left - MARGIN.right;
+const PH = H - MARGIN.top - MARGIN.bottom;
+const soilLeft = 40;
+const soilWidth = 120;
+const stressOriginX = soilLeft + soilWidth + 40;
+const stressWidth = PW - soilWidth - 40 - MARGIN.right + 70;
+
+function getParams() {
+  return {
+    wt: parseFloat(document.getElementById('wtSlider').value),
+    layers: [
+      { h: parseFloat(document.getElementById('h1').value), gNat: parseFloat(document.getElementById('g1_nat').value), gSat: parseFloat(document.getElementById('g1_sat').value), name: '细砂', color: '#fbd38d' },
+      { h: parseFloat(document.getElementById('h2').value), gNat: parseFloat(document.getElementById('g2_nat').value), gSat: parseFloat(document.getElementById('g2_sat').value), name: '黏土', color: '#b794f4' },
+      { h: parseFloat(document.getElementById('h3').value), gNat: parseFloat(document.getElementById('g3_nat').value), gSat: parseFloat(document.getElementById('g3_sat').value), name: '砂砾', color: '#fc8181' }
+    ]
+  };
+}
+
+function getTotalDepth(layers) {
+  return layers.reduce((s, l) => s + l.h, 0);
+}
+
+function depthToY(depth, maxDepth) {
+  return MARGIN.top + (depth / maxDepth) * PH;
+}
+
+function stressToX(stress, maxStress) {
+  return stressOriginX + (stress / maxStress) * stressWidth;
+}
+
+function redraw() {
+  const p = getParams();
+  const maxDepth = getTotalDepth(p.layers);
+  const wt = p.wt;
+
+  // Compute stress arrays
+  const steps = 200;
+  const depths = [];
+  const sigma = [];
+  const u = [];
+  const sigmaPrime = [];
+  let maxStress = 0;
+
+  for (let i = 0; i <= steps; i++) {
+    const z = (i / steps) * maxDepth;
+    depths.push(z);
+
+    // Calculate total stress sigma at depth z
+    let s = 0;
+    let zRemain = z;
+    for (const layer of p.layers) {
+      const dz = Math.min(zRemain, layer.h);
+      if (dz <= 0) break;
+      const layerTopZ = z - zRemain;
+      const layerTop = layerTopZ;
+      // above WT: use natural unit weight; below WT: use saturated
+      const gamma = layerTop + dz <= wt ? layer.gNat : (layerTop >= wt ? layer.gSat : layer.gNat);
+      // Simplified: use natural above wt, saturated below wt
+      // Actually need more careful integration
+      const segTop = layerTop;
+      const segBot = layerTop + dz;
+      let segSigma = 0;
+      if (segBot <= wt) {
+        segSigma = dz * layer.gNat;
+      } else if (segTop >= wt) {
+        segSigma = dz * layer.gSat;
+      } else {
+        segSigma = (wt - segTop) * layer.gNat + (segBot - wt) * layer.gSat;
+      }
+      s += segSigma;
+      zRemain -= dz;
+    }
+    sigma.push(s);
+
+    // Pore water pressure
+    let uw = 0;
+    if (z > wt) {
+      uw = 10 * (z - wt);
+    }
+    u.push(Math.max(0, uw));
+
+    // Effective stress
+    const sp = s - uw;
+    sigmaPrime.push(Math.max(0, sp));
+
+    maxStress = Math.max(maxStress, s, uw, sp);
+  }
+
+  // Round up maxStress to nice number
+  maxStress = Math.ceil(maxStress / 25) * 25;
+  if (maxStress < 50) maxStress = 50;
+
+  // Draw
+  ctx.clearRect(0, 0, W, H);
+
+  // Draw soil profile
+  let y0 = MARGIN.top;
+  for (const layer of p.layers) {
+    const hPx = (layer.h / maxDepth) * PH;
+    ctx.fillStyle = layer.color;
+    ctx.fillRect(soilLeft, y0, soilWidth, hPx);
+    ctx.strokeStyle = '#a0aec0';
+    ctx.strokeRect(soilLeft, y0, soilWidth, hPx);
+    // Label
+    ctx.fillStyle = '#2d3748';
+    ctx.font = '12px "Microsoft YaHei", sans-serif';
+    ctx.textAlign = 'center';
+    ctx.fillText(layer.name, soilLeft + soilWidth / 2, y0 + hPx / 2 + 4);
+    y0 += hPx;
+  }
+  // Soil profile border
+  ctx.strokeStyle = '#4a5568';
+  ctx.lineWidth = 2;
+  ctx.strokeRect(soilLeft, MARGIN.top, soilWidth, PH);
+
+  // Water table
+  const wtY = depthToY(wt, maxDepth);
+  ctx.setLineDash([8, 4]);
+  ctx.strokeStyle = '#3182ce';
+  ctx.lineWidth = 2;
+  ctx.beginPath();
+  ctx.moveTo(soilLeft - 20, wtY);
+  ctx.lineTo(soilLeft + soilWidth + 20, wtY);
+  ctx.stroke();
+  ctx.setLineDash([]);
+
+  // WT label
+  ctx.fillStyle = '#3182ce';
+  ctx.font = 'bold 13px "Microsoft YaHei", sans-serif';
+  ctx.textAlign = 'right';
+  ctx.fillText('▽ 地下水位', soilLeft - 24, wtY + 4);
+
+  // Ground surface label
+  ctx.fillStyle = '#4a5568';
+  ctx.font = '12px "Microsoft YaHei", sans-serif';
+  ctx.textAlign = 'right';
+  ctx.fillText('地面', soilLeft - 6, MARGIN.top + 12);
+
+  // Depth axis
+  ctx.fillStyle = '#718096';
+  ctx.font = '12px "Microsoft YaHei", sans-serif';
+  ctx.textAlign = 'right';
+  for (let z = 0; z <= maxDepth; z += Math.ceil(maxDepth / 10)) {
+    const y = depthToY(z, maxDepth);
+    ctx.fillText(z + ' m', soilLeft - 10, y + 4);
+  }
+
+  // Stress axes
+  ctx.strokeStyle = '#cbd5e0';
+  ctx.lineWidth = 1;
+  ctx.beginPath();
+  ctx.moveTo(stressOriginX, MARGIN.top);
+  ctx.lineTo(stressOriginX, MARGIN.top + PH);
+  ctx.stroke();
+
+  // Stress axis labels
+  ctx.fillStyle = '#718096';
+  ctx.font = '11px "Microsoft YaHei", sans-serif';
+  ctx.textAlign = 'center';
+  const xTicks = 5;
+  for (let i = 0; i <= xTicks; i++) {
+    const val = (maxStress / xTicks) * i;
+    const x = stressToX(val, maxStress);
+    ctx.fillText(Math.round(val), x, MARGIN.top + PH + 16);
+  }
+  ctx.fillText('(kPa)', stressOriginX + stressWidth / 2, MARGIN.top + PH + 30);
+
+  // Draw stress curves
+  function drawCurve(data, color, width) {
+    ctx.strokeStyle = color;
+    ctx.lineWidth = width;
+    ctx.beginPath();
+    for (let i = 0; i <= steps; i++) {
+      const x = stressToX(data[i], maxStress);
+      const y = depthToY(depths[i], maxDepth);
+      if (i === 0) ctx.moveTo(x, y);
+      else ctx.lineTo(x, y);
+    }
+    ctx.stroke();
+  }
+
+  drawCurve(sigma, '#e53e3e', 2.5);
+  drawCurve(u, '#3182ce', 2.5);
+  drawCurve(sigmaPrime, '#38a169', 2.5);
+
+  // Highlight layer boundaries on curves
+  let cumH = 0;
+  for (let i = 0; i < p.layers.length; i++) {
+    cumH += p.layers[i].h;
+    if (cumH < maxDepth) {
+      const y = depthToY(cumH, maxDepth);
+      ctx.setLineDash([3, 5]);
+      ctx.strokeStyle = '#a0aec0';
+      ctx.lineWidth = 1;
+      ctx.beginPath();
+      ctx.moveTo(stressOriginX, y);
+      ctx.lineTo(stressOriginX + stressWidth, y);
+      ctx.stroke();
+      ctx.setLineDash([]);
+    }
+  }
+
+  // Water table marker on stress curves
+  if (wt < maxDepth) {
+    const yWT = depthToY(wt, maxDepth);
+    const idxWT = Math.round((wt / maxDepth) * steps);
+    // Mark u=0 at WT
+    ctx.fillStyle = '#3182ce';
+    ctx.beginPath();
+    ctx.arc(stressOriginX, yWT, 4, 0, Math.PI * 2);
+    ctx.fill();
+    ctx.fillText('u=0 此处', stressOriginX + 8, yWT + 4);
+  }
+
+  // Update reading table
+  updateReadings(p, sigma, u, sigmaPrime, depths, steps, maxDepth);
+  updateObsPoints(p);
+}
+
+function updateReadings(p, sigma, u, sigmaPrime, depths, steps, maxDepth) {
+  const tbody = document.getElementById('readingsBody');
+  const checkDepths = [0];
+  // Add layer boundaries
+  let cum = 0;
+  for (const l of p.layers) {
+    cum += l.h;
+    if (cum < maxDepth) checkDepths.push(cum);
+  }
+  checkDepths.push(maxDepth);
+  // Add water table
+  if (p.wt > 0 && p.wt < maxDepth) checkDepths.push(p.wt);
+  checkDepths.sort((a, b) => a - b);
+  // Deduplicate
+  const unique = [...new Set(checkDepths.map(d => Math.round(d * 100) / 100))];
+
+  let html = '';
+  for (const z of unique) {
+    const idx = Math.round((z / maxDepth) * steps);
+    html += `<tr>
+      <td>${z.toFixed(1)}</td>
+      <td>${sigma[idx].toFixed(1)}</td>
+      <td>${u[idx].toFixed(1)}</td>
+      <td style="font-weight:600; color:#38a169;">${sigmaPrime[idx].toFixed(1)}</td>
+    </tr>`;
+  }
+  tbody.innerHTML = html;
+
+  // Update WT display
+  document.getElementById('wtVal').textContent = p.wt.toFixed(1) + ' m';
+}
+
+function updateObsPoints(p) {
+  // Show key observation depths
+  const maxDepth = getTotalDepth(p.layers);
+  const depths = [p.wt, maxDepth / 2, maxDepth];
+  const labels = ['水位面', '中点', '底面'];
+  let html = '';
+  for (let i = 0; i < depths.length; i++) {
+    const z = depths[i];
+    if (z <= maxDepth && z >= 0) {
+      html += `<div style="font-size:12px; margin-bottom:4px;">
+        <strong>${labels[i]} (z=${z.toFixed(1)}m)</strong>:
+        σ' = σ - u
+      </div>`;
+    }
+  }
+  document.getElementById('obsPoints').innerHTML = html +
+    '<p style="font-size:11px; color:#e53e3e; margin-top:6px;">σ: 红线 | u: 蓝线 | σ\': 绿线</p>';
+}
+
+// Drag water table
+let dragging = false;
+canvas.addEventListener('mousedown', (e) => {
+  const rect = canvas.getBoundingClientRect();
+  const scaleX = W / rect.width;
+  const scaleY = H / rect.height;
+  const my = (e.clientY - rect.top) * scaleY;
+  const p = getParams();
+  const maxDepth = getTotalDepth(p.layers);
+  const wtY = depthToY(p.wt, maxDepth);
+  if (Math.abs(my - wtY) < 20) {
+    dragging = true;
+    canvas.style.cursor = 'ns-resize';
+  }
+});
+canvas.addEventListener('mousemove', (e) => {
+  if (!dragging) return;
+  const rect = canvas.getBoundingClientRect();
+  const scaleY = H / rect.height;
+  const my = (e.clientY - rect.top) * scaleY;
+  const p = getParams();
+  const maxDepth = getTotalDepth(p.layers);
+  let newWt = ((my - MARGIN.top) / PH) * maxDepth;
+  newWt = Math.max(0.1, Math.min(maxDepth - 0.1, newWt));
+  document.getElementById('wtSlider').value = newWt;
+  redraw();
+});
+canvas.addEventListener('mouseup', () => {
+  dragging = false;
+  canvas.style.cursor = 'default';
+});
+canvas.addEventListener('mouseleave', () => {
+  dragging = false;
+  canvas.style.cursor = 'default';
+});
+
+// Touch support
+canvas.addEventListener('touchstart', (e) => {
+  const rect = canvas.getBoundingClientRect();
+  const scaleY = H / rect.height;
+  const my = (e.touches[0].clientY - rect.top) * scaleY;
+  const p = getParams();
+  const maxDepth = getTotalDepth(p.layers);
+  const wtY = depthToY(p.wt, maxDepth);
+  if (Math.abs(my - wtY) < 30) {
+    dragging = true;
+    e.preventDefault();
+  }
+}, {passive: false});
+canvas.addEventListener('touchmove', (e) => {
+  if (!dragging) return;
+  e.preventDefault();
+  const rect = canvas.getBoundingClientRect();
+  const scaleY = H / rect.height;
+  const my = (e.touches[0].clientY - rect.top) * scaleY;
+  const p = getParams();
+  const maxDepth = getTotalDepth(p.layers);
+  let newWt = ((my - MARGIN.top) / PH) * maxDepth;
+  newWt = Math.max(0.1, Math.min(maxDepth - 0.1, newWt));
+  document.getElementById('wtSlider').value = newWt;
+  redraw();
+}, {passive: false});
+canvas.addEventListener('touchend', () => { dragging = false; });
+
+document.getElementById('wtSlider').addEventListener('input', redraw);
+
+// Initial draw
+redraw();
+</script>
+</body>
+</html>

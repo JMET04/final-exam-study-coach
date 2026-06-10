@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>土力学基本原理动画入口</title>
+<style>
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: "Microsoft YaHei", "PingFang SC", system-ui, sans-serif;
+  background: #f2f5f2;
+  color: #17251f;
+}
+.hero {
+  min-height: 210px;
+  padding: 32px 24px 28px;
+  background:
+    linear-gradient(135deg, rgba(37,83,71,.96), rgba(107,90,53,.9)),
+    radial-gradient(circle at 20% 20%, rgba(255,255,255,.28), transparent 26%);
+  color: #fff;
+}
+.inner { max-width: 1120px; margin: 0 auto; }
+h1 { margin: 0 0 10px; font-size: clamp(28px, 4vw, 44px); letter-spacing: 0; }
+.hero p { max-width: 760px; margin: 0; line-height: 1.7; opacity: .92; }
+.route {
+  max-width: 1120px;
+  margin: -28px auto 0;
+  padding: 0 20px 28px;
+}
+.cards {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(190px, 1fr));
+  gap: 14px;
+}
+@media (max-width: 980px) { .cards { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 560px) { .cards { grid-template-columns: 1fr; } }
+.card {
+  background: #fff;
+  border: 1px solid #dce5df;
+  border-radius: 8px;
+  min-height: 270px;
+  padding: 17px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 5px 18px rgba(23, 37, 31, .12);
+}
+.step {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: #2c7a63;
+  color: #fff;
+  display: grid;
+  place-items: center;
+  font-weight: 900;
+  margin-bottom: 12px;
+}
+.card:nth-child(2) .step { background: #346c9b; }
+.card:nth-child(3) .step { background: #6b5a35; }
+.card:nth-child(4) .step { background: #8b4e3a; }
+.card h2 { margin: 0 0 8px; font-size: 18px; color: #255347; }
+.card p { margin: 0 0 10px; color: #4c6259; line-height: 1.55; font-size: 14px; }
+.card ul { margin: 0 0 14px 18px; padding: 0; color: #31453c; line-height: 1.55; font-size: 13px; }
+.card a {
+  margin-top: auto;
+  display: block;
+  text-align: center;
+  background: #255347;
+  color: #fff;
+  padding: 10px 12px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 800;
+}
+.band {
+  max-width: 1120px;
+  margin: 0 auto 28px;
+  padding: 0 20px;
+}
+.panel {
+  background: #fff;
+  border: 1px solid #dce5df;
+  border-radius: 8px;
+  padding: 18px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+@media (max-width: 760px) { .panel { grid-template-columns: 1fr; } }
+.panel h2 { margin: 0 0 8px; color: #255347; font-size: 18px; }
+.panel p, .panel li { color: #31453c; line-height: 1.65; font-size: 14px; }
+.panel ul { margin: 0 0 0 18px; padding: 0; }
+.footer {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 20px 28px;
+  color: #60766d;
+  font-size: 13px;
+}
+</style>
+</head>
+<body>
+<section class="hero">
+  <div class="inner">
+    <h1>土力学基本原理动画入口</h1>
+    <p>这不是把 PPT 换成好看的网页，而是先用几个能“看见变化”的原理建立底层模型：土由三相构成，水改变有效应力，水头差驱动渗流，强度包线决定是否破坏。</p>
+  </div>
+</section>
+
+<main class="route">
+  <section class="cards">
+    <article class="card">
+      <div class="step">1</div>
+      <h2>三相组成与指标换算</h2>
+      <p>看见 Vs、Vw、Va 怎么组成土体，再把 e、n、Sr、w、重度从图中推出来。</p>
+      <ul>
+        <li>观察：水和气分别占哪一部分。</li>
+        <li>自测：e、n、Sr、w 的分子分母。</li>
+      </ul>
+      <a href="three_phase_indices.html">打开动画</a>
+    </article>
+    <article class="card">
+      <div class="step">2</div>
+      <h2>有效应力原理</h2>
+      <p>总应力、孔隙水压力、有效应力同时变化，理解土骨架到底承受了什么。</p>
+      <ul>
+        <li>观察：地下水位变化后的三条曲线。</li>
+        <li>自测：sigma' = sigma - u 的物理意义。</li>
+      </ul>
+      <a href="effective_stress.html">打开动画</a>
+    </article>
+    <article class="card">
+      <div class="step">3</div>
+      <h2>达西定律与渗流</h2>
+      <p>水头差、水力坡降、渗透系数、流量之间的关系，用流线和水头线串起来。</p>
+      <ul>
+        <li>观察：坡降变大时流量怎么变。</li>
+        <li>自测：q = k i A 每个量的含义。</li>
+      </ul>
+      <a href="seepage_flow.html">打开动画</a>
+    </article>
+    <article class="card">
+      <div class="step">4</div>
+      <h2>莫尔-库伦强度</h2>
+      <p>让莫尔圆靠近强度包线，看土体从安全到破坏的边界条件。</p>
+      <ul>
+        <li>观察：围压变化时圆心和半径。</li>
+        <li>自测：c、phi、sigma 对抗剪强度的影响。</li>
+      </ul>
+      <a href="mohr_coulomb.html">打开动画</a>
+    </article>
+  </section>
+</main>
+
+<section class="band">
+  <div class="panel">
+    <div>
+      <h2>建议学习节奏</h2>
+      <ul>
+        <li>每个动画先看 3-5 分钟，只抓一个核心关系。</li>
+        <li>看完立刻闭眼复述 60 秒，别继续被动播放。</li>
+        <li>每个动画接 1 道基础题，做不出就回到对应暂停点。</li>
+      </ul>
+    </div>
+    <div>
+      <h2>定时检测</h2>
+      <ul>
+        <li>看完 10 分钟：默写公式和图。</li>
+        <li>当天结束：做 4 道混合小题。</li>
+        <li>第二天开始：用 8 分钟复测昨天四个原理。</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<p class="footer">当前入口覆盖土力学四个底层动态原理。后续进入沉降固结、渗透破坏、流网时，可以继续补更细动画。</p>
+</body>
+</html>

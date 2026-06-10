@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>达西定律与渗流 — 交互式演示</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: "Microsoft YaHei", "PingFang SC", system-ui, sans-serif; background: #f0f4f8; color: #1a202c; min-height: 100vh; }
+.header { background: linear-gradient(135deg, #276749, #38a169); color: #fff; padding: 20px 24px; text-align: center; }
+.header h1 { font-size: 24px; margin-bottom: 4px; }
+.header p { font-size: 14px; opacity: 0.85; }
+.container { max-width: 1000px; margin: 0 auto; padding: 20px; display: grid; grid-template-columns: 300px 1fr; gap: 20px; }
+@media (max-width: 768px) { .container { grid-template-columns: 1fr; } }
+.controls { background: #fff; border-radius: 12px; padding: 18px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+.controls h3 { font-size: 16px; color: #276749; margin-bottom: 10px; border-bottom: 2px solid #c6f6d5; padding-bottom: 8px; }
+.control-group { margin-bottom: 12px; }
+.control-group label { display: flex; justify-content: space-between; font-size: 13px; font-weight: 600; margin-bottom: 3px; color: #4a5568; }
+.control-group .val { color: #276749; font-weight: 600; }
+.control-group input[type=range] { width: 100%; }
+.canvas-area { background: #fff; border-radius: 12px; padding: 16px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+canvas { display: block; width: 100%; }
+.info-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 12px; }
+.info-card { background: #f0fff4; border-radius: 8px; padding: 10px; text-align: center; }
+.info-card .val { font-size: 20px; font-weight: 700; color: #276749; }
+.info-card .label { font-size: 11px; color: #718096; margin-top: 2px; }
+.questions { background: #fffbe6; border: 1px solid #f6e05e; border-radius: 8px; padding: 14px; margin-top: 14px; }
+.questions h4 { color: #975a16; margin-bottom: 6px; font-size: 14px; }
+.questions ul { margin-left: 18px; font-size: 13px; color: #744210; }
+.questions li { margin-bottom: 4px; }
+.warning { background: #fff5f5; border: 1px solid #fc8181; border-radius: 8px; padding: 12px; margin-top: 12px; color: #9b2c2c; font-size: 13px; display: none; }
+.warning.show { display: block; }
+</style>
+</head>
+<body>
+<div class="header">
+  <h1>达西定律 · 一维渗流演示</h1>
+  <p>q = k·i·A &nbsp;|&nbsp; 调节水头 &nbsp;|&nbsp; 观察水头分布和渗流方向</p>
+</div>
+
+<div class="container">
+  <div class="controls">
+    <h3>渗流参数</h3>
+    <div class="control-group">
+      <label>上游水头 h₁ <span class="val" id="h1Val">5.0 m</span></label>
+      <input type="range" id="h1Slider" min="1" max="10" step="0.1" value="5">
+    </div>
+    <div class="control-group">
+      <label>下游水头 h₂ <span class="val" id="h2Val">2.0 m</span></label>
+      <input type="range" id="h2Slider" min="0" max="9" step="0.1" value="2">
+    </div>
+    <div class="control-group">
+      <label>渗透系数 k <span class="val" id="kVal">0.01 cm/s</span></label>
+      <input type="range" id="kSlider" min="0.001" max="0.5" step="0.001" value="0.01">
+    </div>
+    <div class="control-group">
+      <label>土样长度 L <span class="val" id="lVal">2.0 m</span></label>
+      <input type="range" id="lSlider" min="0.5" max="5" step="0.1" value="2">
+    </div>
+    <div class="control-group">
+      <label>截面积 A <span class="val" id="aVal">0.5 m²</span></label>
+      <input type="range" id="aSlider" min="0.1" max="2" step="0.05" value="0.5">
+    </div>
+
+    <h3 style="margin-top:16px;">渗流方向</h3>
+    <div style="display:flex; gap:8px; margin-bottom:8px;">
+      <button id="btnForward" onclick="setDirection('forward')"
+        style="flex:1; padding:8px; background:#38a169; color:#fff; border:none; border-radius:6px; cursor:pointer; font-weight:600;">→ 从左向右</button>
+      <button id="btnUpward" onclick="setDirection('upward')"
+        style="flex:1; padding:8px; background:#a0aec0; color:#fff; border:none; border-radius:6px; cursor:pointer; font-weight:600;">↑ 从下向上</button>
+    </div>
+    <p style="font-size:11px; color:#718096;">从左向右：水平渗流（达西渗透仪）<br>从下向上：垂直渗流（流土风险分析）</p>
+
+    <div class="info-grid">
+      <div class="info-card">
+        <div class="val" id="infoI">—</div>
+        <div class="label">水力坡降 i</div>
+      </div>
+      <div class="info-card">
+        <div class="val" id="infoQ">—</div>
+        <div class="label">渗流量 q (cm³/s)</div>
+      </div>
+      <div class="info-card">
+        <div class="val" id="infoV">—</div>
+        <div class="label">达西流速 v (cm/s)</div>
+      </div>
+      <div class="info-card">
+        <div class="val" id="infoICr">—</div>
+        <div class="label">临界水力坡降 i_cr</div>
+      </div>
+    </div>
+
+    <div class="warning" id="warningBox">
+      ⚠ 警告：当前水力坡降 i ≥ i_cr，可能发生流土/管涌！
+    </div>
+
+    <div class="questions">
+      <h4>思考题</h4>
+      <ul>
+        <li>增大水头差 Δh，渗流量如何变化？</li>
+        <li>水头沿渗流路径如何分布？是线性还是非线性？</li>
+        <li>什么条件下会发生流土？i_cr 与什么因素有关？</li>
+        <li>向上渗流和向下渗流对有效应力有何不同影响？</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="canvas-area">
+    <canvas id="mainCanvas" width="660" height="520"></canvas>
+  </div>
+</div>
+
+<script>
+const canvas = document.getElementById('mainCanvas');
+const ctx = canvas.getContext('2d');
+const W = canvas.width, H = canvas.height;
+
+let flowDirection = 'forward'; // 'forward' = horizontal left-to-right, 'upward' = vertical bottom-to-top
+
+function setDirection(dir) {
+  flowDirection = dir;
+  document.getElementById('btnForward').style.background = dir === 'forward' ? '#38a169' : '#a0aec0';
+  document.getElementById('btnUpward').style.background = dir === 'upward' ? '#38a169' : '#a0aec0';
+  redraw();
+}
+
+function getParams() {
+  const k = parseFloat(document.getElementById('kSlider').value);
+  const h1 = parseFloat(document.getElementById('h1Slider').value);
+  const h2 = parseFloat(document.getElementById('h2Slider').value);
+  const L = parseFloat(document.getElementById('lSlider').value);
+  const A = parseFloat(document.getElementById('aSlider').value);
+
+  const dh = h1 - h2;
+  const i = dh / L;
+  const q = k * i * A * 10000; // m³/s → cm³/s (×1e6), but k in cm/s, A in m² need adjustment
+  // Actually: k (cm/s) * i (dim) * A (m²) * 10000 (cm²/m²) = cm³/s
+  const qCm3s = k * Math.abs(i) * (A * 10000);
+  const v = k * Math.abs(i); // cm/s
+  const gammaSub = 10; // γ' = γ_sat - γ_w ≈ 10 kN/m³
+  const gammaW = 10;
+  const iCr = gammaSub / gammaW; // = 1.0
+
+  return { k, h1, h2, L, A, dh, i, qCm3s, v, iCr };
+}
+
+function redraw() {
+  const p = getParams();
+
+  // Update display values
+  document.getElementById('h1Val').textContent = p.h1.toFixed(1) + ' m';
+  document.getElementById('h2Val').textContent = p.h2.toFixed(1) + ' m';
+  document.getElementById('kVal').textContent = p.k.toFixed(3) + ' cm/s';
+  document.getElementById('lVal').textContent = p.L.toFixed(1) + ' m';
+  document.getElementById('aVal').textContent = p.A.toFixed(2) + ' m²';
+  document.getElementById('infoI').textContent = p.i.toFixed(3);
+  document.getElementById('infoQ').textContent = p.qCm3s.toFixed(2);
+  document.getElementById('infoV').textContent = p.v.toFixed(4);
+  document.getElementById('infoICr').textContent = p.iCr.toFixed(2);
+
+  // Show warning if i >= iCr for upward flow
+  const warningBox = document.getElementById('warningBox');
+  if (flowDirection === 'upward' && Math.abs(p.i) >= p.iCr && Math.abs(p.dh) > 0.01) {
+    warningBox.classList.add('show');
+  } else {
+    warningBox.classList.remove('show');
+  }
+
+  // Draw
+  ctx.clearRect(0, 0, W, H);
+
+  if (flowDirection === 'forward') {
+    drawHorizontal(p);
+  } else {
+    drawVertical(p);
+  }
+}
+
+function drawHorizontal(p) {
+  // Layout
+  const leftTankX = 50, leftTankW = 90;
+  const soilX = leftTankX + leftTankW + 30;
+  const soilW = 280;
+  const rightTankX = soilX + soilW + 30, rightTankW = 90;
+  const tankTop = 60;
+  const tankH = 280;
+  const waterTop1 = tankTop + (tankH - p.h1 / 10 * tankH);
+  const waterTop2 = tankTop + (tankH - p.h2 / 10 * tankH);
+  const soilTop = tankTop + 40;
+  const soilH = tankH - 80;
+  const soilBottom = soilTop + soilH;
+
+  // Left tank
+  ctx.fillStyle = '#bee3f8';
+  ctx.fillRect(leftTankX, waterTop1, leftTankW, tankTop + tankH - waterTop1);
+  ctx.strokeStyle = '#2b6cb0';
+  ctx.lineWidth = 2;
+  ctx.strokeRect(leftTankX, tankTop, leftTankW, tankH);
+  ctx.fillStyle = '#2b6cb0';
+  ctx.font = 'bold 14px "Microsoft YaHei", sans-serif';
+  ctx.textAlign = 'center';
+  ctx.fillText('上游', leftTankX + leftTankW / 2, tankTop + tankH + 24);
+  ctx.fillText('h₁=' + p.h1.toFixed(1) + 'm', leftTankX + leftTankW / 2, waterTop1 - 8);
+
+  // Right tank
+  ctx.fillStyle = '#bee3f8';
+  ctx.fillRect(rightTankX, waterTop2, rightTankW, tankTop + tankH - waterTop2);
+  ctx.strokeStyle = '#2b6cb0';
+  ctx.strokeRect(rightTankX, tankTop, rightTankW, tankH);
+  ctx.fillText('下游', rightTankX + rightTankW / 2, tankTop + tankH + 24);
+  ctx.fillText('h₂=' + p.h2.toFixed(1) + 'm', rightTankX + rightTankW / 2, waterTop2 - 8);
+
+  // Soil sample
+  const soilGrad = ctx.createLinearGradient(soilX, 0, soilX + soilW, 0);
+  soilGrad.addColorStop(0, '#fbd38d');
+  soilGrad.addColorStop(0.5, '#f6ad55');
+  soilGrad.addColorStop(1, '#fbd38d');
+  ctx.fillStyle = soilGrad;
+  ctx.fillRect(soilX, soilTop, soilW, soilH);
+  ctx.strokeStyle = '#c05621';
+  ctx.lineWidth = 2;
+  ctx.strokeRect(soilX, soilTop, soilW, soilH);
+
+  // Soil label
+  ctx.fillStyle = '#744210';
+  ctx.font = '13px "Microsoft YaHei", sans-serif';
+  ctx.textAlign = 'center';
+  ctx.fillText('土样 L=' + p.L.toFixed(1) + 'm', soilX + soilW / 2, soilTop + soilH / 2);
+  ctx.fillText('k=' + p.k.toFixed(3) + ' cm/s', soilX + soilW / 2, soilTop + soilH / 2 + 20);
+
+  // Connection pipes
+  ctx.strokeStyle = '#4a5568';
+  ctx.lineWidth = 3;
+  // Left to soil
+  ctx.beginPath();
+  ctx.moveTo(leftTankX + leftTankW, tankTop + tankH / 2 - 20);
+  ctx.lineTo(soilX, soilTop + soilH / 2);
+  ctx.stroke();
+  // Soil to right
+  ctx.beginPath();
+  ctx.moveTo(soilX + soilW, soilTop + soilH / 2);
+  ctx.lineTo(rightTankX, tankTop + tankH / 2 - 20);
+  ctx.stroke();
+
+  // Flow arrows inside soil
+  const arrowY = soilTop + soilH / 2;
+  const arrowCount = 5;
+  ctx.fillStyle = '#3182ce';
+  for (let i = 0; i < arrowCount; i++) {
+    const ax = soilX + 30 + i * (soilW - 60) / (arrowCount - 1);
+    drawArrow(ax, arrowY, ax + 16, arrowY, '#3182ce');
+  }
+
+  // Water head line (total head distribution)
+  const headLineY1 = tankTop + tankH - (p.h1 / 10) * tankH;
+  const headLineY2 = tankTop + tankH - (p.h2 / 10) * tankH;
+  ctx.setLineDash([5, 5]);
+  ctx.strokeStyle = '#e53e3e';
+  ctx.lineWidth = 2;
+  ctx.beginPath();
+  ctx.moveTo(leftTankX + leftTankW / 2, headLineY1);
+  ctx.lineTo(soilX, headLineY1);
+  ctx.lineTo(soilX + soilW, headLineY2);
+  ctx.lineTo(rightTankX + rightTankW / 2, headLineY2);
+  ctx.stroke();
+  ctx.setLineDash([]);
+
+  ctx.fillStyle = '#e53e3e';
+  ctx.font = 'bold 13px "Microsoft YaHei", sans-serif';
+  ctx.textAlign = 'center';
+  ctx.fillText('总水头线', soilX + soilW / 2, Math.min(headLineY1, headLineY2) - 14);
+
+  // Hydraulic gradient annotation
+  const dhAbs = Math.abs(p.dh);
+  ctx.fillStyle = '#dd6b20';
+  ctx.font = '12px "Microsoft YaHei", sans-serif';
+  ctx.textAlign = 'center';
+  ctx.fillText('Δh = ' + dhAbs.toFixed(1) + ' m', soilX + soilW / 2, soilBottom + 40);
+  ctx.fillText('i = Δh/L = ' + Math.abs(p.i).toFixed(3), soilX + soilW / 2, soilBottom + 56);
+
+  // Labels at soil ends
+  ctx.fillStyle = '#4a5568';
+  ctx.font = '12px "Microsoft YaHei", sans-serif';
+  ctx.textAlign = 'left';
+  // Left pore pressure markers
+  const leftPl = soilX + 10;
+  const rightPl = soilX + soilW - 10;
+
+  // Piezometer tubes (simplified)
+  const nTubes = 5;
+  for (let i = 0; i < nTubes; i++) {
+    const frac = i / (nTubes - 1);
+    const px = soilX + 20 + frac * (soilW - 40);
+    const hLocal = p.h1 - frac * (p.h1 - p.h2);
+    const tubeTop = tankTop + tankH - (hLocal / 10) * tankH;
+
+    // Standpipe
+    ctx.strokeStyle = '#a0aec0';
+    ctx.lineWidth = 1;
+    ctx.setLineDash([2, 2]);
+    ctx.beginPath();
+    ctx.moveTo(px, soilTop + soilH / 2);
+    ctx.lineTo(px, tubeTop);
+    ctx.stroke();
+    ctx.setLineDash([]);
+
+    // Water in standpipe
+    ctx.fillStyle = 'rgba(49,130,206,0.4)';
+    ctx.fillRect(px - 4, tubeTop, 8, soilTop + soilH / 2 - tubeTop);
+    ctx.strokeStyle = '#3182ce';
+    ctx.strokeRect(px - 4, tubeTop, 8, soilTop + soilH / 2 - tubeTop);
+  }
+
+  // Piezometer label
+  ctx.fillStyle = '#718096';
+  ctx.font = '11px "Microsoft YaHei", sans-serif';
+  ctx.textAlign = 'center';
+  ctx.fillText('测压管（水头线性分布）', soilX + soilW / 2, tankTop - 10);
+
+  // A label
+  ctx.fillStyle = '#4a5568';
+  ctx.font = '12px "Microsoft YaHei", sans-serif';
+  ctx.textAlign = 'center';
+  ctx.fillText('A = ' + p.A.toFixed(2) + ' m²', soilX + soilW / 2, soilTop - 8);
+
+  // Dimension arrow for L
+  ctx.strokeStyle = '#718096';
+  ctx.lineWidth = 1;
+  ctx.beginPath();
+  ctx.moveTo(soilX, soilBottom + 15);
+  ctx.lineTo(soilX + soilW, soilBottom + 15);
+  ctx.stroke();
+  ctx.beginPath();
+  ctx.moveTo(soilX, soilBottom + 10);
+  ctx.lineTo(soilX, soilBottom + 20);
+  ctx.stroke();
+  ctx.beginPath();
+  ctx.moveTo(soilX + soilW, soilBottom + 10);
+  ctx.lineTo(soilX + soilW, soilBottom + 20);
+  ctx.stroke();
+}
+
+function drawVertical(p) {
+  // Vertical flow setup (bottom to top)
+  const setupCX = 200;
+  const tankW = 160, tankH = 380;
+  const tankX = setupCX - tankW / 2;
+  const tankTop = 50;
+  const tankBottom = tankTop + tankH;
+  const soilTop = tankTop + 40;
+  const soilBottom = tankBottom - 40;
+  const soilH = soilBottom - soilTop;
+
+  // Tank outline
+  ctx.strokeStyle = '#2b6cb0';
+  ctx.lineWidth = 2;
+  ctx.strokeRect(tankX, tankTop, tankW, tankH);
+
+  // Bottom reservoir (h1 = upstream)
+  ctx.fillStyle = '#2b6cb0';
+  ctx.fillRect(tankX, soilBottom, tankW, tankBottom - soilBottom);
+  ctx.fillStyle = '#bee3f8';
+  ctx.fillRect(tankX + 2, soilBottom + 2, tankW - 4, tankBottom - soilBottom - 4);
+
+  // Top reservoir (h2 = downstream)
+  ctx.fillStyle = '#2b6cb0';
+  ctx.fillRect(tankX, tankTop, tankW, soilTop - tankTop);
+  ctx.fillStyle = '#bee3f8';
+  ctx.fillRect(tankX + 2, tankTop + 2, tankW - 4, soilTop - tankTop - 4);
+
+  // Soil
+  const soilGrad = ctx.createLinearGradient(0, soilTop, 0, soilBottom);
+  soilGrad.addColorStop(0, '#fbd38d');
+  soilGrad.addColorStop(1, '#dd6b20');
+  ctx.fillStyle = soilGrad;
+  ctx.fillRect(tankX + 2, soilTop, tankW - 4, soilH);
+
+  // Soil label
+  ctx.fillStyle = '#744210';
+  ctx.font = '13px "Microsoft YaHei", sans-serif';
+  ctx.textAlign = 'center';
+  ctx.fillText('土样', setupCX, soilTop + soilH / 2 - 10);
+  ctx.fillText('k=' + p.k.toFixed(3) + ' cm/s', setupCX, soilTop + soilH / 2 + 10);
+
+  // Upstream/downstream labels
+  ctx.fillStyle = '#2b6cb0';
+  ctx.font = 'bold 13px "Microsoft YaHei", sans-serif';
+  ctx.fillText('上游 h₁=' + p.h1.toFixed(1) + 'm', setupCX, soilBottom + 28);
+  ctx.fillText('下游 h₂=' + p.h2.toFixed(1) + 'm', setupCX, soilTop - 18);
+
+  // Flow arrows (upward)
+  const arrowCount = 6;
+  ctx.fillStyle = '#3182ce';
+  for (let i = 0; i < arrowCount; i++) {
+    const ay = soilBottom - 20 - i * (soilH - 40) / (arrowCount - 1);
+    drawArrow(setupCX - 40, ay, setupCX - 40, ay - 20, '#3182ce');
+    drawArrow(setupCX + 20, ay, setupCX + 20, ay - 20, '#3182ce');
+  }
+
+  // Water head distribution (right side chart)
+  const chartX = tankX + tankW + 50;
+  const chartW = 160;
+  const chartTop = tankTop;
+  const chartH = tankH;
+  const chartBottom = chartTop + chartH;
+
+  // Chart axes
+  ctx.strokeStyle = '#4a5568';
+  ctx.lineWidth = 2;
+  ctx.beginPath();
+  ctx.moveTo(chartX, chartTop);
+  ctx.lineTo(chartX, chartBottom);
+  ctx.lineTo(chartX + chartW, chartBottom);
+  ctx.stroke();
+
+  ctx.fillStyle = '#4a5568';
+  ctx.font = '12px "Microsoft YaHei", sans-serif';
+  ctx.textAlign = 'center';
+  ctx.fillText('总水头 (m)', chartX + chartW / 2, chartBottom + 30);
+
+  // Head line
+  const headFracTop = p.h2 / p.h1;
+  const headFracBottom = 1.0;
+  const hx1 = chartX + 10;
+  const hx2 = chartX + chartW - 10;
+
+  ctx.setLineDash([5, 5]);
+  ctx.strokeStyle = '#e53e3e';
+  ctx.lineWidth = 2;
+  ctx.beginPath();
+  ctx.moveTo(hx1 + (p.h2 / p.h1) * (hx2 - hx1), chartTop + 10);
+  ctx.lineTo(hx2, chartBottom - 10);
+  ctx.stroke();
+  ctx.setLineDash([]);
+
+  ctx.fillStyle = '#e53e3e';
+  ctx.font = 'bold 12px "Microsoft YaHei", sans-serif';
+  ctx.fillText('水头线', chartX + chartW / 2, chartTop - 10);
+
+  // Right side info
+  const infoX = chartX;
+  const infoY = chartBottom + 50;
+
+  ctx.fillStyle = '#4a5568';
+  ctx.font = '12px "Microsoft YaHei", sans-serif';
+  ctx.textAlign = 'left';
+
+  // i and i_cr comparison
+  const dhAbs = Math.abs(p.dh);
+  ctx.fillText('Δh = ' + dhAbs.toFixed(1) + ' m', infoX, infoY);
+  ctx.fillText('L = ' + p.L.toFixed(1) + ' m', infoX, infoY + 18);
+  ctx.fillText('i = ' + Math.abs(p.i).toFixed(3), infoX, infoY + 36);
+
+  const iCrVal = 1.0; // simplified
+  if (Math.abs(p.i) >= iCrVal && dhAbs > 0.01) {
+    ctx.fillStyle = '#e53e3e';
+    ctx.font = 'bold 13px "Microsoft YaHei", sans-serif';
+    ctx.fillText('⚠ i ≥ i_cr 可能流土！', infoX, infoY + 58);
+  } else {
+    ctx.fillStyle = '#38a169';
+    ctx.font = '13px "Microsoft YaHei", sans-serif';
+    ctx.fillText('✓ i < i_cr  安全', infoX, infoY + 58);
+  }
+
+  // Effective stress note
+  ctx.fillStyle = '#4a5568';
+  ctx.font = '11px "Microsoft YaHei", sans-serif';
+  ctx.fillText('向上渗流 → σ\' = γ\'z − jz', infoX, infoY + 78);
+  ctx.fillText('j = i·γ_w = ' + (Math.abs(p.i) * 10).toFixed(2) + ' kN/m³', infoX, infoY + 94);
+
+  // Dimension label
+  ctx.fillStyle = '#4a5568';
+  ctx.font = '12px "Microsoft YaHei", sans-serif';
+  ctx.textAlign = 'center';
+  ctx.fillText('L = ' + p.L.toFixed(1) + ' m', tankX + tankW + 30, soilTop + soilH / 2);
+  ctx.strokeStyle = '#718096';
+  ctx.lineWidth = 1;
+  ctx.beginPath();
+  ctx.moveTo(tankX + tankW + 10, soilTop);
+  ctx.lineTo(tankX + tankW + 10, soilBottom);
+  ctx.stroke();
+}
+
+function drawArrow(x1, y1, x2, y2, color) {
+  const angle = Math.atan2(y2 - y1, x2 - x1);
+  const headLen = 8;
+
+  ctx.strokeStyle = color;
+  ctx.fillStyle = color;
+  ctx.lineWidth = 2;
+  ctx.beginPath();
+  ctx.moveTo(x1, y1);
+  ctx.lineTo(x2, y2);
+  ctx.stroke();
+
+  ctx.beginPath();
+  ctx.moveTo(x2, y2);
+  ctx.lineTo(x2 - headLen * Math.cos(angle - Math.PI / 6), y2 - headLen * Math.sin(angle - Math.PI / 6));
+  ctx.lineTo(x2 - headLen * Math.cos(angle + Math.PI / 6), y2 - headLen * Math.sin(angle + Math.PI / 6));
+  ctx.closePath();
+  ctx.fill();
+}
+
+// Event listeners
+['h1Slider', 'h2Slider', 'kSlider', 'lSlider', 'aSlider'].forEach(id => {
+  document.getElementById(id).addEventListener('input', redraw);
+});
+
+// Initial draw
+redraw();
+</script>
+</body>
+</html>

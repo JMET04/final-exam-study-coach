@@ -1,0 +1,126 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2200" height="1500" viewBox="0 0 2200 1500">
+  <defs>
+    <style>
+      .bg { fill: #f7f5ef; }
+      .title { font: 800 52px "Microsoft YaHei", "Noto Sans CJK SC", Arial, sans-serif; fill: #1f2933; }
+      .subtitle { font: 400 28px "Microsoft YaHei", "Noto Sans CJK SC", Arial, sans-serif; fill: #52606d; }
+      .center { fill: #a23b2a; stroke: #7c2d22; stroke-width: 5; }
+      .centerText { font: 800 42px "Microsoft YaHei", "Noto Sans CJK SC", Arial, sans-serif; fill: #fffaf0; }
+      .branchTitle { font: 800 31px "Microsoft YaHei", "Noto Sans CJK SC", Arial, sans-serif; fill: #1f2933; }
+      .item { font: 400 25px "Microsoft YaHei", "Noto Sans CJK SC", Arial, sans-serif; fill: #334e68; }
+      .small { font: 400 22px "Microsoft YaHei", "Noto Sans CJK SC", Arial, sans-serif; fill: #52606d; }
+      .tag { font: 700 23px "Microsoft YaHei", "Noto Sans CJK SC", Arial, sans-serif; fill: #fff; }
+      .card { fill: #fffdf7; stroke-width: 3; rx: 22; }
+      .line { fill: none; stroke-width: 8; stroke-linecap: round; }
+      .thin { fill: none; stroke-width: 3; stroke-linecap: round; opacity: .72; }
+      .red { stroke: #b94132; }
+      .gold { stroke: #d69e2e; }
+      .green { stroke: #2f855a; }
+      .blue { stroke: #2b6cb0; }
+      .purple { stroke: #6b46c1; }
+      .teal { stroke: #2c7a7b; }
+      .redFill { fill: #b94132; }
+      .goldFill { fill: #d69e2e; }
+      .greenFill { fill: #2f855a; }
+      .blueFill { fill: #2b6cb0; }
+      .purpleFill { fill: #6b46c1; }
+      .tealFill { fill: #2c7a7b; }
+    </style>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="10" stdDeviation="10" flood-color="#1f2933" flood-opacity=".16"/>
+    </filter>
+  </defs>
+
+  <rect class="bg" width="2200" height="1500"/>
+  <text class="title" x="1100" y="88" text-anchor="middle">毛泽东思想和中国特色社会主义理论体系概论</text>
+  <text class="subtitle" x="1100" y="132" text-anchor="middle">先抓主线：马克思主义中国化时代化 → 革命、建设、改革的理论成果 → 用框架答题</text>
+
+  <path class="line red" d="M1040 710 C780 575 680 340 520 260"/>
+  <path class="line gold" d="M1020 740 C710 710 585 640 420 600"/>
+  <path class="line green" d="M1025 790 C750 890 665 1060 500 1190"/>
+  <path class="line blue" d="M1180 690 C1390 555 1485 340 1660 260"/>
+  <path class="line purple" d="M1195 755 C1460 710 1580 640 1780 600"/>
+  <path class="line teal" d="M1180 825 C1430 910 1515 1080 1680 1190"/>
+
+  <ellipse class="center" cx="1100" cy="760" rx="260" ry="125" filter="url(#shadow)"/>
+  <text class="centerText" x="1100" y="740" text-anchor="middle">毛概总框架</text>
+  <text class="centerText" x="1100" y="792" text-anchor="middle">六大核心模块</text>
+
+  <g filter="url(#shadow)">
+    <rect class="card red" x="130" y="190" width="650" height="300" rx="22"/>
+    <rect class="redFill" x="130" y="190" width="650" height="58" rx="22"/>
+    <text class="tag" x="455" y="228" text-anchor="middle">01 毛泽东思想</text>
+    <text class="branchTitle" x="165" y="295">考试最高频入口</text>
+    <text class="item" x="165" y="345">• 形成发展：革命和建设实践中形成</text>
+    <text class="item" x="165" y="388">• 主要内容：新民主主义、社会主义革命和建设等</text>
+    <text class="item" x="165" y="431">• 活的灵魂：实事求是、群众路线、独立自主</text>
+    <text class="small" x="165" y="468">答题抓法：定义 + 内容 + 地位 + 当代意义</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect class="card gold" x="120" y="550" width="690" height="295" rx="22"/>
+    <rect class="goldFill" x="120" y="550" width="690" height="58" rx="22"/>
+    <text class="tag" x="465" y="588" text-anchor="middle">02 新民主主义革命理论</text>
+    <text class="branchTitle" x="165" y="655">革命怎么胜利</text>
+    <text class="item" x="165" y="705">• 总路线：无产阶级领导，人民大众的革命</text>
+    <text class="item" x="165" y="748">• 对象：帝国主义、封建主义、官僚资本主义</text>
+    <text class="item" x="165" y="791">• 道路：农村包围城市，武装夺取政权</text>
+    <text class="small" x="165" y="828">答题抓法：总路线 + 基本纲领 + 三大法宝</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect class="card green" x="150" y="1020" width="720" height="305" rx="22"/>
+    <rect class="greenFill" x="150" y="1020" width="720" height="58" rx="22"/>
+    <text class="tag" x="510" y="1058" text-anchor="middle">03 社会主义改造理论</text>
+    <text class="branchTitle" x="195" y="1125">从新民主主义到社会主义</text>
+    <text class="item" x="195" y="1175">• 过渡时期总路线：一化三改</text>
+    <text class="item" x="195" y="1218">• 改造对象：农业、手工业、资本主义工商业</text>
+    <text class="item" x="195" y="1261">• 结果：社会主义基本制度在中国确立</text>
+    <text class="small" x="195" y="1298">答题抓法：必要性 + 道路 + 经验 + 意义</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect class="card blue" x="1430" y="190" width="690" height="300" rx="22"/>
+    <rect class="blueFill" x="1430" y="190" width="690" height="58" rx="22"/>
+    <text class="tag" x="1775" y="228" text-anchor="middle">04 建设道路初步探索</text>
+    <text class="branchTitle" x="1470" y="295">建设社会主义怎么探索</text>
+    <text class="item" x="1470" y="345">• 重要成果：调动一切积极因素建设社会主义</text>
+    <text class="item" x="1470" y="388">• 经验教训：不能照搬别国模式</text>
+    <text class="item" x="1470" y="431">• 意义：为后续改革开放提供经验和理论准备</text>
+    <text class="small" x="1470" y="468">答题抓法：成果 + 曲折 + 经验教训</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect class="card purple" x="1380" y="550" width="770" height="330" rx="22"/>
+    <rect class="purpleFill" x="1380" y="550" width="770" height="58" rx="22"/>
+    <text class="tag" x="1765" y="588" text-anchor="middle">05 中国特色社会主义理论体系</text>
+    <text class="branchTitle" x="1425" y="655">改革开放后的理论成果</text>
+    <text class="item" x="1425" y="705">• 邓小平理论：什么是社会主义、怎样建设社会主义</text>
+    <text class="item" x="1425" y="748">• “三个代表”：建设什么样的党、怎样建设党</text>
+    <text class="item" x="1425" y="791">• 科学发展观：以人为本，全面协调可持续</text>
+    <text class="small" x="1425" y="834">答题抓法：时代问题 + 核心观点 + 历史地位</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect class="card teal" x="1370" y="1020" width="760" height="305" rx="22"/>
+    <rect class="tealFill" x="1370" y="1020" width="760" height="58" rx="22"/>
+    <text class="tag" x="1750" y="1058" text-anchor="middle">06 考试答题模板</text>
+    <text class="branchTitle" x="1415" y="1125">把背诵转成得分</text>
+    <text class="item" x="1415" y="1175">• 名词解释：定义 + 关键词 + 地位</text>
+    <text class="item" x="1415" y="1218">• 简答题：分点列框架，每点一句解释</text>
+    <text class="item" x="1415" y="1261">• 论述/材料：背景 + 理论 + 材料对应 + 结论</text>
+    <text class="small" x="1415" y="1298">答题抓法：先框架，后细节，最后回扣题目</text>
+  </g>
+
+  <path class="thin red" d="M780 360 C890 450 970 550 1040 700"/>
+  <path class="thin gold" d="M810 700 C900 720 975 735 1020 745"/>
+  <path class="thin green" d="M870 1160 C965 1010 1015 920 1060 860"/>
+  <path class="thin blue" d="M1430 350 C1330 460 1245 555 1165 705"/>
+  <path class="thin purple" d="M1380 720 C1295 735 1240 748 1198 758"/>
+  <path class="thin teal" d="M1370 1160 C1285 1020 1220 920 1165 850"/>
+
+  <g>
+    <rect x="720" y="1355" width="760" height="78" rx="18" fill="#fffdf7" stroke="#d69e2e" stroke-width="3"/>
+    <text class="branchTitle" x="1100" y="1406" text-anchor="middle">今天先学：01 毛泽东思想 = 主要内容 + 活的灵魂 + 历史地位</text>
+  </g>
+</svg>

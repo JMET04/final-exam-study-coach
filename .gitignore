@@ -1,0 +1,22 @@
+# Private study materials and generated personal state
+*.pdf
+*.ppt
+*.pptx
+*.doc
+*.docx
+*.zip
+*.7z
+*.rar
+test_outputs/
+extracted/
+materials/
+private/
+*.log
+__pycache__/
+*.pyc
+
+# OS/editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

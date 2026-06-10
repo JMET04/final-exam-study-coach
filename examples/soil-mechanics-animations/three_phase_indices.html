@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>土的三相组成与指标换算 - 交互式演示</title>
+<style>
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: "Microsoft YaHei", "PingFang SC", system-ui, sans-serif;
+  background: #eef3f1;
+  color: #17251f;
+}
+.header {
+  background: linear-gradient(135deg, #255347, #6b5a35);
+  color: #fff;
+  padding: 22px 24px;
+  text-align: center;
+}
+.header h1 { margin: 0 0 6px; font-size: 26px; letter-spacing: 0; }
+.header p { margin: 0; opacity: .9; font-size: 14px; }
+.layout {
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 18px;
+}
+@media (max-width: 860px) {
+  .layout { grid-template-columns: 1fr; }
+}
+.panel, .stage, .note, .quiz {
+  background: #fff;
+  border: 1px solid #dce5df;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(23, 37, 31, .08);
+}
+.panel { padding: 16px; }
+.panel h2, .stage h2, .quiz h2 { margin: 0 0 12px; font-size: 17px; color: #255347; }
+.control { margin-bottom: 15px; }
+.control label {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  font-size: 13px;
+  font-weight: 700;
+  margin-bottom: 6px;
+  color: #31453c;
+}
+.value {
+  min-width: 70px;
+  text-align: right;
+  color: #6b5a35;
+}
+input[type=range] { width: 100%; accent-color: #2c7a63; }
+.buttons { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 10px; }
+button, .link-btn {
+  border: 0;
+  border-radius: 6px;
+  background: #2c7a63;
+  color: #fff;
+  padding: 10px 12px;
+  font-weight: 700;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+}
+button.secondary, .link-btn.secondary { background: #6b5a35; }
+.stage { padding: 18px; min-height: 540px; }
+.visual-grid {
+  display: grid;
+  grid-template-columns: minmax(260px, 420px) 1fr;
+  gap: 18px;
+  align-items: stretch;
+}
+@media (max-width: 900px) {
+  .visual-grid { grid-template-columns: 1fr; }
+}
+.soil-box {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  aspect-ratio: 1 / 1.18;
+  margin: 0 auto;
+  border: 3px solid #31453c;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #f7faf8;
+}
+.phase {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  text-shadow: 0 1px 0 rgba(255,255,255,.5);
+  transition: height .35s ease, top .35s ease;
+}
+.air { background: repeating-linear-gradient(-45deg, #f7faf8, #f7faf8 10px, #e4ece7 10px, #e4ece7 20px); color: #48625a; }
+.water { background: linear-gradient(180deg, #b9e4f8, #5fb0d9); color: #113d52; }
+.solid { background: linear-gradient(180deg, #c69b62, #8a6234); color: #2a1708; }
+.particles {
+  position: absolute;
+  inset: auto 0 0;
+  pointer-events: none;
+}
+.particle {
+  position: absolute;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: rgba(67, 43, 20, .65);
+  animation: float 2.6s ease-in-out infinite;
+}
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+.formula-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(160px, 1fr));
+  gap: 10px;
+}
+@media (max-width: 620px) {
+  .formula-grid { grid-template-columns: 1fr; }
+}
+.metric {
+  border: 1px solid #dce5df;
+  border-radius: 8px;
+  padding: 11px;
+  background: #fbfcfb;
+}
+.metric strong { display: block; color: #255347; font-size: 15px; margin-bottom: 4px; }
+.metric .num { font-size: 24px; color: #6b5a35; font-weight: 900; }
+.metric small { display: block; color: #60766d; margin-top: 4px; line-height: 1.45; }
+.note {
+  margin-top: 14px;
+  padding: 13px;
+  color: #31453c;
+  line-height: 1.65;
+}
+.note b { color: #255347; }
+.quiz {
+  margin-top: 16px;
+  padding: 16px;
+}
+.quiz ol { margin: 0 0 0 20px; padding: 0; line-height: 1.7; }
+.quiz li { margin-bottom: 6px; }
+.status {
+  margin-top: 12px;
+  padding: 10px 12px;
+  background: #eef7f3;
+  border-left: 4px solid #2c7a63;
+  color: #255347;
+  font-size: 13px;
+  line-height: 1.55;
+}
+</style>
+</head>
+<body>
+<header class="header">
+  <h1>土的三相组成与指标换算</h1>
+  <p>先把土看成“土粒 + 水 + 气”的系统，再让 w、e、n、Sr、重度从图里长出来。</p>
+</header>
+
+<main class="layout">
+  <aside class="panel">
+    <h2>拖动三相状态</h2>
+    <div class="control">
+      <label>土粒体积 Vs <span class="value" id="vsText">42.0</span></label>
+      <input id="vs" type="range" min="25" max="70" step="1" value="42">
+    </div>
+    <div class="control">
+      <label>水体积 Vw <span class="value" id="vwText">34.0</span></label>
+      <input id="vw" type="range" min="0" max="60" step="1" value="34">
+    </div>
+    <div class="control">
+      <label>气体积 Va <span class="value" id="vaText">24.0</span></label>
+      <input id="va" type="range" min="0" max="60" step="1" value="24">
+    </div>
+    <div class="control">
+      <label>土粒比重 Gs <span class="value" id="gsText">2.70</span></label>
+      <input id="gs" type="range" min="2.55" max="2.80" step="0.01" value="2.70">
+    </div>
+    <div class="buttons">
+      <button id="presetDry">偏干土</button>
+      <button id="presetSat" class="secondary">饱和土</button>
+      <button id="presetLoose">孔隙大</button>
+      <button id="presetDense" class="secondary">密实土</button>
+    </div>
+    <div class="status" id="statusText"></div>
+    <div class="buttons">
+      <a class="link-btn secondary" href="index.html">返回动画入口</a>
+      <button id="quizBtn">显示检查点</button>
+    </div>
+  </aside>
+
+  <section class="stage">
+    <h2>三相图：先看体积，再看指标</h2>
+    <div class="visual-grid">
+      <div class="soil-box" aria-label="土的三相组成动态图">
+        <div class="phase air" id="airPhase">气 Va</div>
+        <div class="phase water" id="waterPhase">水 Vw</div>
+        <div class="phase solid" id="solidPhase">土粒 Vs</div>
+        <div class="particles" id="particles"></div>
+      </div>
+      <div>
+        <div class="formula-grid">
+          <div class="metric">
+            <strong>孔隙比 e = Vv / Vs</strong>
+            <span class="num" id="eVal">0.00</span>
+            <small>孔隙体积与土粒体积相比。压密、沉降、密实度会反复用。</small>
+          </div>
+          <div class="metric">
+            <strong>孔隙率 n = Vv / V</strong>
+            <span class="num" id="nVal">0%</span>
+            <small>孔隙体积占总体积的比例。注意 n 和 e 不是一回事。</small>
+          </div>
+          <div class="metric">
+            <strong>饱和度 Sr = Vw / Vv</strong>
+            <span class="num" id="srVal">0%</span>
+            <small>水占孔隙的比例。Va 变成 0 时，Sr 才是 100%。</small>
+          </div>
+          <div class="metric">
+            <strong>含水率 w = mw / ms</strong>
+            <span class="num" id="wVal">0%</span>
+            <small>质量比，不是体积比。考试最容易把 w 和 Sr 混。</small>
+          </div>
+          <div class="metric">
+            <strong>干重度 gamma_d</strong>
+            <span class="num" id="gdVal">0</span>
+            <small>只看土粒质量除以总体积，可由 Gs、e 推出来。</small>
+          </div>
+          <div class="metric">
+            <strong>天然重度 gamma</strong>
+            <span class="num" id="gVal">0</span>
+            <small>土粒和水一起算重量，气体重量通常忽略。</small>
+          </div>
+        </div>
+        <div class="note">
+          <b>做题顺序：</b>先画三相图，填已知量；再找目标量属于“体积比、质量比还是重度”；最后用
+          e、n、Sr、w、Gs 之间的桥接关系换算。不要上来背一堆公式。
+        </div>
+      </div>
+    </div>
+    <div class="quiz" id="quiz" hidden>
+      <h2>暂停检查点</h2>
+      <ol>
+        <li>只增加 Vw，不改变 Vs 和 Va：w、Sr、e、n 分别怎么变？</li>
+        <li>只减少 Va，让水填满孔隙：哪个指标会接近 100%？哪个指标不一定变？</li>
+        <li>只压密土体，让 Vv 变小：e 和 gamma_d 会怎样？为什么？</li>
+        <li>闭眼默写：e、n、Sr、w 四个指标的分子分母分别是什么。</li>
+      </ol>
+    </div>
+  </section>
+</main>
+
+<script>
+const rhoW = 1.0;
+const gravityFactor = 9.81;
+const $ = (id) => document.getElementById(id);
+const sliders = ["vs", "vw", "va", "gs"].map($);
+
+function clampWaterToVoid() {
+  const vw = Number($("vw").value);
+  const va = Number($("va").value);
+  if (vw + va < 1) $("va").value = 1;
+}
+
+function fmt(x, digits = 2) {
+  return Number.isFinite(x) ? x.toFixed(digits) : "0.00";
+}
+
+function setPreset(type) {
+  const presets = {
+    dry: { vs: 46, vw: 12, va: 42, gs: 2.70 },
+    sat: { vs: 42, vw: 58, va: 0, gs: 2.70 },
+    loose: { vs: 32, vw: 36, va: 32, gs: 2.68 },
+    dense: { vs: 62, vw: 24, va: 14, gs: 2.72 }
+  };
+  Object.entries(presets[type]).forEach(([key, value]) => $(key).value = value);
+  update();
+}
+
+function updateParticles(solidPct) {
+  const box = $("particles");
+  box.style.height = solidPct + "%";
+  box.innerHTML = "";
+  for (let i = 0; i < 34; i++) {
+    const dot = document.createElement("span");
+    dot.className = "particle";
+    dot.style.left = (5 + Math.random() * 88) + "%";
+    dot.style.bottom = (4 + Math.random() * Math.max(8, solidPct - 10)) + "%";
+    dot.style.animationDelay = (Math.random() * 1.8) + "s";
+    box.appendChild(dot);
+  }
+}
+
+function update() {
+  clampWaterToVoid();
+  const vs = Number($("vs").value);
+  const vw = Number($("vw").value);
+  const va = Number($("va").value);
+  const gs = Number($("gs").value);
+  const vv = vw + va;
+  const total = vs + vv;
+  const ms = gs * rhoW * vs;
+  const mw = rhoW * vw;
+  const e = vv / vs;
+  const n = vv / total;
+  const sr = vv === 0 ? 0 : vw / vv;
+  const w = mw / ms;
+  const gammaD = (ms / total) * gravityFactor;
+  const gamma = ((ms + mw) / total) * gravityFactor;
+
+  $("vsText").textContent = fmt(vs, 1);
+  $("vwText").textContent = fmt(vw, 1);
+  $("vaText").textContent = fmt(va, 1);
+  $("gsText").textContent = fmt(gs, 2);
+  $("eVal").textContent = fmt(e, 2);
+  $("nVal").textContent = fmt(n * 100, 1) + "%";
+  $("srVal").textContent = fmt(sr * 100, 1) + "%";
+  $("wVal").textContent = fmt(w * 100, 1) + "%";
+  $("gdVal").textContent = fmt(gammaD, 2);
+  $("gVal").textContent = fmt(gamma, 2);
+
+  const airPct = va / total * 100;
+  const waterPct = vw / total * 100;
+  const solidPct = vs / total * 100;
+  $("airPhase").style.top = "0";
+  $("airPhase").style.height = airPct + "%";
+  $("waterPhase").style.top = airPct + "%";
+  $("waterPhase").style.height = waterPct + "%";
+  $("solidPhase").style.top = (airPct + waterPct) + "%";
+  $("solidPhase").style.height = solidPct + "%";
+  $("airPhase").textContent = airPct < 7 ? "" : "气 Va";
+  $("waterPhase").textContent = waterPct < 7 ? "" : "水 Vw";
+  $("solidPhase").textContent = solidPct < 9 ? "" : "土粒 Vs";
+  updateParticles(solidPct);
+
+  let status = "现在先观察：";
+  if (sr > .98) status += "孔隙几乎被水填满，这是饱和土；有效应力和渗流题会经常从这里接上。";
+  else if (e > 1.2) status += "孔隙比偏大，土较疏松；后面沉降和压密会让 Vv 变小。";
+  else if (w > .25) status += "含水率较高，但不等于饱和度高，先分清质量比和体积比。";
+  else status += "三相都比较明显，最适合练习指标换算。";
+  $("statusText").textContent = status;
+}
+
+sliders.forEach((slider) => slider.addEventListener("input", update));
+$("presetDry").addEventListener("click", () => setPreset("dry"));
+$("presetSat").addEventListener("click", () => setPreset("sat"));
+$("presetLoose").addEventListener("click", () => setPreset("loose"));
+$("presetDense").addEventListener("click", () => setPreset("dense"));
+$("quizBtn").addEventListener("click", () => {
+  $("quiz").hidden = !$("quiz").hidden;
+});
+update();
+</script>
+</body>
+</html>

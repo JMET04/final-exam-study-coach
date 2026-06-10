@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>莫尔-库伦破坏包线 — 交互式演示</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: "Microsoft YaHei", "PingFang SC", system-ui, sans-serif; background: #f0f4f8; color: #1a202c; min-height: 100vh; }
+.header { background: linear-gradient(135deg, #6b46c1, #805ad5); color: #fff; padding: 20px 24px; text-align: center; }
+.header h1 { font-size: 24px; margin-bottom: 4px; }
+.header p { font-size: 14px; opacity: 0.85; }
+.container { max-width: 1000px; margin: 0 auto; padding: 20px; display: grid; grid-template-columns: 300px 1fr; gap: 20px; }
+@media (max-width: 768px) { .container { grid-template-columns: 1fr; } }
+.controls { background: #fff; border-radius: 12px; padding: 18px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+.controls h3 { font-size: 16px; color: #6b46c1; margin-bottom: 10px; border-bottom: 2px solid #e9d8fd; padding-bottom: 8px; }
+.control-group { margin-bottom: 12px; }
+.control-group label { display: flex; justify-content: space-between; font-size: 13px; font-weight: 600; margin-bottom: 3px; color: #4a5568; }
+.control-group .val { color: #6b46c1; }
+.control-group input[type=range] { width: 100%; }
+.canvas-area { background: #fff; border-radius: 12px; padding: 16px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+canvas { display: block; width: 100%; }
+.info-panel { background: #faf5ff; border-radius: 8px; padding: 14px; margin-top: 8px; }
+.info-panel .row { display: flex; justify-content: space-between; font-size: 13px; padding: 3px 0; }
+.info-panel .row .label { color: #718096; }
+.info-panel .row .value { font-weight: 600; color: #2d3748; }
+.questions { background: #fffbe6; border: 1px solid #f6e05e; border-radius: 8px; padding: 14px; margin-top: 14px; }
+.questions h4 { color: #975a16; margin-bottom: 6px; font-size: 14px; }
+.questions ul { margin-left: 18px; font-size: 13px; color: #744210; }
+.questions li { margin-bottom: 4px; }
+.status-badge { display: inline-block; padding: 3px 10px; border-radius: 12px; font-size: 13px; font-weight: 600; }
+.safe { background: #c6f6d5; color: #276749; }
+.failure { background: #fed7d7; color: #9b2c2c; }
+.critical { background: #fefcbf; color: #975a16; }
+</style>
+</head>
+<body>
+<div class="header">
+  <h1>莫尔-库伦破坏包线</h1>
+  <p>τ_f = c + σ·tan φ &nbsp;|&nbsp; 可拖动参数滑块 &nbsp;|&nbsp; 实时判断破坏状态</p>
+</div>
+
+<div class="container">
+  <div class="controls">
+    <h3>应力参数</h3>
+    <div class="control-group">
+      <label>大主应力 σ₁ <span class="val" id="s1Val">300 kPa</span></label>
+      <input type="range" id="s1Slider" min="50" max="600" step="1" value="300">
+    </div>
+    <div class="control-group">
+      <label>小主应力 σ₃ <span class="val" id="s3Val">100 kPa</span></label>
+      <input type="range" id="s3Slider" min="0" max="500" step="1" value="100">
+    </div>
+
+    <h3 style="margin-top:16px;">强度参数</h3>
+    <div class="control-group">
+      <label>黏聚力 c <span class="val" id="cVal">30 kPa</span></label>
+      <input type="range" id="cSlider" min="0" max="100" step="0.5" value="30">
+    </div>
+    <div class="control-group">
+      <label>内摩擦角 φ <span class="val" id="phiVal">30°</span></label>
+      <input type="range" id="phiSlider" min="5" max="45" step="0.5" value="30">
+    </div>
+
+    <div class="info-panel" id="infoPanel">
+      <h4 style="font-size:14px; color:#6b46c1; margin-bottom:8px;">实时数据</h4>
+      <div class="row"><span class="label">圆心 σ_center</span><span class="value" id="infoCenter">—</span></div>
+      <div class="row"><span class="label">半径 R</span><span class="value" id="infoRadius">—</span></div>
+      <div class="row"><span class="label">tan φ</span><span class="value" id="infoTanPhi">—</span></div>
+      <div class="row"><span class="label">τ_f at σ_center</span><span class="value" id="infoTauF">—</span></div>
+      <div style="margin-top:8px; padding-top:8px; border-top:1px solid #e9d8fd;">
+        <span id="statusBadge" class="status-badge safe">安全</span>
+      </div>
+    </div>
+
+    <div class="questions">
+      <h4>思考题</h4>
+      <ul>
+        <li>增大 c 值，破坏线如何移动？对稳定性有何影响？</li>
+        <li>保持 σ₁ 不变，增大 σ₃，莫尔圆如何变化？</li>
+        <li>莫尔圆与破坏线相切代表什么状态？</li>
+        <li>对于无黏性土 (c=0)，小主应力为零时能否稳定？</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="canvas-area">
+    <canvas id="mainCanvas" width="660" height="520"></canvas>
+  </div>
+</div>
+
+<script>
+const canvas = document.getElementById('mainCanvas');
+const ctx = canvas.getContext('2d');
+const W = canvas.width, H = canvas.height;
+
+const MARGIN = { top: 40, right: 40, bottom: 60, left: 70 };
+const PW = W - MARGIN.left - MARGIN.right;
+const PH = H - MARGIN.top - MARGIN.bottom;
+
+function getParams() {
+  return {
+    s1: parseFloat(document.getElementById('s1Slider').value),
+    s3: parseFloat(document.getElementById('s3Slider').value),
+    c: parseFloat(document.getElementById('cSlider').value),
+    phi: parseFloat(document.getElementById('phiSlider').value)
+  };
+}
+
+function redraw() {
+  const p = getParams();
+  const phiRad = p.phi * Math.PI / 180;
+
+  // Auto-range based on data
+  const maxSigma = Math.max(p.s1, p.c * 3) * 1.25;
+  const maxTau = maxSigma * 0.7;
+
+  function toX(sigma) { return MARGIN.left + (sigma / maxSigma) * PW; }
+  function toY(tau) { return MARGIN.top + PH - (tau / maxTau) * PH; }
+  function fromX(px) { return (px - MARGIN.left) / PW * maxSigma; }
+
+  // Clear
+  ctx.clearRect(0, 0, W, H);
+
+  // Grid
+  ctx.strokeStyle = '#e2e8f0';
+  ctx.lineWidth = 1;
+  const gridLines = 8;
+  for (let i = 0; i <= gridLines; i++) {
+    const x = toX(maxSigma * i / gridLines);
+    const y = MARGIN.top + PH - PH * i / gridLines;
+    ctx.beginPath(); ctx.moveTo(x, MARGIN.top); ctx.lineTo(x, MARGIN.top + PH); ctx.stroke();
+    ctx.beginPath(); ctx.moveTo(MARGIN.left, y); ctx.lineTo(MARGIN.left + PW, y); ctx.stroke();
+  }
+
+  // Axes
+  ctx.strokeStyle = '#4a5568';
+  ctx.lineWidth = 2;
+  // Sigma axis (horizontal)
+  ctx.beginPath(); ctx.moveTo(MARGIN.left, MARGIN.top + PH); ctx.lineTo(MARGIN.left + PW, MARGIN.top + PH); ctx.stroke();
+  // Tau axis (vertical)
+  ctx.beginPath(); ctx.moveTo(MARGIN.left, MARGIN.top); ctx.lineTo(MARGIN.left, MARGIN.top + PH); ctx.stroke();
+
+  // Axis labels
+  ctx.fillStyle = '#4a5568';
+  ctx.font = '14px "Microsoft YaHei", sans-serif';
+  ctx.textAlign = 'center';
+  ctx.fillText('正应力 σ (kPa)', MARGIN.left + PW / 2, MARGIN.top + PH + 40);
+  ctx.save();
+  ctx.translate(18, MARGIN.top + PH / 2);
+  ctx.rotate(-Math.PI / 2);
+  ctx.fillText('剪应力 τ (kPa)', 0, 0);
+  ctx.restore();
+
+  // Sigma axis ticks
+  ctx.fillStyle = '#718096';
+  ctx.font = '11px "Microsoft YaHei", sans-serif';
+  ctx.textAlign = 'center';
+  for (let i = 0; i <= gridLines; i++) {
+    const val = maxSigma * i / gridLines;
+    ctx.fillText(Math.round(val), toX(val), MARGIN.top + PH + 18);
+  }
+
+  // Tau axis ticks
+  ctx.textAlign = 'right';
+  for (let i = 0; i <= gridLines; i++) {
+    const val = maxTau * i / gridLines;
+    ctx.fillText(Math.round(val), MARGIN.left - 8, toY(val) + 5);
+  }
+
+  // === Draw Mohr-Coulomb failure envelope ===
+  ctx.strokeStyle = '#e53e3e';
+  ctx.lineWidth = 2.5;
+  ctx.setLineDash([]);
+  ctx.beginPath();
+
+  // Line: τ = c + σ * tan(φ)
+  // Start from σ=0
+  const tau0 = p.c;
+  const xStart = toX(0);
+  const yStart = toY(tau0);
+
+  // End at max sigma
+  const tauEnd = p.c + maxSigma * Math.tan(phiRad);
+  const xEnd = toX(maxSigma);
+  const yEnd = toY(Math.min(tauEnd, maxTau * 1.1));
+
+  ctx.moveTo(xStart, Math.max(Math.min(yStart, MARGIN.top), MARGIN.top));
+  ctx.lineTo(xEnd, Math.max(yEnd, MARGIN.top));
+
+  // Extend line through valid range
+  // Better: clip to visible area
+  ctx.save();
+  ctx.beginPath();
+  ctx.rect(MARGIN.left, MARGIN.top, PW, PH);
+  ctx.clip();
+
+  // Draw full line
+  const lineX0 = MARGIN.left;
+  const lineSigma0 = 0;
+  const lineY0 = toY(p.c);
+  const lineX1 = MARGIN.left + PW;
+  const lineSigma1 = maxSigma;
+  const lineY1 = toY(p.c + maxSigma * Math.tan(phiRad));
+
+  ctx.strokeStyle = '#e53e3e';
+  ctx.lineWidth = 2.5;
+  ctx.beginPath();
+  ctx.moveTo(toX(-p.c / Math.tan(phiRad)), toY(0));
+  ctx.lineTo(lineX1, lineY1);
+  ctx.stroke();
+
+  // Failure line label
+  ctx.fillStyle = '#e53e3e';
+  ctx.font = 'bold 13px "Microsoft YaHei", sans-serif';
+  ctx.textAlign = 'left';
+  ctx.fillText('τ_f = c + σ·tan φ', toX(maxSigma * 0.55), toY(p.c + maxSigma * 0.55 * Math.tan(phiRad)) - 10);
+
+  // c intercept
+  ctx.fillStyle = '#e53e3e';
+  ctx.beginPath();
+  ctx.arc(toX(0), toY(p.c), 5, 0, Math.PI * 2);
+  ctx.fill();
+  ctx.fillText('c = ' + p.c + ' kPa', toX(0) + 10, toY(p.c) - 8);
+
+  // Phi angle indicator
+  const phiArcR = 60;
+  const phiCx = toX(maxSigma * 0.15);
+  const phiCy = toY(p.c + maxSigma * 0.15 * Math.tan(phiRad));
+  // Actually let's draw from intercept
+  const ix = toX(0);
+  const iy = toY(p.c);
+  ctx.strokeStyle = '#e53e3e';
+  ctx.lineWidth = 1;
+  ctx.setLineDash([3, 3]);
+  ctx.beginPath();
+  ctx.arc(ix, iy, 50, -phiRad, 0);
+  ctx.stroke();
+  ctx.setLineDash([]);
+  ctx.fillText('φ = ' + p.phi + '°', ix + 55, iy - 20);
+
+  // === Draw Mohr's circle ===
+  const center = (p.s1 + p.s3) / 2;
+  const radius = (p.s1 - p.s3) / 2;
+
+  const cx = toX(center);
+  const cy = toY(radius); // circle top is at tau=radius
+  const rPx = (radius / maxTau) * PH;
+
+  // Circle
+  ctx.strokeStyle = '#3182ce';
+  ctx.lineWidth = 3;
+  ctx.beginPath();
+  ctx.arc(cx, MARGIN.top + PH, rPx, Math.PI, 0); // only upper half
+  ctx.stroke();
+
+  // Circle center
+  ctx.fillStyle = '#3182ce';
+  ctx.beginPath();
+  ctx.arc(cx, MARGIN.top + PH, 5, 0, Math.PI * 2);
+  ctx.fill();
+
+  // Sigma_1 and Sigma_3 markers
+  const s3x = toX(p.s3);
+  const s1x = toX(p.s1);
+  const axisY = MARGIN.top + PH;
+
+  ctx.fillStyle = '#dd6b20';
+  ctx.beginPath();
+  ctx.arc(s3x, axisY, 6, 0, Math.PI * 2);
+  ctx.fill();
+  ctx.fillText('σ₃ = ' + p.s3, s3x - 10, axisY + 24);
+
+  ctx.beginPath();
+  ctx.arc(s1x, axisY, 6, 0, Math.PI * 2);
+  ctx.fill();
+  ctx.fillText('σ₁ = ' + p.s1, s1x - 30, axisY + 24);
+
+  // Pole (origin of planes) at σ₃
+  // The pole is at (σ₃, 0) — actually the pole for Mohr's circle in soil mechanics
+  // is at (σ₃, 0) when considering major principal plane as horizontal
+  ctx.fillStyle = '#805ad5';
+  ctx.beginPath();
+  ctx.arc(s3x, axisY, 4, 0, Math.PI * 2);
+  ctx.fill();
+  ctx.fillText('极点', s3x + 10, axisY - 12);
+
+  // Draw line from pole to circle — representing a plane at some angle
+  // Actually, for simplicity, draw the major principal plane and failure plane
+  // Failure plane angle from pole: α_f = 45° + φ/2
+
+  // Draw a representative point on the circle
+  const failAngle = 45 + p.phi / 2;
+  const failAngleRad = failAngle * Math.PI / 180;
+  const fpSigma = center - radius * Math.cos(2 * failAngleRad);
+  const fpTau = radius * Math.sin(2 * failAngleRad);
+
+  // Point on failure envelope
+  // τ = c + σ·tan(φ), intersect with Mohr circle?
+  // Check if circle touches envelope
+  const dCenter = center;
+  const sinPhi = Math.sin(phiRad);
+  const cosPhi = Math.cos(phiRad);
+  const tanPhi = Math.tan(phiRad);
+
+  // Distance from center to failure line: (c + center*tanPhi) / sqrt(1+tanPhi^2) * cosPhi = c*cosPhi + center*sinPhi
+  const distTau = p.c * cosPhi + center * sinPhi;
+  const margin = distTau - radius;
+
+  // Draw the failure point on circle (closest to envelope)
+  const fpX = toX(center - radius * sinPhi);
+  const fpY = MARGIN.top + PH - (radius * cosPhi / maxTau) * PH;
+
+  // Closer to the envelope
+  const contactSigma = center - radius * sinPhi;
+  const contactTau = radius * cosPhi;
+  const cpx = toX(Math.max(0, contactSigma));
+  const cpy = MARGIN.top + PH - (Math.min(maxTau, contactTau) / maxTau) * PH;
+
+  ctx.fillStyle = '#dd6b20';
+  ctx.beginPath();
+  ctx.arc(cpx, cpy, 5, 0, Math.PI * 2);
+  ctx.fill();
+
+  // Annotate
+  ctx.fillStyle = '#dd6b20';
+  ctx.font = '12px "Microsoft YaHei", sans-serif';
+  ctx.textAlign = 'left';
+  ctx.fillText('切点', cpx + 8, cpy - 8);
+
+  // Draw dashed line from center to contact point
+  ctx.setLineDash([4, 4]);
+  ctx.strokeStyle = '#805ad5';
+  ctx.lineWidth = 1.5;
+  ctx.beginPath();
+  ctx.moveTo(cx, axisY);
+  ctx.lineTo(cpx, cpy);
+  ctx.stroke();
+  ctx.setLineDash([]);
+
+  // Label radius
+  ctx.fillStyle = '#805ad5';
+  ctx.fillText('R = ' + radius.toFixed(1), cx + 8, axisY - radius/maxTau * PH / 2);
+
+  ctx.restore();
+
+  // === Status ===
+  const status = margin > 1 ? 'safe' : (margin > -1 ? 'critical' : 'failure');
+  const badge = document.getElementById('statusBadge');
+  badge.textContent = status === 'safe' ? '✓ 安全 — 莫尔圆在包线内' :
+    (status === 'critical' ? '⚠ 临界 — 莫尔圆与包线相切' : '✗ 破坏 — 莫尔圆超出包线');
+  badge.className = 'status-badge ' + (status === 'safe' ? 'safe' : (status === 'critical' ? 'critical' : 'failure'));
+
+  // Info panel
+  document.getElementById('infoCenter').textContent = center.toFixed(1) + ' kPa';
+  document.getElementById('infoRadius').textContent = radius.toFixed(1) + ' kPa';
+  document.getElementById('infoTanPhi').textContent = Math.tan(phiRad).toFixed(3);
+  document.getElementById('infoTauF').textContent = (p.c + center * Math.tan(phiRad)).toFixed(1) + ' kPa';
+
+  // Update slider display values
+  document.getElementById('s1Val').textContent = p.s1 + ' kPa';
+  document.getElementById('s3Val').textContent = p.s3 + ' kPa';
+  document.getElementById('cVal').textContent = p.c + ' kPa';
+  document.getElementById('phiVal').textContent = p.phi + '°';
+}
+
+// Event listeners
+['s1Slider', 's3Slider', 'cSlider', 'phiSlider'].forEach(id => {
+  document.getElementById(id).addEventListener('input', redraw);
+});
+
+// Initial draw
+redraw();
+</script>
+</body>
+</html>

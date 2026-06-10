@@ -1,0 +1,4 @@
+interface:
+  display_name: "期末复习教练"
+  short_description: "先建立通用课程模型，再按材料生成提分计划、练习和带学复盘。"
+  default_prompt: "Use $final-exam-study-coach 帮我先把这门课建成通用课程模型，再根据材料、范围、往年题和剩余时间制定期末提分计划。"
