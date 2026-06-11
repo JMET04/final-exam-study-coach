@@ -13,7 +13,7 @@ Codex exposes token usage at the active goal level, not per file or per generate
 | Work item | Observed tokens | Observed time | Evidence |
 | --- | ---: | ---: | --- |
 | Soil mechanics principle animation goal | 327,000 | about 10 min 13 sec | Codex goal completion counter after finishing the animation and skill-rule update |
-| Final packaging/GitHub publishing goal, latest packaging snapshot | 165,080 | about 10 min 7 sec | Codex active goal counter while building the GitHub release package |
+| Final packaging/GitHub publishing goal, latest packaging snapshot | 227,634 | about 12 min 3 sec | Codex active goal counter while building the GitHub release package and upload-ready artifacts |
 
 ## Animation-Specific Estimate
 
