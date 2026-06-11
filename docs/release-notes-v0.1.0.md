@@ -24,6 +24,10 @@ These examples demonstrate how the skill can use concrete animated principles be
 
 ## Showcase Assets
 
+- `assets/product-showcase-real.png`: real-output promotional image combining an actual soil mechanics animation page, the generated Mao theory mind map, and real guided tutoring excerpts.
+- `assets/soil-three-phase-real.png`: screenshot of the generated soil mechanics three-phase interactive page.
+- `assets/soil-animation-index-real.png`: screenshot of the generated soil mechanics animation entry page.
+- `assets/mao-mindmap-real.png`: rendered screenshot of the generated Mao theory mind map.
 - `assets/soil-mechanics-showcase.svg`: public showcase for STEM concrete-principle animation onboarding.
 - `assets/mao-interaction-showcase.svg`: anonymized showcase for guided humanities tutoring with recall checks.
 - `assets/mao-mindmap-clear.svg`: generated clear mind map for Mao theory review.
