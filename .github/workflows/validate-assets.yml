@@ -1,0 +1,15 @@
+name: Validate public book assets
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python optional/book-spirit/scripts/book_asset.py validate-catalog optional/book-library
+      - run: python tests/test_book_assets.py optional/book-library
+      - run: python tests/test_progress_evidence.py
