@@ -1,0 +1,1087 @@
+{
+  "format": "book-spirit-public-book",
+  "format_version": "1.0",
+  "book_id": "book_a1b3ea6805d54e63",
+  "title": "高等数学（上册）",
+  "edition": "同济大学数学科学学院第8版上册·2023年6月第1次印刷·ISBN 978-7-04-058981-8",
+  "asset_revision": "2026-11-26",
+  "knowledge_snapshot": "read-only-library-2026-11-26",
+  "content_license": "MIT",
+  "source_rights": "Original explanatory knowledge and authored visualizations only. Referenced books remain copyrighted by their respective owners. No textbook pages, scans or OCR are redistributed.",
+  "authority_mode": "this book and edition; course-specific teacher precedence is a separate explicit mode",
+  "coverage": {
+    "registered_pages": 442,
+    "reviewed_pages": 67,
+    "knowledge_covered_pages": 67,
+    "source_review_complete": false,
+    "whole_book_expert_complete": false,
+    "fresh_topics": 74,
+    "unavailable_topics": 0,
+    "animation_points": 25,
+    "animation_segments": 58,
+    "whole_book_animation_complete": false,
+    "original_demo": false
+  },
+  "limitations": [
+    "PDF2、4—22、87—259、261—442尚未逐页核读；目录与全书页序完整性尚待核验。",
+    "PDF85—86练习已核；PDF87起后续正文未读，书末答案未核。",
+    "习题1-8图1-39内部0跳跃与1改2可去已核；−1、2的外侧规则保留条件，不能宣称全图答案无条件闭合。",
+    "习题1-5 workflow按父线建议同步19计算8判断2证明共29问，仅改当前新交付。",
+    "所有独立题解、源页核读与学生掌握、动画覆盖分账。",
+    "PDF260对称定积分例6证明续页未核，不由早期跨章单页整理推成全章完成。",
+    "数学分支13份书籍的全量目标未完成，其余12份仍待正式逐批核验与整理。",
+    "复核分支新增理解点动画未制作：parity_not_existence: 偶性不保证极限存在的振荡反例；zero_value_is_separate: 中心另行赋值与去心极限独立；uniform_integer_extension: 变化正整数根次数的统一误差界；继承更早缺口。",
+    "PDF78指数连续是教材未详证声明；对数与任意实指数正输入连续依赖此声明。反函数像区间与局部连续采用实数完备性独立补证，不冒认教材已证明。",
+    "PDF79固定零指数差商恒零，但比值型等价不成立；PDF80幂指有限定理必须联合前提。81习题续项已独立解；书末答案未读。",
+    "一致连续定理原书明确不予证明，坏点对与闭区间子列为独立补证；PDF85习题1-10九题和已见总题32项已独立解，书末答案未核。",
+    "动画覆盖独立建账：25点58段继承显示；120原未制与3独立缺口合计123项零信用，后页未分类；本批两图为静态图，零新动画。",
+    "Source pages are not part of this public asset; addresses alone cannot be re-verified without the corresponding lawful source.",
+    "Existing animations are exported with integrity checks; this release is not a new browser or full-book semantic acceptance."
+  ],
+  "entrypoints": {
+    "frame": "knowledge/frame.json",
+    "index": "knowledge/index.json",
+    "topics": "knowledge/topics.jsonl",
+    "nodes": "knowledge/nodes.json",
+    "relations": "knowledge/relations.json",
+    "animations": "animations/index.json"
+  },
+  "files": {
+    "animations/index.json": {
+      "sha256": "c0de0f58036189577b7944c042c31e85b9477d807cdf153e4954a3fcbd3d8b51",
+      "bytes": 30267
+    },
+    "animations/keyframes/bounded-versus-attained-extrema/lower/0.svg": {
+      "sha256": "2b99dfa4f8c7f5da93fce302710e0e397671f77dc1633ebd25ead146a8b7d644",
+      "bytes": 2259
+    },
+    "animations/keyframes/bounded-versus-attained-extrema/lower/1.svg": {
+      "sha256": "cd92c80643f28e6f94c2e570afd18a3d40da9a06c4627eff383d2e70b73fa5f7",
+      "bytes": 2327
+    },
+    "animations/keyframes/bounded-versus-attained-extrema/lower/2.svg": {
+      "sha256": "6a3338cf718fd0e85bc7cb83f0c420c2c46ec1c005e7234a716a438f35774101",
+      "bytes": 2319
+    },
+    "animations/keyframes/bounded-versus-attained-extrema/upper/0.svg": {
+      "sha256": "2117a822a2c14989090db4668ca20bdc9898151c476ba0aa6016d2f1cd7070c3",
+      "bytes": 2259
+    },
+    "animations/keyframes/bounded-versus-attained-extrema/upper/1.svg": {
+      "sha256": "c40746630a0c7dd44f9767639036b568044182862b3d7da617ea95293e8a73b4",
+      "bytes": 2275
+    },
+    "animations/keyframes/bounded-versus-attained-extrema/upper/2.svg": {
+      "sha256": "fd732dc25c06cae0d87ceadf33c81a0b361fccaf3cfea5830aa2f6deae710b19",
+      "bytes": 2267
+    },
+    "animations/keyframes/cosine-independent-error-bound/bound/0.svg": {
+      "sha256": "0dfb64fa3b9e4c2c5680c1ed015431682650d85a8806e148f9139c2dd11b8891",
+      "bytes": 11398
+    },
+    "animations/keyframes/cosine-independent-error-bound/bound/1.svg": {
+      "sha256": "04ca8fb58f8123dc4f72fee93181ed77c91c1e4a819a9c2b1d11a1c71e067d35",
+      "bytes": 11425
+    },
+    "animations/keyframes/cosine-independent-error-bound/bound/2.svg": {
+      "sha256": "4d3a85f5878766965a5c806f60d5547af8c1128e6664e4c6ac62ed5bfce4b884",
+      "bytes": 11417
+    },
+    "animations/keyframes/cosine-independent-error-bound/projection/0.svg": {
+      "sha256": "282338c4502324c8b12624b3632361bac5fc8bf27cd76079f8435c7c05845617",
+      "bytes": 5890
+    },
+    "animations/keyframes/cosine-independent-error-bound/projection/1.svg": {
+      "sha256": "63cf0ce12c9b7b353b060f4def76606960fcd1e4c3294066979fac9de51e9a7d",
+      "bytes": 5899
+    },
+    "animations/keyframes/cosine-independent-error-bound/projection/2.svg": {
+      "sha256": "e84ea47183b4ca79076707b90ad2ded3b1b615546dd567a409c5b10c82932e4c",
+      "bytes": 5899
+    },
+    "animations/keyframes/cosine-independent-error-bound/squeeze/0.svg": {
+      "sha256": "4483039814212201054d1c3ee78f5aa63cf7192b6778488c57e9a9138242daa2",
+      "bytes": 13912
+    },
+    "animations/keyframes/cosine-independent-error-bound/squeeze/1.svg": {
+      "sha256": "867666940f0f729ccba0cfc82343eff585d111e0bc8e3a371354693d03956ac9",
+      "bytes": 13921
+    },
+    "animations/keyframes/cosine-independent-error-bound/squeeze/2.svg": {
+      "sha256": "fbb7e3b08d05d659726a5760b39fbe048017e7f0175090db68aaf09cd5a186d5",
+      "bytes": 13921
+    },
+    "animations/keyframes/finite-constant-versus-infinity/fixed-value/0.svg": {
+      "sha256": "8838e04d75071f3d2682f3a77770ed994314dcf2e459510b5c0040304de57759",
+      "bytes": 713
+    },
+    "animations/keyframes/finite-constant-versus-infinity/fixed-value/1.svg": {
+      "sha256": "8eb32408da1306c08d3dbdf90154f820dbc526cd649d31b7d458d3bf606d22ec",
+      "bytes": 713
+    },
+    "animations/keyframes/finite-constant-versus-infinity/fixed-value/2.svg": {
+      "sha256": "7dc72cd45fff35b8f59a7b2546314a4986bed63442268a41c6c2d6a9f1d8737d",
+      "bytes": 710
+    },
+    "animations/keyframes/finite-limit-local-constraints/bounded-nearby/0.svg": {
+      "sha256": "25d90316dd949fcbaea1427160ae502379350f3fa8fab9f8d248991c7666c7ed",
+      "bytes": 1322
+    },
+    "animations/keyframes/finite-limit-local-constraints/bounded-nearby/1.svg": {
+      "sha256": "b04944eda8ef69b05df5a14f3cc16e2b92e6a5990138ba4acb37c7f463c598ca",
+      "bytes": 1367
+    },
+    "animations/keyframes/finite-limit-local-constraints/bounded-nearby/2.svg": {
+      "sha256": "2cdf3d45c3d917ce537c64f7e32799b97a1ff063f3c5835f0cc4c13797da1c49",
+      "bytes": 1337
+    },
+    "animations/keyframes/finite-limit-local-constraints/positive-nearby/0.svg": {
+      "sha256": "86d0953542297a3db597f27ef3f526a796066390becc7addfcdb81e6f0beef15",
+      "bytes": 1326
+    },
+    "animations/keyframes/finite-limit-local-constraints/positive-nearby/1.svg": {
+      "sha256": "7bdeae5a47772c8436cc1668157348eee21b464a6b10b44da5b194b9e3981e07",
+      "bytes": 1371
+    },
+    "animations/keyframes/finite-limit-local-constraints/positive-nearby/2.svg": {
+      "sha256": "769f7a6226c1eaf9747fe83ba618b4f518bac298eb4fe28d40139e4279ec7b64",
+      "bytes": 1341
+    },
+    "animations/keyframes/finite-limit-local-constraints/separate-candidates/0.svg": {
+      "sha256": "14b68538c8385d0ccf8f35540bfc574ab4e799eac99bbe53e6e5307e890598b9",
+      "bytes": 1096
+    },
+    "animations/keyframes/finite-limit-local-constraints/separate-candidates/1.svg": {
+      "sha256": "63b089622f39377d948575ab05a5613df62c14f1b8783454b8354a7c1d1a5937",
+      "bytes": 1096
+    },
+    "animations/keyframes/finite-limit-local-constraints/separate-candidates/2.svg": {
+      "sha256": "14539d258ed9de93cfd58bc393c3106ba8e617047b38fdcbf7007d0c7bf95201",
+      "bytes": 1096
+    },
+    "animations/keyframes/function-limit-domain-and-sides/root-domain/0.svg": {
+      "sha256": "626c852580e6cd7932c92044aad84b480d1e73d3cfdf19e18f62baedfb756929",
+      "bytes": 8303
+    },
+    "animations/keyframes/function-limit-domain-and-sides/root-domain/1.svg": {
+      "sha256": "520781f87f4eb5db641e8c0dcde5a32b88fe1b68d368ef49ae7c1532fe67ecc5",
+      "bytes": 8308
+    },
+    "animations/keyframes/function-limit-domain-and-sides/root-domain/2.svg": {
+      "sha256": "abfceabaae21a163c71913f2fff3ad1ab94bb11a87c31290ebf2094c3db1e696",
+      "bytes": 8305
+    },
+    "animations/keyframes/function-limit-domain-and-sides/side-approaches/0.svg": {
+      "sha256": "b55775daa7932c607162a478a3ec8bf88b171f41438e8b81af2070596b4ec2f4",
+      "bytes": 1604
+    },
+    "animations/keyframes/function-limit-domain-and-sides/side-approaches/1.svg": {
+      "sha256": "f6e9e3f4ef654d0502d230727bf2b35c3ea58b2e6c2bf1318fd3beeb1357585b",
+      "bytes": 1602
+    },
+    "animations/keyframes/function-limit-domain-and-sides/side-approaches/2.svg": {
+      "sha256": "d96fac63361f97c1727cb169dd2e393ffce93dc023bd3e4b56cc47da324dc34c",
+      "bytes": 1602
+    },
+    "animations/keyframes/function-limit-input-and-center/center-value/0.svg": {
+      "sha256": "494d2c4840d6620da1428e439be1a4228409af5d92600dbfa16d49a802ca7ed0",
+      "bytes": 2063
+    },
+    "animations/keyframes/function-limit-input-and-center/center-value/1.svg": {
+      "sha256": "ab37828565bc740bd47e3ed7c1efc8c264bb87a902c1d1acb48ecbf235f5bb3c",
+      "bytes": 2238
+    },
+    "animations/keyframes/function-limit-input-and-center/center-value/2.svg": {
+      "sha256": "2a96b67c8a8efc4e707bd8cd7765593e1a5b612c39cf722d2fe36759c05f24ae",
+      "bytes": 2161
+    },
+    "animations/keyframes/function-limit-input-and-center/input-radius/0.svg": {
+      "sha256": "651143ad105ca668991179ae6e4d65e3b718eaed63e171d386f5c1b03b848685",
+      "bytes": 2423
+    },
+    "animations/keyframes/function-limit-input-and-center/input-radius/1.svg": {
+      "sha256": "78667429e4af9e662f0b8be9d0a81bcceaf3f63690a10d935cd03e0d5fabd9cf",
+      "bytes": 2061
+    },
+    "animations/keyframes/function-limit-input-and-center/input-radius/2.svg": {
+      "sha256": "226d1011fa6f3c3fd0d4b3949740cce853df8ceafb53d181dbad762da81a52f6",
+      "bytes": 2079
+    },
+    "animations/keyframes/function-limit-reciprocal-tails/reciprocal-tails/0.svg": {
+      "sha256": "40b6ed342b341792d36b3ec7bd7bf996548e28804d90c5cf6633745280601f87",
+      "bytes": 9577
+    },
+    "animations/keyframes/function-limit-reciprocal-tails/reciprocal-tails/1.svg": {
+      "sha256": "af44953dd452c4991d2ebda63f121ad9283f28668e34c522a3a35cc43778503f",
+      "bytes": 9554
+    },
+    "animations/keyframes/function-limit-reciprocal-tails/reciprocal-tails/2.svg": {
+      "sha256": "9cf50be8d12c82c34f2f3c6aaea530bad1a2cab297ed0cba178bc49470c39c7e",
+      "bytes": 9554
+    },
+    "animations/keyframes/function-limit-two-sequence-witness/sequence-witness/0.svg": {
+      "sha256": "85d7190e7cd11c5fab6028170d93d367a09bef0348b0c4507997e0bd1e45378b",
+      "bytes": 1542
+    },
+    "animations/keyframes/function-limit-two-sequence-witness/sequence-witness/1.svg": {
+      "sha256": "232f6dd901d833b5a741dda53059d96146251991df88af3ab145ed0e36de13b5",
+      "bytes": 1550
+    },
+    "animations/keyframes/function-limit-two-sequence-witness/sequence-witness/2.svg": {
+      "sha256": "cc0b180b4beb5a57ae60ba1a43c85b5a4cb9943472bdf3dc08541724b5ff070e",
+      "bytes": 1558
+    },
+    "animations/keyframes/increment-input-output/base/0.svg": {
+      "sha256": "ee03db68287934074d150d11c04de59c88fc1b64877debf72e0869c0011ead3c",
+      "bytes": 5057
+    },
+    "animations/keyframes/increment-input-output/base/1.svg": {
+      "sha256": "811f79adbfe4930132302b638e04fa509e81b600dbe725c948fd9081392fb98b",
+      "bytes": 5159
+    },
+    "animations/keyframes/increment-input-output/base/2.svg": {
+      "sha256": "a33f0c25f92ff060de0cddd4ff921f88308cca362d48ecec26e803d1f7cef874",
+      "bytes": 5147
+    },
+    "animations/keyframes/increment-input-output/input/0.svg": {
+      "sha256": "ff8c92c187341abf6a1c342366351e0b9b93c66d642ae87b216a6952f65b8ede",
+      "bytes": 4846
+    },
+    "animations/keyframes/increment-input-output/input/1.svg": {
+      "sha256": "cd618e1925899499820f8113d74c6e05a29c82b2b9a25f15895ac907e9a6a4c0",
+      "bytes": 4938
+    },
+    "animations/keyframes/increment-input-output/input/2.svg": {
+      "sha256": "7f760bc55cabaac7323b3bb421696d424bc10fa22fb707bf1d2c9b350f7bc479",
+      "bytes": 4877
+    },
+    "animations/keyframes/increment-input-output/output/0.svg": {
+      "sha256": "1af3d0b0d74eaac8844c667ab807a571de5c84895115096a1d7c30a65f16b5ea",
+      "bytes": 4863
+    },
+    "animations/keyframes/increment-input-output/output/1.svg": {
+      "sha256": "6bd0d69950657e9e20a72e8cfc30738745024328f21f3ca19194111c2751bd30",
+      "bytes": 5029
+    },
+    "animations/keyframes/increment-input-output/output/2.svg": {
+      "sha256": "2cc198e961eb31d0e400a53dc82a286178dfc7b5153fb9bd234011c68c4da15d",
+      "bytes": 4911
+    },
+    "animations/keyframes/increment-input-output/sign/0.svg": {
+      "sha256": "94be53fb525d99dd3c00f72ab13a395ff4789240e2481b00667e3be16de44b88",
+      "bytes": 3781
+    },
+    "animations/keyframes/increment-input-output/sign/1.svg": {
+      "sha256": "fe63ffc77a2b9ea6329c981335f393ce3e6817ffa3b921f23ca1bfc6c8d3bfc8",
+      "bytes": 3284
+    },
+    "animations/keyframes/increment-input-output/sign/2.svg": {
+      "sha256": "04a1b2cc1016bb28116860f0f7639b4b75f7774dbec9c3e9bfc18ae8a06e1085",
+      "bytes": 3782
+    },
+    "animations/keyframes/infinite-magnitude-gates/both-magnitude/0.svg": {
+      "sha256": "cabcf6d915ee8225bee9eb37292969b561c4b28030e77a0da660f4cf3cc46a2e",
+      "bytes": 11813
+    },
+    "animations/keyframes/infinite-magnitude-gates/both-magnitude/1.svg": {
+      "sha256": "c2ed0643d0d0bc1af5e67ab75ccab936e01ab5d086e1f675774daa4db1faff32",
+      "bytes": 11805
+    },
+    "animations/keyframes/infinite-magnitude-gates/both-magnitude/2.svg": {
+      "sha256": "2607485cfb205b8addc159c099417a1f49be73640b7001f74460e956d0ff93aa",
+      "bytes": 11821
+    },
+    "animations/keyframes/infinite-magnitude-gates/left-negative/0.svg": {
+      "sha256": "ef72cef497ada7643907422da77ab72ef84d33792d13b140c26fd994a7e329b5",
+      "bytes": 11571
+    },
+    "animations/keyframes/infinite-magnitude-gates/left-negative/1.svg": {
+      "sha256": "bd37bf641acddd685cc56acaea7f474dfca5026e0419df218f4363e30d3daeb5",
+      "bytes": 11562
+    },
+    "animations/keyframes/infinite-magnitude-gates/left-negative/2.svg": {
+      "sha256": "d78c87c94cfc2e70e842f8c5d53c656e0572a3304dcbbca2710faad92d0e8b2b",
+      "bytes": 11580
+    },
+    "animations/keyframes/infinite-magnitude-gates/right-positive/0.svg": {
+      "sha256": "63a20587b961263fc9a7c464c2641fc882e1b117dea5bbd2c14b2c6250331252",
+      "bytes": 11567
+    },
+    "animations/keyframes/infinite-magnitude-gates/right-positive/1.svg": {
+      "sha256": "a8ec46460dabc826ea7fe56815f94550ae71fb15c68258b19cd9c90c49ad4fd5",
+      "bytes": 11559
+    },
+    "animations/keyframes/infinite-magnitude-gates/right-positive/2.svg": {
+      "sha256": "b27cc8c82dbe3bc84dd511eccc74923201e4ab18cb2da23cfc4ea0cd31b948aa",
+      "bytes": 11570
+    },
+    "animations/keyframes/infinitesimal-error-band/same-error/0.svg": {
+      "sha256": "0df5f13ea0d0b3fe72678f187e275a39ffdaac31b8d0746042ceab6f559786db",
+      "bytes": 1494
+    },
+    "animations/keyframes/infinitesimal-error-band/same-error/1.svg": {
+      "sha256": "fb55c97cb53cdf3e22cbb5a089b687f2aa34bdeadab245f355b83b362e55fbb5",
+      "bytes": 1513
+    },
+    "animations/keyframes/infinitesimal-error-band/same-error/2.svg": {
+      "sha256": "5a786118708c6103ea389c0dabf5c53df9a1733ef52b37dd6c4d2efd022c41bd",
+      "bytes": 1500
+    },
+    "animations/keyframes/odd-integral-paired-areas/0.svg": {
+      "sha256": "82f8f29edba3cf1055a0bf7294735f6ddb02a0336ced18aae609e0053c7cd894",
+      "bytes": 1406
+    },
+    "animations/keyframes/odd-integral-paired-areas/1.svg": {
+      "sha256": "495d93b0364bc12a39a06590659c86096c7f0565128e146e2735f61b718fc0b8",
+      "bytes": 1426
+    },
+    "animations/keyframes/odd-integral-paired-areas/2.svg": {
+      "sha256": "22918d3a97ac8b23386bf4b0a9317b87affe2c53135edf64f4ae5e915efc94d5",
+      "bytes": 1403
+    },
+    "animations/keyframes/reciprocal-magnitude-transfer/large-to-small/0.svg": {
+      "sha256": "b58a006fe5fd1333f8c29857da987b78fcf988b07a581f44db31d49262723af0",
+      "bytes": 1238
+    },
+    "animations/keyframes/reciprocal-magnitude-transfer/large-to-small/1.svg": {
+      "sha256": "3d799d16eb1e8d4acddcdfcd76a6ba6170e85e1ec5b8833d813d5d7d7a8b8914",
+      "bytes": 1238
+    },
+    "animations/keyframes/reciprocal-magnitude-transfer/large-to-small/2.svg": {
+      "sha256": "92d24e529c667773b9a74dbaa24b5464e8d7c37fd2a52d6a461861e924970b77",
+      "bytes": 1235
+    },
+    "animations/keyframes/reciprocal-magnitude-transfer/small-to-large/0.svg": {
+      "sha256": "45883e015acdd2b2870c0abd01dc6bf2f8cdef48bac6916c62cdf4f1741d1e47",
+      "bytes": 1238
+    },
+    "animations/keyframes/reciprocal-magnitude-transfer/small-to-large/1.svg": {
+      "sha256": "b44e14dd57189b0c5371c0729c366cb43b25e23c79ea13d9dfd3cfc26b9ceafb",
+      "bytes": 1239
+    },
+    "animations/keyframes/reciprocal-magnitude-transfer/small-to-large/2.svg": {
+      "sha256": "fe53d123f03d95401b4b56a1ec1e2469553de1ec1ed480316609bca76faf7023",
+      "bytes": 1224
+    },
+    "animations/keyframes/removable-hole-and-wrong-center/approach/0.svg": {
+      "sha256": "4bd927cd6430abcd413e371868f1e95ad991a217a10de040e69c9a58647452c8",
+      "bytes": 5392
+    },
+    "animations/keyframes/removable-hole-and-wrong-center/approach/1.svg": {
+      "sha256": "784d438504f6fdfba34595a9fb68436f5e46fdddb3f96b88db85bf16e22e1c8e",
+      "bytes": 5400
+    },
+    "animations/keyframes/removable-hole-and-wrong-center/approach/2.svg": {
+      "sha256": "ccec172b2293ead86c8dd400b223004fdae41265e0eb838fb6daeeec591d4a4b",
+      "bytes": 5400
+    },
+    "animations/keyframes/removable-hole-and-wrong-center/correct/0.svg": {
+      "sha256": "a19fa619e373d5548522a140e2cfbc32ea0d8b8396277c60060f61a962fad056",
+      "bytes": 5155
+    },
+    "animations/keyframes/removable-hole-and-wrong-center/correct/1.svg": {
+      "sha256": "116e1201ef4b0c40075e3e751c7ec0cf876105bc86019566102dc3d0897443fd",
+      "bytes": 5155
+    },
+    "animations/keyframes/removable-hole-and-wrong-center/correct/2.svg": {
+      "sha256": "92b45b36cfac6368d42974f4c9f0fd46e1c84599a8f6b34cc221092d95269cf1",
+      "bytes": 4991
+    },
+    "animations/keyframes/removable-hole-and-wrong-center/fill/0.svg": {
+      "sha256": "d7b68d55c2cb62eb08f53ede1e01a04ad2797afb2e8cc131c5fda2730be298bc",
+      "bytes": 5111
+    },
+    "animations/keyframes/removable-hole-and-wrong-center/fill/1.svg": {
+      "sha256": "24397d6024524c83b4d10a343a75e0b6c5dcbec548a7d684b63ece946277fc0f",
+      "bytes": 5031
+    },
+    "animations/keyframes/removable-hole-and-wrong-center/fill/2.svg": {
+      "sha256": "24397d6024524c83b4d10a343a75e0b6c5dcbec548a7d684b63ece946277fc0f",
+      "bytes": 5031
+    },
+    "animations/keyframes/sequence-geometric-and-properties/alternation/0.svg": {
+      "sha256": "13436db73dd9aebb3e7cc315076115e4ee42794ad95e82256c4de86eda8149cf",
+      "bytes": 1150
+    },
+    "animations/keyframes/sequence-geometric-and-properties/alternation/1.svg": {
+      "sha256": "6e7204bcfa02c76c9a2320c45727e8c93f6d46479908d3d5ecb1b6ef0a256133",
+      "bytes": 1151
+    },
+    "animations/keyframes/sequence-geometric-and-properties/alternation/2.svg": {
+      "sha256": "d50bc9956ec9ad238a40391a0b66b5678e50f2fef0adb463405aea7def4b3288",
+      "bytes": 1154
+    },
+    "animations/keyframes/sequence-geometric-and-properties/boundedness/0.svg": {
+      "sha256": "68e780abe79eacd100596da95c99cb943e742d58039168f1290f392166e5a484",
+      "bytes": 2175
+    },
+    "animations/keyframes/sequence-geometric-and-properties/boundedness/1.svg": {
+      "sha256": "e7746d6feb1281168fd6974fc08747107bbfdabbeee3cf31958894dc04544976",
+      "bytes": 2180
+    },
+    "animations/keyframes/sequence-geometric-and-properties/boundedness/2.svg": {
+      "sha256": "5abe4ce68fe74c3ab21a179fc8612c8ce624b71bef3ac221ffa0e3fd2289a5b4",
+      "bytes": 2178
+    },
+    "animations/keyframes/sequence-geometric-and-properties/geometric/0.svg": {
+      "sha256": "6280e12c9854026cc3b5917c95e3cd1a178a1850bf3c503eb255d4ee61d437b7",
+      "bytes": 3580
+    },
+    "animations/keyframes/sequence-geometric-and-properties/geometric/1.svg": {
+      "sha256": "def2b221417952b1337202af10e1bd2bfe665a24709abbdd1690feb9d8b8ddd3",
+      "bytes": 3814
+    },
+    "animations/keyframes/sequence-geometric-and-properties/geometric/2.svg": {
+      "sha256": "a6a88d44c55a05c63ee35f1e9361f34916045b2ff18cd4c90a1e331f84eb5670",
+      "bytes": 3854
+    },
+    "animations/keyframes/sequence-geometric-and-properties/geometric/3.svg": {
+      "sha256": "e599c40af727ba0bd5aa665ddd8fef9ee11ee1fa4eac0f5c9050d93f21f6f84f",
+      "bytes": 3835
+    },
+    "animations/keyframes/sequence-geometric-and-properties/uniqueness/0.svg": {
+      "sha256": "d9dd4eee76330abf90584df7579f1038f9643f959197b8d514c63ef08ba40003",
+      "bytes": 1488
+    },
+    "animations/keyframes/sequence-geometric-and-properties/uniqueness/1.svg": {
+      "sha256": "801aeeec2dc002743fe5b393108ed6be5f3217b26e0c3abc4076308bc2a75996",
+      "bytes": 1488
+    },
+    "animations/keyframes/sequence-geometric-and-properties/uniqueness/2.svg": {
+      "sha256": "1814e70221debb7217925221bba048e45478adcb9b1f4f50ed12f837e2fbf0f3",
+      "bytes": 1448
+    },
+    "animations/keyframes/sequence-limit-inscribed-area/doubling/0.svg": {
+      "sha256": "7a9ab34ac11dc7a32b6f0bdfeb2209d2166f2faf2b485929265cb38e53459e81",
+      "bytes": 592
+    },
+    "animations/keyframes/sequence-limit-inscribed-area/doubling/1.svg": {
+      "sha256": "c2119f1966e24b99d61a81c1171cf587d787fffa90f77254f55c70fbbb00b792",
+      "bytes": 731
+    },
+    "animations/keyframes/sequence-limit-inscribed-area/doubling/2.svg": {
+      "sha256": "e8fb77df13ee4a55d474ff5eab7f2bcb3daf34c9a87a9312749461585c6b1eb6",
+      "bytes": 1172
+    },
+    "animations/keyframes/sequence-limit-inscribed-area/doubling/3.svg": {
+      "sha256": "c43e51fc574489fa7a5cb34bb4ecd667633589c197f2a10285d48f3305770498",
+      "bytes": 2051
+    },
+    "animations/keyframes/sequence-limit-open-band/example-1/0.svg": {
+      "sha256": "a1ba8a4abcd11c04deb802882d3a1b3aae4ec58c17d2220913865837dfdb82bd",
+      "bytes": 4905
+    },
+    "animations/keyframes/sequence-limit-open-band/example-1/1.svg": {
+      "sha256": "0d16c93e4a99a79c330097780075e54ef6b92fcfbec1371b301a561e99dd65dc",
+      "bytes": 4913
+    },
+    "animations/keyframes/sequence-limit-open-band/example-1/2.svg": {
+      "sha256": "56629909ea471a8792305e813b716c1402d6fd800a025b0f6d9abafa38d2670d",
+      "bytes": 4993
+    },
+    "animations/keyframes/sequence-limit-open-band/example-1/3.svg": {
+      "sha256": "d8369bf1c16647557da4b14dc92d84e0b460bcbd3f54efcb67bc39579c862180",
+      "bytes": 4939
+    },
+    "animations/keyframes/sequence-limit-open-band/example-2/0.svg": {
+      "sha256": "317948553c8800d012eb9bdae969fba077d4382c43fea844bfd8f9e0847f7c38",
+      "bytes": 4797
+    },
+    "animations/keyframes/sequence-limit-open-band/example-2/1.svg": {
+      "sha256": "5cdd7ea5a4ec8a22a22bc764d8034416ca1694e1970bd8d4683c8bfe0f7eec78",
+      "bytes": 4902
+    },
+    "animations/keyframes/sequence-limit-open-band/example-2/2.svg": {
+      "sha256": "dccd8767c7830106e7a9b32d0448907663170652c44c825eb888c5a2f412277d",
+      "bytes": 4977
+    },
+    "animations/keyframes/sequence-limit-open-band/example-2/3.svg": {
+      "sha256": "25e57bcf211df460f4877a78ba87f541bb1c35aac354ccc279d772e029b56a7b",
+      "bytes": 4917
+    },
+    "animations/keyframes/sequence-sign-and-subsequences/eventual-sign/0.svg": {
+      "sha256": "d09741dbc9596e486513474db465c2e5f0133334838ebcca4729a6f15d5931e4",
+      "bytes": 2614
+    },
+    "animations/keyframes/sequence-sign-and-subsequences/eventual-sign/1.svg": {
+      "sha256": "0cf6ba36d847eb28fc896540d02f6305e451f10fe4be53a52cdab0f9856173c3",
+      "bytes": 2556
+    },
+    "animations/keyframes/sequence-sign-and-subsequences/eventual-sign/2.svg": {
+      "sha256": "6dd82161374b608c7eb54b86a7d2265d9730884eadec4430d8863835e7c4a25f",
+      "bytes": 2560
+    },
+    "animations/keyframes/sequence-sign-and-subsequences/subsequences/0.svg": {
+      "sha256": "288288295da8ac3bc29539f1a7fd62cf09d7a264f8de9a8321da65ab32538014",
+      "bytes": 1985
+    },
+    "animations/keyframes/sequence-sign-and-subsequences/subsequences/1.svg": {
+      "sha256": "6e040bf7b13e2b53f11ec912ae3c452a3694228ed24c0480ad89cbacafb69863",
+      "bytes": 2761
+    },
+    "animations/keyframes/sequence-sign-and-subsequences/subsequences/2.svg": {
+      "sha256": "f2055e0be95efff9ef4dcb29cd8115b0cf43d3e94263e3f8a7a673f89bacec0f",
+      "bytes": 2762
+    },
+    "animations/keyframes/sine-ratio-even-sides/hole/0.svg": {
+      "sha256": "4dfd8aeaec12cc4415b3518a8e00226e71fc8ce7921845f71f9ee8b1ced83f7d",
+      "bytes": 8002
+    },
+    "animations/keyframes/sine-ratio-even-sides/hole/1.svg": {
+      "sha256": "af4d08d9808408e7769a8fa1a7f76b25ea5b3affcff8c0f0e9e37a844c0f9afe",
+      "bytes": 7785
+    },
+    "animations/keyframes/sine-ratio-even-sides/hole/2.svg": {
+      "sha256": "b87ef3ad7399b320621321d1a8cc1a388a0d10f80823add18c49762947bf8061",
+      "bytes": 8003
+    },
+    "animations/keyframes/sine-ratio-even-sides/mirror/0.svg": {
+      "sha256": "71d206d0cd997e4fad098811a221505da3486ff5feda9804bd2a31c011eb6b55",
+      "bytes": 6616
+    },
+    "animations/keyframes/sine-ratio-even-sides/mirror/1.svg": {
+      "sha256": "bebcaa4ae5b4e44985d0a1a8a2400a268bf7f27e52982823d56e6fb95266f132",
+      "bytes": 5061
+    },
+    "animations/keyframes/sine-ratio-even-sides/mirror/2.svg": {
+      "sha256": "97bef3e2a2376ff446807f44d66190cf23991bd8811ff80741e688794bb62d88",
+      "bytes": 6625
+    },
+    "animations/keyframes/sine-ratio-even-sides/paired/0.svg": {
+      "sha256": "52ec2cfbd2a14be51814827c7a08118b28006d8e07e3fd4dd8828c2409009d86",
+      "bytes": 8333
+    },
+    "animations/keyframes/sine-ratio-even-sides/paired/1.svg": {
+      "sha256": "94da4fa905cb25cb403028da310ae64a8a553be363bdc0a804850b5f57363bed",
+      "bytes": 8343
+    },
+    "animations/keyframes/sine-ratio-even-sides/paired/2.svg": {
+      "sha256": "90895abbea21f4879e129a82cf8710f050b0d4548c4962d10bc2c3ddd02b3dc9",
+      "bytes": 8329
+    },
+    "animations/keyframes/square-rule-inverse-branch/0.svg": {
+      "sha256": "b8d93da096f26005ba4dc58ce380cfa8a56439798f13a04052c9bdd01a17bbc2",
+      "bytes": 5656
+    },
+    "animations/keyframes/square-rule-inverse-branch/1.svg": {
+      "sha256": "5741c6a0675a02f5f79c8304d9c15db267f698c4bc0e0334f9f94ba6567ff6cc",
+      "bytes": 5638
+    },
+    "animations/keyframes/square-rule-inverse-branch/2.svg": {
+      "sha256": "9afd0612ba52a9e43e5e12c3674860ac3f2e599d1e2325050d455c24fcae789a",
+      "bytes": 5495
+    },
+    "animations/keyframes/sum-common-input-neighborhood/common/0.svg": {
+      "sha256": "273ac76c09a5d34a1ed74c28afe2116f195924b2685a5cc099f55fa880a5dd58",
+      "bytes": 1969
+    },
+    "animations/keyframes/sum-common-input-neighborhood/common/1.svg": {
+      "sha256": "44fca36a25c48c43e7ed5b5711bc0e536dc5ef6f7dbe275c73d8898905b0d72b",
+      "bytes": 1967
+    },
+    "animations/keyframes/sum-common-input-neighborhood/common/2.svg": {
+      "sha256": "43d4e4595654412f9a5030f6b5cbe7fa8863ae8cfba044d2a46deeb78fb3f62e",
+      "bytes": 1951
+    },
+    "animations/keyframes/sum-common-input-neighborhood/first/0.svg": {
+      "sha256": "299e6f99a7be69d0fb835f1d56200aa0198126ba1df398986fcbc0a4873a27a3",
+      "bytes": 1951
+    },
+    "animations/keyframes/sum-common-input-neighborhood/first/1.svg": {
+      "sha256": "c789a59b0fc9f428f634294991aad3027a07415e66f372d87edb00fecb8d4761",
+      "bytes": 1971
+    },
+    "animations/keyframes/sum-common-input-neighborhood/first/2.svg": {
+      "sha256": "048e67824c94713c1b92188dafee6662437bcf8d63068bd0a3eba2087c732e18",
+      "bytes": 1951
+    },
+    "animations/keyframes/sum-common-input-neighborhood/second/0.svg": {
+      "sha256": "ad900eedafa63261fb2c016808719c25560bfc9ef163ac9c9c9d4c576bd6edac",
+      "bytes": 1952
+    },
+    "animations/keyframes/sum-common-input-neighborhood/second/1.svg": {
+      "sha256": "1965bae222edb15c84e3279497fa0465f088d248d8619905e097b34ed21d60c9",
+      "bytes": 1971
+    },
+    "animations/keyframes/sum-common-input-neighborhood/second/2.svg": {
+      "sha256": "86b83ac2f37854985f96aad29acd646fb5a0be6dcb5d8275f94b0e7d204463c0",
+      "bytes": 1956
+    },
+    "animations/keyframes/sum-common-input-neighborhood/tails/0.svg": {
+      "sha256": "34c4309ce09682082bba8310be09546c6fc069919761366376cf9512b5d41879",
+      "bytes": 38010
+    },
+    "animations/keyframes/sum-common-input-neighborhood/tails/1.svg": {
+      "sha256": "d3bfc4cb8e3cf24c3623fa99e6f6fd5aed67c0465e420a3c8bc754d9b0ab7f8b",
+      "bytes": 38027
+    },
+    "animations/keyframes/sum-common-input-neighborhood/tails/2.svg": {
+      "sha256": "2008c38adda6ca8cd8c1e7104f971a5f74d990cdf7fa0b8220fa58303b404e9f",
+      "bytes": 37983
+    },
+    "animations/keyframes/uniform-bound-product/factor/0.svg": {
+      "sha256": "f6caa06f4cd54990983b3a401e743619166c535aa2208e77bef9d1756a37b9ff",
+      "bytes": 104794
+    },
+    "animations/keyframes/uniform-bound-product/factor/1.svg": {
+      "sha256": "f8fa1ced6352a84027357beaa16fa07c5820585d77781c2deaf0b2107eae21dd",
+      "bytes": 104792
+    },
+    "animations/keyframes/uniform-bound-product/factor/2.svg": {
+      "sha256": "fc49fe26cf565e0fe5e3834a4b07fb44430a66a84a4cddf2f83a51348a28c68a",
+      "bytes": 104834
+    },
+    "animations/keyframes/uniform-bound-product/product/0.svg": {
+      "sha256": "4a88b903f59fc49168d9a70dcf6fc65948e637b16fdee811c53e4bcf4142ce4e",
+      "bytes": 105294
+    },
+    "animations/keyframes/uniform-bound-product/product/1.svg": {
+      "sha256": "50628e81e873a0518a985a60f230038de2d1a9de8bd4e1049d9e35de05b3a3b0",
+      "bytes": 105520
+    },
+    "animations/keyframes/uniform-bound-product/product/2.svg": {
+      "sha256": "6a538ff27c3c515e4f22ad1dd7515d39769324142501f703a26ce3af64181407",
+      "bytes": 105309
+    },
+    "animations/keyframes/unit-circle-area-squeeze/angle/0.svg": {
+      "sha256": "c7faafc62a8202880c40b0f498bc38888600cde77c1ee80d3df94863f20f760c",
+      "bytes": 1485
+    },
+    "animations/keyframes/unit-circle-area-squeeze/angle/1.svg": {
+      "sha256": "db0d7055b79f516faaf2dd6dd5940f4571e1a1f7a11483311a107f94e9aec063",
+      "bytes": 1488
+    },
+    "animations/keyframes/unit-circle-area-squeeze/angle/2.svg": {
+      "sha256": "c3ddfa254f0ae7ff580c1f784f5192578aac0c21b5211b5cb9c96d502796220e",
+      "bytes": 1489
+    },
+    "animations/keyframes/unit-circle-area-squeeze/height/0.svg": {
+      "sha256": "55bf7bb52431fdcb8e6716aa22c11f7ed1379bf4bd5f9f5e4f256a50b8025b27",
+      "bytes": 1813
+    },
+    "animations/keyframes/unit-circle-area-squeeze/height/1.svg": {
+      "sha256": "879ffb48205722ff77a67a2dedc241e15454461785ef7cf65e599754a447b8d3",
+      "bytes": 1828
+    },
+    "animations/keyframes/unit-circle-area-squeeze/height/2.svg": {
+      "sha256": "de694333dee69aa0324771d8434006937b344978efa9eee9d824a172356c7b16",
+      "bytes": 1828
+    },
+    "animations/keyframes/unit-circle-area-squeeze/inner/0.svg": {
+      "sha256": "b799bfcb0d8dca75f281f2c6e6a65cf9701316f3b5a472d1bab20243c32bd340",
+      "bytes": 1548
+    },
+    "animations/keyframes/unit-circle-area-squeeze/inner/1.svg": {
+      "sha256": "eb5abcbb70712bcab82a048c3109b0744e1e80b7124da7d10b57e7fde64f8753",
+      "bytes": 1549
+    },
+    "animations/keyframes/unit-circle-area-squeeze/inner/2.svg": {
+      "sha256": "c26ca865ec6e7fc9888061562972a81d18f53b49e99db2bae9688766bf9930de",
+      "bytes": 1548
+    },
+    "animations/keyframes/unit-circle-area-squeeze/outer/0.svg": {
+      "sha256": "18b85feec02e5f3092f32534ad45fd484ab0dea9b651a62c327a89cdee3dbe7d",
+      "bytes": 1968
+    },
+    "animations/keyframes/unit-circle-area-squeeze/outer/1.svg": {
+      "sha256": "53cd993abba175938ab34551193e0f04ed912752a0016ead97177256238d1306",
+      "bytes": 1969
+    },
+    "animations/keyframes/unit-circle-area-squeeze/outer/2.svg": {
+      "sha256": "4f09c57318f4058f6c802acb84116e4e11c4ec5d70ebd107cddc6b109fb10109",
+      "bytes": 1968
+    },
+    "animations/keyframes/unit-circle-area-squeeze/tangent/0.svg": {
+      "sha256": "a61704b69fa3ffd0a81b79ce498d173e7b3ac659c68fcba4c4d129b45adb5a7b",
+      "bytes": 1735
+    },
+    "animations/keyframes/unit-circle-area-squeeze/tangent/1.svg": {
+      "sha256": "fc7edb0df07f54863f46e7b8ee0c5ec35c120ec074e9bd782a8dfa83362b3dc0",
+      "bytes": 1750
+    },
+    "animations/keyframes/unit-circle-area-squeeze/tangent/2.svg": {
+      "sha256": "5f691aefea51c4013e5ce350f0a736b5515c0ac2d4cd9714238c58119cda2f2d",
+      "bytes": 1750
+    },
+    "animations/keyframes/zero-accumulation-reciprocal-domain/nearby-zeros/0.svg": {
+      "sha256": "4c54c4ffa3b53c50eac3b682f29125d810388f87108c8bb1e3f07f66fe5a432c",
+      "bytes": 33027
+    },
+    "animations/keyframes/zero-accumulation-reciprocal-domain/nearby-zeros/1.svg": {
+      "sha256": "984b1e3c712553e85f26aa60236bf1c29dcf32bc132f0c38595e932d511ebc00",
+      "bytes": 33027
+    },
+    "animations/keyframes/zero-accumulation-reciprocal-domain/nearby-zeros/2.svg": {
+      "sha256": "1e475942479f0a3ea1dd0627180968348d3212ad376cad896ca3056340685236",
+      "bytes": 33030
+    },
+    "animations/keyframes/zero-over-zero-outcomes/finite/0.svg": {
+      "sha256": "cfb0f521be2564381295201fe40db8e8fa4b8c62668b8a20fd9b82b244851fe5",
+      "bytes": 47526
+    },
+    "animations/keyframes/zero-over-zero-outcomes/finite/1.svg": {
+      "sha256": "a844ff335efc85dbc5827ec0ffe7bef22fab4b26004e4296f7fd4ef579658643",
+      "bytes": 47630
+    },
+    "animations/keyframes/zero-over-zero-outcomes/finite/2.svg": {
+      "sha256": "ecd456c624b6b34eead7a2356f5592fb600b9abb852fb39d7afb4178a7b3019c",
+      "bytes": 47534
+    },
+    "animations/keyframes/zero-over-zero-outcomes/infinite/0.svg": {
+      "sha256": "5362ef54c922f0ffe986f2e60b9f9dde7e14fd4bbafd202bdbed70dccff704da",
+      "bytes": 77122
+    },
+    "animations/keyframes/zero-over-zero-outcomes/infinite/1.svg": {
+      "sha256": "c58ee58e1e6dbe1a72bbd8c2d8e1df09a1d094fc6214b57cf33b30c21ff54f73",
+      "bytes": 77226
+    },
+    "animations/keyframes/zero-over-zero-outcomes/infinite/2.svg": {
+      "sha256": "f6bcfa526fcdb7c0b3f0a7ab2e55665678e38df8b3dba1d9034a59582ea35776",
+      "bytes": 77130
+    },
+    "animations/keyframes/zero-over-zero-outcomes/oscillating/0.svg": {
+      "sha256": "b3bc41502ed7e6eb24ac2a19d1d3bb64fe47f9288d95060684b4f82572af1dd5",
+      "bytes": 104953
+    },
+    "animations/keyframes/zero-over-zero-outcomes/oscillating/1.svg": {
+      "sha256": "b87b301ab4c26231533759c6efc4ce5fafe45bf0101735a3faf85954ee233571",
+      "bytes": 104945
+    },
+    "animations/keyframes/zero-over-zero-outcomes/oscillating/2.svg": {
+      "sha256": "b9b5d67b334292fb0c85da0ba99e89519188fcc895ff3d0c0a2a22757cb2c3af",
+      "bytes": 104949
+    },
+    "animations/keyframes/zero-over-zero-outcomes/zero/0.svg": {
+      "sha256": "b1e9c1521d6ed0a1530bb5463b73822d06db675dc20bb4529ee1cd1e3b1d461c",
+      "bytes": 74853
+    },
+    "animations/keyframes/zero-over-zero-outcomes/zero/1.svg": {
+      "sha256": "3ae8705b1f8141874a98c855b2830bcc660789334f5ce84897d94628668ab8fc",
+      "bytes": 74953
+    },
+    "animations/keyframes/zero-over-zero-outcomes/zero/2.svg": {
+      "sha256": "99b8bfe3e08c5d2e19243e1da7900cf43cfe826a7207c0840b33e13864ea53e4",
+      "bytes": 74865
+    },
+    "animations/knowledge/bounded-versus-attained-extrema.json": {
+      "sha256": "f591fd609ede76551fb14cfd0788bf417c8662a6d838ab6d88483019c3187187",
+      "bytes": 3466
+    },
+    "animations/knowledge/cosine-independent-error-bound.json": {
+      "sha256": "c9c289afda413ab300efcd4a43e09eaa431a5ac2f1da29b304c8dc7656471e80",
+      "bytes": 4766
+    },
+    "animations/knowledge/finite-constant-versus-infinity.json": {
+      "sha256": "3197970867135b2820d5ee13048c63ce7a32d845cdf11522956c79692322a9a2",
+      "bytes": 2267
+    },
+    "animations/knowledge/finite-limit-local-constraints.json": {
+      "sha256": "be42183f9d987c3b69daa4e5bdf2395017fdd7d2de8ead725e12f6bd7256fc75",
+      "bytes": 2261
+    },
+    "animations/knowledge/function-limit-domain-and-sides.json": {
+      "sha256": "4a4f841fe2f8ca4ad85328f2dc00199ea9e46595beefe05b93aca86ab1653977",
+      "bytes": 5061
+    },
+    "animations/knowledge/function-limit-input-and-center.json": {
+      "sha256": "0db2da9476e663df1703047fbada65881402d981a56a0dcbe3096afd6e2d9900",
+      "bytes": 3272
+    },
+    "animations/knowledge/function-limit-reciprocal-tails.json": {
+      "sha256": "3699aaba64527f8662a70369f9940a290e67803603a4ddf2818d5fa6ea54d4d0",
+      "bytes": 1811
+    },
+    "animations/knowledge/function-limit-two-sequence-witness.json": {
+      "sha256": "13e0b660bb026d9b168748b43d3be16fd839c3910f4393e9c96950274c02878d",
+      "bytes": 2575
+    },
+    "animations/knowledge/increment-input-output.json": {
+      "sha256": "22223463211729081baaa03625e36a74763311a7126ccaf04c1d34126644787a",
+      "bytes": 4209
+    },
+    "animations/knowledge/infinite-magnitude-gates.json": {
+      "sha256": "1e7f4b91fba13d478d66e323dd1617637980bbbec1d052470eac9109f6796959",
+      "bytes": 4068
+    },
+    "animations/knowledge/infinitesimal-error-band.json": {
+      "sha256": "233fb54f4fd57e8647199dd750b5082e4095e77c14ea5458d0e87139ec723de1",
+      "bytes": 2326
+    },
+    "animations/knowledge/odd-integral-paired-areas.json": {
+      "sha256": "cf56046cab28fb499378260af56a2a6aa4b4da6e377983eb2c2cee136c3e0e6d",
+      "bytes": 1283
+    },
+    "animations/knowledge/reciprocal-magnitude-transfer.json": {
+      "sha256": "b9b0caf6a052ce12de8b7fc677e27e9bba8d462fd2438499ac1bd8b8f9847730",
+      "bytes": 4144
+    },
+    "animations/knowledge/removable-hole-and-wrong-center.json": {
+      "sha256": "437f90d2bbecc0a94938863e681560dfcb1bf548ce98a1c480cf5aabeb90cb36",
+      "bytes": 3195
+    },
+    "animations/knowledge/sequence-geometric-and-properties.json": {
+      "sha256": "ce96513b5b595e556977585211dde0bab2e5449420d5b40f664e7de5aa8b343c",
+      "bytes": 6209
+    },
+    "animations/knowledge/sequence-limit-inscribed-area.json": {
+      "sha256": "db92a00057b2f76d4a2c666d461697a65e32ee562f2ab3b60d13f6ce99632eb0",
+      "bytes": 1594
+    },
+    "animations/knowledge/sequence-limit-open-band.json": {
+      "sha256": "3a30a931a5fe06fa2c47628418ed11a896ba754dbb4f15dc546ed9949074be72",
+      "bytes": 4130
+    },
+    "animations/knowledge/sequence-sign-and-subsequences.json": {
+      "sha256": "d147be7ed585c0fa6bee7f84c4b7bc0910e557192c755ac52174b86710ccc5ac",
+      "bytes": 4506
+    },
+    "animations/knowledge/sine-ratio-even-sides.json": {
+      "sha256": "98cafdc9a5821709a6e39e0c87844fe071c7f3cb28eed7b2a6f88b9790b97aec",
+      "bytes": 2670
+    },
+    "animations/knowledge/square-rule-inverse-branch.json": {
+      "sha256": "9853065439b45e9003db9a89b049276e0cc56e6617eb67e8ffac79453b946df7",
+      "bytes": 1834
+    },
+    "animations/knowledge/sum-common-input-neighborhood.json": {
+      "sha256": "2017f082b6115579b3b2df77aef52637e3ef3647582478c3a2ced5370789c26f",
+      "bytes": 3522
+    },
+    "animations/knowledge/uniform-bound-product.json": {
+      "sha256": "f0023e72f6a7b5b0f182abe140f9bad73ebea9717019452a0ea85e7eaca26a68",
+      "bytes": 1637
+    },
+    "animations/knowledge/unit-circle-area-squeeze.json": {
+      "sha256": "3be5c94e0da79d13f5f1470a61dd2f1633feb5ef651ffe2591db5e33ea9df2a1",
+      "bytes": 3318
+    },
+    "animations/knowledge/zero-accumulation-reciprocal-domain.json": {
+      "sha256": "8314754c5fad514263ba121413a4cf3028817fbe500704cf3a021892fcac8d8f",
+      "bytes": 2422
+    },
+    "animations/knowledge/zero-over-zero-outcomes.json": {
+      "sha256": "081464f3da203e0da7c274364222e74efc1a489c1778180de049334dcbb7ae89",
+      "bytes": 1375
+    },
+    "animations/players/bounded-versus-attained-extrema.html": {
+      "sha256": "275d75b690081fad1828886e1835148743bd222c1b7982b74db88aa79caaa213",
+      "bytes": 11446
+    },
+    "animations/players/cosine-independent-error-bound.html": {
+      "sha256": "a3339b362e33b128aa8465c77db3e6fd1da8869a04b1e20dc62c107da79107ef",
+      "bytes": 12369
+    },
+    "animations/players/finite-constant-versus-infinity.html": {
+      "sha256": "e100e8ebebe0491403f93951c7ae68c6f0f08ef2308c014d0554d27b3234e7ab",
+      "bytes": 9644
+    },
+    "animations/players/finite-limit-local-constraints.html": {
+      "sha256": "d9531d7a7f42dc190713cf0520fa8fe83cbe7b16174a55cfcf49210953180acb",
+      "bytes": 9844
+    },
+    "animations/players/function-limit-domain-and-sides.html": {
+      "sha256": "92eaa19f0701c095d6671abd4f2b827948773f4d22300d32bef5161f4b2ef984",
+      "bytes": 8128
+    },
+    "animations/players/function-limit-input-and-center.html": {
+      "sha256": "52de361a60cb2897351cffc803dec2580305183fa756ef879590ceac3a07ea80",
+      "bytes": 7454
+    },
+    "animations/players/function-limit-reciprocal-tails.html": {
+      "sha256": "40ac8ad1bd00fa620a493545c87e756cd4e5da8fbd0180ff67ae8b0a075e5939",
+      "bytes": 8370
+    },
+    "animations/players/function-limit-two-sequence-witness.html": {
+      "sha256": "f448b40e7f12cddee09cba15cf52f08cd04ffc0618854a59c5001b936db76340",
+      "bytes": 8399
+    },
+    "animations/players/increment-input-output.html": {
+      "sha256": "6667121ba61822bf01ca0f0514041305c907966db136d5dd86477d548e9408fd",
+      "bytes": 12728
+    },
+    "animations/players/infinite-magnitude-gates.html": {
+      "sha256": "a83496ad04365380c0cb2c5493452398cb18d644b580239846dd83eb1c7b3b3a",
+      "bytes": 9818
+    },
+    "animations/players/infinitesimal-error-band.html": {
+      "sha256": "1ceef3abe172f91761d0e76ffefcdf0172468be682908924cde9e29ade379206",
+      "bytes": 9633
+    },
+    "animations/players/odd-integral-paired-areas.html": {
+      "sha256": "e57dad0bfb7b90c7f7d6dbe1f46a09c6d5ca9b30139ecc0d39e340ffc6f35bf4",
+      "bytes": 6067
+    },
+    "animations/players/reciprocal-magnitude-transfer.html": {
+      "sha256": "fd21c653fe9d7d385f080e64868f6aff8dc9418946b0144ff2ebdbb716f41f0b",
+      "bytes": 9761
+    },
+    "animations/players/removable-hole-and-wrong-center.html": {
+      "sha256": "02f300a7088aaee2cef0f2d757e4c19fbc2cd6f2d036ca3086689fccbb74becf",
+      "bytes": 11930
+    },
+    "animations/players/sequence-geometric-and-properties.html": {
+      "sha256": "cebcc044d4383e8b293cb42a71d34520c3985be452139725de951df013674fe3",
+      "bytes": 10481
+    },
+    "animations/players/sequence-limit-inscribed-area.html": {
+      "sha256": "f6667c33a00ef3b30e591a7a8885c5092843dbaa2df48094abcd3e62b63bf0e4",
+      "bytes": 8051
+    },
+    "animations/players/sequence-limit-open-band.html": {
+      "sha256": "ebc7277fd1f1ef3ae17bb44e76007b8bac1d07f4cc710b1bd8fdeb3acb0a1caa",
+      "bytes": 8167
+    },
+    "animations/players/sequence-sign-and-subsequences.html": {
+      "sha256": "a20a0e7c3cef8ab5e0ee70f35876913a31dc52aa3b7082016b4416c137f8bbd4",
+      "bytes": 7539
+    },
+    "animations/players/sine-ratio-even-sides.html": {
+      "sha256": "d466c79d60bd0e852dcd8f55297c6d0ea889df9dfd6cf857bbdd1b2778594c8c",
+      "bytes": 12447
+    },
+    "animations/players/square-rule-inverse-branch.html": {
+      "sha256": "e7c26d0d605e1accc320398a8d5e7094439462f838843ac76dfed30670d3e994",
+      "bytes": 6384
+    },
+    "animations/players/sum-common-input-neighborhood.html": {
+      "sha256": "441f0aaff41b526734a743e39a36eb536327348cb5c8ef8178d73a07e1e70881",
+      "bytes": 12274
+    },
+    "animations/players/uniform-bound-product.html": {
+      "sha256": "f3560ec328814c9a3fdd13eff240a81a16729aa1a6b949ff2dec4ab999c62ea1",
+      "bytes": 13884
+    },
+    "animations/players/unit-circle-area-squeeze.html": {
+      "sha256": "8c9acf007fd3d72c68f078c8f0ffbedb05448ea6fe00e85a0c890bd27b9fcde0",
+      "bytes": 12829
+    },
+    "animations/players/zero-accumulation-reciprocal-domain.html": {
+      "sha256": "8760873fc4b3f0fcda5796f0a59a1e21f5c30962aeedbdf430cc96b083210ea5",
+      "bytes": 9641
+    },
+    "animations/players/zero-over-zero-outcomes.html": {
+      "sha256": "392fd3ef7b156feb2e6719b7f676e0c4905069f443353e633c6194722fc0202b",
+      "bytes": 14062
+    },
+    "animations/points/bounded-versus-attained-extrema.json": {
+      "sha256": "028bb0d46bd6f1c53bad4a12eb94b6069491abf6229ed8be73010a4d07428725",
+      "bytes": 6642
+    },
+    "animations/points/cosine-independent-error-bound.json": {
+      "sha256": "f321bd972c61836ff8a342433133de1ef8eb6a6c8c4c5857c57a5aa235fb36be",
+      "bytes": 9110
+    },
+    "animations/points/finite-constant-versus-infinity.json": {
+      "sha256": "8955b6349d152d4b7812d5c3c2c02ab09612b3aa33a34d4394ae9136988e1855",
+      "bytes": 2948
+    },
+    "animations/points/finite-limit-local-constraints.json": {
+      "sha256": "94f760cd8de04e8d3b85d290a10fd34546a71d4b466b1dc1a3c6fac834e63731",
+      "bytes": 8018
+    },
+    "animations/points/function-limit-domain-and-sides.json": {
+      "sha256": "766191f83ce1503e9feeead4c33d7fc0490239a4b1495d7ddda3b0384feb7924",
+      "bytes": 5507
+    },
+    "animations/points/function-limit-input-and-center.json": {
+      "sha256": "00e039f084e29df791c8ec8c429b532087b248191653c444626748889671d628",
+      "bytes": 5419
+    },
+    "animations/points/function-limit-reciprocal-tails.json": {
+      "sha256": "b4f207ce68c05e1637ff82c007bcdcafb6196b946fb7189956ffafd21293fb5d",
+      "bytes": 2722
+    },
+    "animations/points/function-limit-two-sequence-witness.json": {
+      "sha256": "092d9db99ce235656d2fa97e725260d1c6df125ea45565dc6540e45e8b5ab438",
+      "bytes": 2952
+    },
+    "animations/points/increment-input-output.json": {
+      "sha256": "bc45de1d3b2c7c22833e6622aedb8bd45cf251c6eb94d1bcf0d21e52f93eb606",
+      "bytes": 12071
+    },
+    "animations/points/infinite-magnitude-gates.json": {
+      "sha256": "e37410b624c34c9e74da70f1249b1af4966b310f97c4b6f8c13d7128a3465cf8",
+      "bytes": 7412
+    },
+    "animations/points/infinitesimal-error-band.json": {
+      "sha256": "113f524c725c385b2d83c8cc668366752f9b7ef4fd006769fabcf595674d2723",
+      "bytes": 3613
+    },
+    "animations/points/odd-integral-paired-areas.json": {
+      "sha256": "79a9067f0535e75d68ec766e321cbec4560d07755bb0cbdfc4bc17e7e6536028",
+      "bytes": 2719
+    },
+    "animations/points/reciprocal-magnitude-transfer.json": {
+      "sha256": "9ca320ee3a51895e10aae9d2231f585b563edcb799a318951ed8c9f309b56c8d",
+      "bytes": 5154
+    },
+    "animations/points/removable-hole-and-wrong-center.json": {
+      "sha256": "1c2fe52d44d3fc4976bfce16c585abf4f42e3bb1a2f84eacc8fc979cb9d4784c",
+      "bytes": 9326
+    },
+    "animations/points/sequence-geometric-and-properties.json": {
+      "sha256": "d53199341349d4870fbd0f371b24c31921c6a77ca56d637f66674e663c106c7f",
+      "bytes": 9836
+    },
+    "animations/points/sequence-limit-inscribed-area.json": {
+      "sha256": "52600a0f9ed0e497afaae00e8cca963c0aadba767d72eb53c3f326ac218e8074",
+      "bytes": 2527
+    },
+    "animations/points/sequence-limit-open-band.json": {
+      "sha256": "9dd24c6d60d918dca10a3b13de45af1803f471c5d187ab9b2c38a27e78658b12",
+      "bytes": 5949
+    },
+    "animations/points/sequence-sign-and-subsequences.json": {
+      "sha256": "5929ef5e6a6356f4f390fb26eb9bcc4e0eb3e3620c8548f87e7590b0c78f062c",
+      "bytes": 5543
+    },
+    "animations/points/sine-ratio-even-sides.json": {
+      "sha256": "bc2a2da16da2d8e1f5336226d4f17cf4ba0d4376127e48047c2da1b421c16701",
+      "bytes": 7644
+    },
+    "animations/points/square-rule-inverse-branch.json": {
+      "sha256": "f0ebbf18a4d080280dcf9a5df597231287f84ee073a7831c5ea90b661ce52838",
+      "bytes": 2704
+    },
+    "animations/points/sum-common-input-neighborhood.json": {
+      "sha256": "f6f1f56c339eb65d003f638eb6aa8549b458c0480dfa2ab5943bd9aa3220ddc9",
+      "bytes": 10924
+    },
+    "animations/points/uniform-bound-product.json": {
+      "sha256": "f3484e2ffd73f3d74c28f5e9eeca806c9fff5714d41f39b3ee3314bceb83716d",
+      "bytes": 5791
+    },
+    "animations/points/unit-circle-area-squeeze.json": {
+      "sha256": "ba74070ea44d15f963902c247de8c83435136456cdc5344e1484d2d9a53ba202",
+      "bytes": 12630
+    },
+    "animations/points/zero-accumulation-reciprocal-domain.json": {
+      "sha256": "101cb021ce3d6b797998ddce63cd9b837831b8dbdb3b9bfaae02a639ad12d721",
+      "bytes": 3157
+    },
+    "animations/points/zero-over-zero-outcomes.json": {
+      "sha256": "36d1ff358cee7e0e037ba5e60bb34d0e4c8cb7eccb528f16e50f689cc20687b5",
+      "bytes": 9238
+    },
+    "knowledge/frame.json": {
+      "sha256": "91bd675b4383ca8405350ac847b359ae531a29499ad971ae3baff3ad724b2fe8",
+      "bytes": 3110
+    },
+    "knowledge/index.json": {
+      "sha256": "69009a16fa9b494380a220e2265e638165bdd8defd8813fc97c5d07fc0cb69c3",
+      "bytes": 20077
+    },
+    "knowledge/nodes.json": {
+      "sha256": "a3fe0d778d5dba10b8617aa5eb7df370d5cef24e03fc1098fea02da1b853d104",
+      "bytes": 432542
+    },
+    "knowledge/relations.json": {
+      "sha256": "06ea9dc900cc11797d9280e0de975796218e9d87b8bab3d7ed7b5f91757c720a",
+      "bytes": 327415
+    },
+    "knowledge/topics.jsonl": {
+      "sha256": "e0b930b31840da1fa07d0b6ead6c496988e3667066e56ac49fa83c139014527a",
+      "bytes": 444362
+    }
+  }
+}

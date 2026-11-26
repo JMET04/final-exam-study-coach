@@ -1,0 +1,15 @@
+{
+  "name": "book-spirit",
+  "version": "0.3.0",
+  "description": "可选书灵：模型无关的专家知识、动画和单段讲解上下文。",
+  "author": {
+    "name": "JMET04"
+  },
+  "license": "MIT",
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "书灵（可选）",
+    "shortDescription": "按书和版本复用知识资产，不自动外发API",
+    "category": "Productivity"
+  }
+}

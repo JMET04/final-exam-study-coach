@@ -1,0 +1,249 @@
+{
+  "format": "book-spirit-public-catalog",
+  "format_version": "1.0",
+  "updated": "2026-11-26",
+  "books": [
+    {
+      "book_id": "book_063e6c01b67242b5",
+      "title": "材料力学Ⅰ（刘鸿文）",
+      "edition": "刘鸿文主编第7版·2024年10月第2次印刷·ISBN 978-7-04-062029-0",
+      "path": "books/book_063e6c01b67242b5",
+      "archive": "books/book_063e6c01b67242b5/book.zip",
+      "sha256": "c3545636ba02cb457d95a14d64d22b00ccd54f93053996d6c4ecaed88faa8d0f",
+      "bytes": 4583455,
+      "coverage": {
+        "registered_pages": 411,
+        "reviewed_pages": 411,
+        "knowledge_covered_pages": 411,
+        "source_review_complete": true,
+        "whole_book_expert_complete": true,
+        "fresh_topics": 205,
+        "unavailable_topics": 0,
+        "animation_points": 396,
+        "animation_segments": 396,
+        "whole_book_animation_complete": false,
+        "original_demo": false
+      }
+    },
+    {
+      "book_id": "book_089f15db0edc44f7",
+      "title": "徐芝纶弹性力学（上册）",
+      "edition": "第6版·2025年6月第1次印刷·章青主编·ISBN 978-7-04-064601-6",
+      "path": "books/book_089f15db0edc44f7",
+      "archive": "books/book_089f15db0edc44f7/book.zip",
+      "sha256": "6a3610e7ff410e7f5502346cad5028f8acdaedb4745952efc523070700b727b7",
+      "bytes": 98926,
+      "coverage": {
+        "registered_pages": 371,
+        "reviewed_pages": 12,
+        "knowledge_covered_pages": 12,
+        "source_review_complete": false,
+        "whole_book_expert_complete": false,
+        "fresh_topics": 9,
+        "unavailable_topics": 0,
+        "animation_points": 5,
+        "animation_segments": 9,
+        "whole_book_animation_complete": false,
+        "original_demo": false
+      }
+    },
+    {
+      "book_id": "book_0ee9728d0c2a46ef",
+      "title": "佳能 EOS 90D 补充信息",
+      "edition": "简体中文·SI2·CT2-D045-B·2019-09-01修订",
+      "path": "books/book_0ee9728d0c2a46ef",
+      "archive": "books/book_0ee9728d0c2a46ef/book.zip",
+      "sha256": "1a142adb3a1eedcfc840c909c4b726453a74152070968c14c0769d4ce98ec90c",
+      "bytes": 211719,
+      "coverage": {
+        "registered_pages": 26,
+        "reviewed_pages": 26,
+        "knowledge_covered_pages": 26,
+        "source_review_complete": true,
+        "whole_book_expert_complete": false,
+        "fresh_topics": 8,
+        "unavailable_topics": 0,
+        "animation_points": 10,
+        "animation_segments": 41,
+        "whole_book_animation_complete": false,
+        "original_demo": false
+      }
+    },
+    {
+      "book_id": "book_1091d4dc226b4086",
+      "title": "门边的小力学",
+      "edition": "第一版·原创验证书",
+      "path": "books/book_1091d4dc226b4086",
+      "archive": "books/book_1091d4dc226b4086/book.zip",
+      "sha256": "29eedeee7a2db393f14a2b8abe085f19831181ef27cb252694ed54f850e46b07",
+      "bytes": 5281,
+      "coverage": {
+        "registered_pages": 2,
+        "reviewed_pages": 2,
+        "knowledge_covered_pages": 2,
+        "source_review_complete": true,
+        "whole_book_expert_complete": false,
+        "fresh_topics": 0,
+        "unavailable_topics": 0,
+        "animation_points": 0,
+        "animation_segments": 0,
+        "whole_book_animation_complete": false,
+        "original_demo": true
+      }
+    },
+    {
+      "book_id": "book_1eb47d6d22f54027",
+      "title": "材料力学解题指导及习题集",
+      "edition": "第二版（1984年3月第2版；1986年9月第3次印刷）",
+      "path": "books/book_1eb47d6d22f54027",
+      "archive": "books/book_1eb47d6d22f54027/book.zip",
+      "sha256": "6840465215a4aaf505f6469db0ee1a0de9f86be20c4745795e0e0d8320b37849",
+      "bytes": 1429135,
+      "coverage": {
+        "registered_pages": 334,
+        "reviewed_pages": 28,
+        "knowledge_covered_pages": 27,
+        "source_review_complete": false,
+        "whole_book_expert_complete": false,
+        "fresh_topics": 117,
+        "unavailable_topics": 0,
+        "animation_points": 36,
+        "animation_segments": 36,
+        "whole_book_animation_complete": false,
+        "original_demo": false
+      }
+    },
+    {
+      "book_id": "book_7d6d67c24e8a4a47",
+      "title": "混凝土结构设计原理",
+      "edition": "第七版·2020年1月版·2023年4月第57次印刷·用户提供PDF",
+      "path": "books/book_7d6d67c24e8a4a47",
+      "archive": "books/book_7d6d67c24e8a4a47/book.zip",
+      "sha256": "cfd331c9cf6f61722c2ea1f5b876651b56bd61ec3a28deebbbfb74ee07816893",
+      "bytes": 1015366,
+      "coverage": {
+        "registered_pages": 328,
+        "reviewed_pages": 251,
+        "knowledge_covered_pages": 251,
+        "source_review_complete": false,
+        "whole_book_expert_complete": false,
+        "fresh_topics": 257,
+        "unavailable_topics": 0,
+        "animation_points": 6,
+        "animation_segments": 11,
+        "whole_book_animation_complete": false,
+        "original_demo": false
+      }
+    },
+    {
+      "book_id": "book_a1b3ea6805d54e63",
+      "title": "高等数学（上册）",
+      "edition": "同济大学数学科学学院第8版上册·2023年6月第1次印刷·ISBN 978-7-04-058981-8",
+      "path": "books/book_a1b3ea6805d54e63",
+      "archive": "books/book_a1b3ea6805d54e63/book.zip",
+      "sha256": "c895b570c3b63d0956c08a83f4e5142dcc3c90dbb23e462959459ce408b54062",
+      "bytes": 1473026,
+      "coverage": {
+        "registered_pages": 442,
+        "reviewed_pages": 67,
+        "knowledge_covered_pages": 67,
+        "source_review_complete": false,
+        "whole_book_expert_complete": false,
+        "fresh_topics": 74,
+        "unavailable_topics": 0,
+        "animation_points": 25,
+        "animation_segments": 58,
+        "whole_book_animation_complete": false,
+        "original_demo": false
+      }
+    },
+    {
+      "book_id": "book_a1b82028cdc1434a",
+      "title": "马克思主义基本原理",
+      "edition": "2023年版·2023年2月第2版第1次印刷·ISBN 978-7-04-059900-8",
+      "path": "books/book_a1b82028cdc1434a",
+      "archive": "books/book_a1b82028cdc1434a/book.zip",
+      "sha256": "63e992c2e3bb26e23ac56cb9f261c5e3ae8e55bc5e4d362b65a0177c74634770",
+      "bytes": 1611411,
+      "coverage": {
+        "registered_pages": 364,
+        "reviewed_pages": 70,
+        "knowledge_covered_pages": 70,
+        "source_review_complete": false,
+        "whole_book_expert_complete": false,
+        "fresh_topics": 87,
+        "unavailable_topics": 0,
+        "animation_points": 78,
+        "animation_segments": 332,
+        "whole_book_animation_complete": false,
+        "original_demo": false
+      }
+    },
+    {
+      "book_id": "book_a1ed39a0fd1d49c4",
+      "title": "佳能 EOS 90D 高级用户指南",
+      "edition": "简体中文·UG4·CT2-D040-D·2022-04-01修订·固件1.1.0及以上",
+      "path": "books/book_a1ed39a0fd1d49c4",
+      "archive": "books/book_a1ed39a0fd1d49c4/book.zip",
+      "sha256": "799d7865af4bf4750e2b751c9ae13b761fae7654080329140d6a336834961bd6",
+      "bytes": 3209011,
+      "coverage": {
+        "registered_pages": 646,
+        "reviewed_pages": 646,
+        "knowledge_covered_pages": 646,
+        "source_review_complete": true,
+        "whole_book_expert_complete": false,
+        "fresh_topics": 110,
+        "unavailable_topics": 0,
+        "animation_points": 140,
+        "animation_segments": 590,
+        "whole_book_animation_complete": false,
+        "original_demo": false
+      }
+    },
+    {
+      "book_id": "book_bc1241aae2d04c5a",
+      "title": "材料力学Ⅱ（刘鸿文）",
+      "edition": "刘鸿文主编第7版·2024年10月第2次印刷·ISBN 978-7-04-062028-3",
+      "path": "books/book_bc1241aae2d04c5a",
+      "archive": "books/book_bc1241aae2d04c5a/book.zip",
+      "sha256": "6ae279a909c0b32a728ed10ab8120b6a92e9d7fd5b09f0278c5c6c1e23aec156",
+      "bytes": 7979218,
+      "coverage": {
+        "registered_pages": 296,
+        "reviewed_pages": 296,
+        "knowledge_covered_pages": 296,
+        "source_review_complete": true,
+        "whole_book_expert_complete": true,
+        "fresh_topics": 109,
+        "unavailable_topics": 0,
+        "animation_points": 484,
+        "animation_segments": 765,
+        "whole_book_animation_complete": false,
+        "original_demo": false
+      }
+    },
+    {
+      "book_id": "book_9a2b8eb822544708",
+      "title": "理论力学（陈建平、范钦珊）",
+      "edition": "第4版·陈建平、范钦珊主编",
+      "path": "books/book_9a2b8eb822544708",
+      "archive": "books/book_9a2b8eb822544708/book.zip",
+      "sha256": "552fecd2d51c9210a91f2d67638944e4e25b9af5290d367446c070b52332a617",
+      "bytes": 31944494,
+      "coverage": {
+        "registered_pages": 392,
+        "reviewed_pages": 392,
+        "knowledge_covered_pages": 392,
+        "source_review_complete": true,
+        "whole_book_expert_complete": false,
+        "fresh_topics": 1266,
+        "unavailable_topics": 0,
+        "animation_points": 1250,
+        "animation_segments": 1597,
+        "whole_book_animation_complete": false,
+        "original_demo": false
+      }
+    }
+  ]
+}

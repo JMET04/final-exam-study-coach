@@ -1,0 +1,16 @@
+{
+  "name": "final-exam-study-coach",
+  "version": "0.5.0",
+  "description": "系统化大学带学、课程资料与期末复习；书灵按需启用。",
+  "author": {
+    "name": "JMET04"
+  },
+  "license": "MIT",
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "期末复习与大学带学",
+    "shortDescription": "先理解用途与原理，再走完整知识与解题路径",
+    "category": "Productivity",
+    "brandColor": "#176B5B"
+  }
+}

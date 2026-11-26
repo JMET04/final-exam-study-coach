@@ -15,6 +15,9 @@ private/
 __pycache__/
 *.pyc
 
+# Explicitly reviewed optional public knowledge assets (no original textbooks)
+!optional/book-library/books/*/book.zip
+
 # OS/editor
 .DS_Store
 Thumbs.db

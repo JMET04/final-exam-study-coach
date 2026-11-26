@@ -1,0 +1,276 @@
+{
+  "format": "book-spirit-public-book",
+  "format_version": "1.0",
+  "book_id": "book_7d6d67c24e8a4a47",
+  "title": "混凝土结构设计原理",
+  "edition": "第七版·2020年1月版·2023年4月第57次印刷·用户提供PDF",
+  "asset_revision": "2026-11-26",
+  "knowledge_snapshot": "frozen-portable-v0.1",
+  "content_license": "MIT",
+  "source_rights": "Original explanatory knowledge and authored visualizations only. Referenced books remain copyrighted by their respective owners. No textbook pages, scans or OCR are redistributed.",
+  "authority_mode": "this book and edition; course-specific teacher precedence is a separate explicit mode",
+  "coverage": {
+    "registered_pages": 328,
+    "reviewed_pages": 251,
+    "knowledge_covered_pages": 251,
+    "source_review_complete": false,
+    "whole_book_expert_complete": false,
+    "fresh_topics": 257,
+    "unavailable_topics": 0,
+    "animation_points": 6,
+    "animation_segments": 11,
+    "whole_book_animation_complete": false,
+    "original_demo": false
+  },
+  "limitations": [
+    "全书328页中77页尚未纳入本专家核读；前言续页/目录与正文继续逐批核读，既有导航不是正文专家",
+    "第3章PDF54—94已核，含构造、全过程与三破坏、单/双筋路径原例、T形宽度/压块/设计复核及章末12思考题和8习题的来源与解题关系；章末题未全部求成带实配几何的最终数值答案",
+    "第1章PDF18—27及第2章PDF28—53正文已逐页核读，含4/13思考题的依赖入口；已建功能、环境附注、材料指标与模型、徐变收缩、钢筋疲劳用途、粘结锚固关系，但不等于所有跨章问题和习题最终数值均已完成。轴拉标准值式的完整变异系数取值尚缺，不能自动计算ftk。500级箍筋完整高强fyv规范条件仍须逐项补",
+    "第5章PDF132—187已核：普通/螺旋轴压、徐变卸载、偏压时序/NM路径与失稳、Pδ控制/三或/非框架放大与PΔ分层、ξb/ξcy前提、两阶段ea、大小偏压平衡、反向破坏、非对称设计补条件/异常转支/复核两入口与平面外、例5-4至5-11闭环与对称配筋用途/大小偏压设计/限定近似及实配复核区分。原书与独立复核差异须保留：例5-2比值、158复核不等号、例5-4实配、例5-9算术、例5-10两e′及选筋、例5-12根数与面积及比较口径。例5-13已核近似设计、各侧/总率共同控制、实配与平面外边界，表5-2已建整题分支；I形大偏压分流和例5-14、完整远翼缘带号矩/反向约束及小偏压迭代思想已核；例5-15近似改写/实配与平面外已核；NuMu两分支原平衡/二次式、179内部符号冲突与正lambda校核、图表参数/方向/每侧面积及界限关系已建，180查图应用已核；偏压受剪轴压机制、框架与其他构件lambda分支、同组合轴力封顶及免算仍配构造已建；型钢混凝土相互约束、轴压净/有效面积与专属稳定、偏压三材料本构和共同受拉合力取矩已核，web响应细算原书外引JGJ138—2016，184型钢共同界限及003/0033差异、钢管双向约束/面积与轴压候选/偏心链已核；185gamma排印按乘法负值疑点未解；186式5-79稳定放大正定义域已核，Nk强度下标与文字身份差异保留，不自动从未明系数造Nk。章末14思考题关系和8习题条件化入口已建，未全数值求解；专属系数、中册框架算法及全部受压最小率附表行仍缺。单项承载试值不是全柱安全",
+    "第4章PDF95—131正文与章末问题已逐页核读：机理、三类控制、位置与分支、例题、材料图、弯起、截断、端部及连续支座锚固、搭接和腰筋已建关系；13思考题与8习题已建依赖入口，未全部数值求解/实配验收。例4-3图h900与计算h700冲突保留。第6章PDF188—193正文与章末已核：轴拉全过程与例6-1、偏拉位置分类、大偏拉带号平衡/屈服域/两未知补条件与对称负压区转支、小偏拉两侧取矩/同配非同应力、轴拉和小偏拉禁绑扎搭接；例6-2从负需量/实配628重求浅压到两候选取1696并选14@90表列1710已闭环，191分母45/35差异保留。偏拉斜剪负.2N、5-64剪跨、Vs容量下限和实际最低配箍/反解模型已建；5思考和1习题有条件路径，习题未完整最终实配求解、真实几何及水池使用条件未全验。第7章PDF194—195的扭矩来源、平衡与协调扭转、裂前裂后阶段及Tcr试验比较已接入；双路径线性转动弹簧仅作有前提力学类比，非书内真实框架通式。第7章196—197纯扭螺旋裂缝图、试验图比较限制、适筋/部分超筋/超筋/少筋四类破坏与终局条件反例已建；198—199页开裂三模型、Wt长短边/量纲/缩放/纯剪主值和裂后箱形桁架三假设已建；弹性α不由区间猜插值。200—201页箱形四平衡式、双屈服候选量与单肢/总面积已建；7-7及7-9末项与前式代入存在源内冲突并保留。202—203页匹配比、模型角限与规范0.6/1.7分开，规范0.35/1.2分项与fyv封顶360已建。204—205页同组合轴压力有利项0.3fcA封顶、箱形壁厚资格与减孔Wt、T/I完整腹板分区和守恒分配已建。第7章206—219的T/I参与翼缘、组合扭转、轴力与构造、例7-1实配最低率和章末路径已建；208箱形源内冲突及217等效翼缘核心到218实体箍回路映射保留。第8章220—238已建截面/杆件刚度、理论切线/使用割线、平均曲率、裂缝间分担、准永久psi与短期Bs；ρte下限不替ρ、翼缘方向及厚度封顶分别保留。长期徐变收缩、压筋约束、theta插值/环境修正、标准与准永久份额的等效刚度、最小刚度误差抵消与同号分区、挠度验收及承载/使用区别已接。229的8-22印Mq而227用Mk，连续梁条件或字歧义保留，不静默更字或恒真放行。230—231的配筋/荷载比较、跨高比初选和四类变形控制目的已核；例8-1经232准永久纯长期路径闭环，保留与前文标准组合模型差别及取整链。322附表4-1全部表行/4注及4-2全部表行/7注已核；限值边界、悬臂参考跨度、起拱组合上限、裂缝等级与专用对象分支已接。例8-2八孔九筋、三等效和配筋率入口已核，233原例psi下限、短期Bs、原例theta另增20%注记及纯长期B/Mq路径到6.95mm已核；未说明的20%原因保留缺口，前文标准组合路径另名。233—234的正截面首裂、局部极限拉应变、粘结传递长度、一侧l与理想间距l—2l/平均1.5l、出齐不等于不展宽已接到平均应变刚度；235—236的宽度侧表面测量定义、相对伸缩及长期机制、双自由体平衡传递长度、等直径平均间距与保护层/表面特征两项式已接；237—238图8-13的同层伸长差、αc一般近似0.85与ψ分工、准永久裂缝应力四分支、偏拉取矩e′与偏压使用ηs/e/z链已接；239—240最大宽度统计与长期归并8-38、deq算法、控制等级/环境限值、吊车修正/小偏压豁免及调整已接；241—242原例8-3至8-6闭环，8-5原印/规则差异具名并列，延性定义及目的已核；243—244曲率延性公式、双筋阶段条件与影响因素已核；245以后T形比较原因、耐久疲劳未核，附录缺口保留",
+    "PDF80式3-31替代写法与PDF88/90部分分类不等号极淡；T分类可由清楚的临界合力/矩等式推导，但不假称淡符号已辨清。HRB500抗压正文430、附表435、例3-7取410的书内差异保留",
+    "例3-8/9当前原页按初估h0选筋，未展示的实际净距/as回算不能当已验；例3-9实选面积约超所需9.5%，保留原值而不编原因",
+    "本轮未证明全书任意位置均能由预建知识回答",
+    "Public release uses the last self-contained portable snapshot (251/328 reviewed pages, 257 topics); newer local work is intentionally not promoted into this snapshot.",
+    "Source pages are not part of this public asset; addresses alone cannot be re-verified without the corresponding lawful source.",
+    "Existing animations are exported with integrity checks; this release is not a new browser or full-book semantic acceptance."
+  ],
+  "entrypoints": {
+    "frame": "knowledge/frame.json",
+    "index": "knowledge/index.json",
+    "topics": "knowledge/topics.jsonl",
+    "nodes": "knowledge/nodes.json",
+    "relations": "knowledge/relations.json",
+    "animations": "animations/index.json"
+  },
+  "files": {
+    "animations/index.json": {
+      "sha256": "8e0e857b9d279b848bf24ebd6ea2ad436479bd621e9c372ff6fdc5be55685090",
+      "bytes": 6703
+    },
+    "animations/keyframes/constant-load-creep/creep-under-fixed-load-0.svg": {
+      "sha256": "02e0aad3cc28c51b083d497e5e96517e999712049939e02c2d760708833d9451",
+      "bytes": 1082
+    },
+    "animations/keyframes/constant-load-creep/creep-under-fixed-load-1.svg": {
+      "sha256": "092ac865097280e2630c93e2e1719ce8cb0c74bb31a929391b54980130846327",
+      "bytes": 1082
+    },
+    "animations/keyframes/constant-load-creep/creep-under-fixed-load-2.svg": {
+      "sha256": "cf052dc7fa68906f36a3a5eab5fb2bbb0d701b22777215ea6bdd1fb966c7a707",
+      "bytes": 1080
+    },
+    "animations/keyframes/curvature-ductility-ratio/post-yield-curvature-reserve-0.svg": {
+      "sha256": "c1452e9a55219a430fb9200fc8a881d37bfcffc8b52fe3060976016cd90bb60e",
+      "bytes": 1715
+    },
+    "animations/keyframes/curvature-ductility-ratio/post-yield-curvature-reserve-1.svg": {
+      "sha256": "f549a09352b72ec1fdfff86c2ec14fd4384b742e7163ff77d0eada976600e6a1",
+      "bytes": 1717
+    },
+    "animations/keyframes/curvature-ductility-ratio/post-yield-curvature-reserve-2.svg": {
+      "sha256": "f42cf50b91bcbbb7052b0158f847f90ea8b31818fec5e84d95625bec9f2cc86d",
+      "bytes": 1717
+    },
+    "animations/keyframes/equal-area-bar-perimeter/trace-perimeters-0.svg": {
+      "sha256": "c082df6f67d6ba4a53342844d6a573ca69afb701f0134d4c78e5cb019fc95d27",
+      "bytes": 3435
+    },
+    "animations/keyframes/equal-area-bar-perimeter/trace-perimeters-1.svg": {
+      "sha256": "e6a39cc0c0bb19389db50423bdb6a4e7c9395d1086c5f5e115a4bf67487609ab",
+      "bytes": 3661
+    },
+    "animations/keyframes/equal-area-bar-perimeter/trace-perimeters-2.svg": {
+      "sha256": "8bec4f218c6efc0f99794aa3d2cc6caa4419c0d436b3bd51212767b8608af68c",
+      "bytes": 3743
+    },
+    "animations/keyframes/neutral-axis-identities/actual-neutral-0.svg": {
+      "sha256": "419c2a54a74d0540a6d7b30eaba9cb68ee3b84b5fd716b80636e03bc7695d5f3",
+      "bytes": 1644
+    },
+    "animations/keyframes/neutral-axis-identities/actual-neutral-1.svg": {
+      "sha256": "c0d3dfac199bb28b3df1ff8dffd099ab4b18d6ffa47a29cc1beee7402698f954",
+      "bytes": 1652
+    },
+    "animations/keyframes/neutral-axis-identities/actual-neutral-2.svg": {
+      "sha256": "178059b24d49dc6a30a98af04f035b9fce7567834fea73dc3d3bc8780cd1a829",
+      "bytes": 1644
+    },
+    "animations/keyframes/neutral-axis-identities/compression-centre-0.svg": {
+      "sha256": "95cca55ac27db8f965327e22fa3d3d240ed3908e0aa7408dd401b733bd9a135a",
+      "bytes": 1756
+    },
+    "animations/keyframes/neutral-axis-identities/compression-centre-1.svg": {
+      "sha256": "1cb2d4b093fd96146bdfb7ff9333d2c3536dbd940bc1f069d00bd7d8731add96",
+      "bytes": 1956
+    },
+    "animations/keyframes/neutral-axis-identities/compression-centre-2.svg": {
+      "sha256": "727d6e0267219920220f385f6a879cee6da7634f7465b7837d2cfcb0f70c30c7",
+      "bytes": 981
+    },
+    "animations/keyframes/neutral-axis-identities/equivalent-depth-0.svg": {
+      "sha256": "6219b2c3ff7a498062763c52298e01549a287e594a732bee0d18d58329c3ee07",
+      "bytes": 890
+    },
+    "animations/keyframes/neutral-axis-identities/equivalent-depth-1.svg": {
+      "sha256": "0134288fcda318306776421d242059f29a765d817ea15ce5500eacefa1aa1951",
+      "bytes": 1102
+    },
+    "animations/keyframes/neutral-axis-identities/equivalent-depth-2.svg": {
+      "sha256": "51514423aca69ceaa079f2d0c9b8668b3551f90f495a955c4cb78d2bc1d2c0dc",
+      "bytes": 1100
+    },
+    "animations/keyframes/prestress-edge-superposition/add-load-0.svg": {
+      "sha256": "31d3d76407ca0ec2be39a158871048e97f2e279cc49338bacf33ec0aec519a32",
+      "bytes": 2283
+    },
+    "animations/keyframes/prestress-edge-superposition/add-load-1.svg": {
+      "sha256": "42e166d223a65df9c632dee669d8c53bcdf95ccae7010fc5aab461dba16ffe71",
+      "bytes": 3250
+    },
+    "animations/keyframes/prestress-edge-superposition/add-load-2.svg": {
+      "sha256": "38317053a29dd7b84f1c3430b72ede7a24f47217395646fb4e0596d8880af472",
+      "bytes": 3233
+    },
+    "animations/keyframes/prestress-edge-superposition/increase-preload-0.svg": {
+      "sha256": "d37c338ce863727354695c4c08a0ea9a7cf250f7fe4d0ec81adb05d274ea1033",
+      "bytes": 3236
+    },
+    "animations/keyframes/prestress-edge-superposition/increase-preload-1.svg": {
+      "sha256": "41f9f23bec8e5d31979ff34e00003bdc037d8d84f0625971e9bebafcc698fe88",
+      "bytes": 3240
+    },
+    "animations/keyframes/prestress-edge-superposition/increase-preload-2.svg": {
+      "sha256": "ea38691fdef77479ac42d7521eb920cbcd80c12d3e50c73e236c3d1820f60a90",
+      "bytes": 3238
+    },
+    "animations/keyframes/prestress-edge-superposition/preload-only-0.svg": {
+      "sha256": "53445030d801286b43b456f4496a63087da6442fd9527afafe7d8396d63d62ff",
+      "bytes": 1905
+    },
+    "animations/keyframes/prestress-edge-superposition/preload-only-1.svg": {
+      "sha256": "9e56807961d66eab5db4b99f6277f6ef3d5aa68c9939b05ca5682f6091feace4",
+      "bytes": 2286
+    },
+    "animations/keyframes/prestress-edge-superposition/preload-only-2.svg": {
+      "sha256": "a97550e8baa964ff4b8db1cb72a700c7a8de1244c3a328c1b3a2853461284d35",
+      "bytes": 2286
+    },
+    "animations/keyframes/stress-block-two-constraints/preserve-resultant-0.svg": {
+      "sha256": "95cca55ac27db8f965327e22fa3d3d240ed3908e0aa7408dd401b733bd9a135a",
+      "bytes": 1756
+    },
+    "animations/keyframes/stress-block-two-constraints/preserve-resultant-1.svg": {
+      "sha256": "1cb2d4b093fd96146bdfb7ff9333d2c3536dbd940bc1f069d00bd7d8731add96",
+      "bytes": 1956
+    },
+    "animations/keyframes/stress-block-two-constraints/preserve-resultant-2.svg": {
+      "sha256": "727d6e0267219920220f385f6a879cee6da7634f7465b7837d2cfcb0f70c30c7",
+      "bytes": 981
+    },
+    "animations/keyframes/stress-block-two-constraints/wrong-position-0.svg": {
+      "sha256": "7a27bb92fb98bfdafaeb3400bbb9cf2b12002e79d37304c9d3fdb7a8d9899059",
+      "bytes": 1388
+    },
+    "animations/keyframes/stress-block-two-constraints/wrong-position-1.svg": {
+      "sha256": "32fba7a955f82eac43d33763050b720d12434aeafa2a72dbb008571735c231da",
+      "bytes": 1388
+    },
+    "animations/keyframes/stress-block-two-constraints/wrong-position-2.svg": {
+      "sha256": "f4a8f1c717882a6c3cab3488c689be5b2f542ed6d1d6578fc1d194682cf79247",
+      "bytes": 1388
+    },
+    "animations/knowledge/constant-load-creep.json": {
+      "sha256": "33e64e1c4f823b6effb3a00c9499b4ed16d984e2772317e2c5d639f5e700fcbe",
+      "bytes": 1491
+    },
+    "animations/knowledge/curvature-ductility-ratio.json": {
+      "sha256": "4b522036edcad4568c21668bbd802b23d560617a360a817879cd0dc3e4e0fac3",
+      "bytes": 2541
+    },
+    "animations/knowledge/equal-area-bar-perimeter.json": {
+      "sha256": "ee5b6397fa90a69e52fbb809173e05a0ab01711ded9df9814377508dea6e4ed2",
+      "bytes": 2860
+    },
+    "animations/knowledge/neutral-axis-identities.json": {
+      "sha256": "3620d4f749b8849266bbba55c9466f2eb3294d847633150c33f6b24d881b429d",
+      "bytes": 3025
+    },
+    "animations/knowledge/prestress-edge-superposition.json": {
+      "sha256": "ed12d194d4ae8db54807b927da6afdac88361231deaceeaf5cc3f79e68b89499",
+      "bytes": 4383
+    },
+    "animations/knowledge/stress-block-two-constraints.json": {
+      "sha256": "73684247522362a141f04ab1e32c7369684a575f28c75ecc1617cab1b37fce2d",
+      "bytes": 1109
+    },
+    "animations/players/constant-load-creep.html": {
+      "sha256": "61ac6e657043c0322860a2de7b0dda9feda70f6787455c585def5185a9454ef0",
+      "bytes": 14852
+    },
+    "animations/players/curvature-ductility-ratio.html": {
+      "sha256": "1b772ecb0d1a1f10a2bc7e1af27e0cda9ccaa254ba4ef6102dea69d379fb6f32",
+      "bytes": 14972
+    },
+    "animations/players/equal-area-bar-perimeter.html": {
+      "sha256": "f33d39eb20ea44a9d2501fb65a9ec868fac93f46e995f08183fdfff3816c6136",
+      "bytes": 14907
+    },
+    "animations/players/neutral-axis-identities.html": {
+      "sha256": "ae1aeb09d6b8fd1086970d18ce9dd151ca341073b258a7af17fb7c70c3e0c11a",
+      "bytes": 16251
+    },
+    "animations/players/prestress-edge-superposition.html": {
+      "sha256": "09a8f75e34688cff9f67ea878771878f2ae0571b71e7bf816b94dd93ee39f1b9",
+      "bytes": 16527
+    },
+    "animations/players/stress-block-two-constraints.html": {
+      "sha256": "28cef0011c46d50ad1577161a545e3a7c9b8941b9bb1b1af9e1a82f13c8863a0",
+      "bytes": 15600
+    },
+    "animations/points/constant-load-creep.json": {
+      "sha256": "3a70ae832617553d9ce55e037d3a26182b2cc764f04a519bcb7ded7bec38fd6f",
+      "bytes": 2877
+    },
+    "animations/points/curvature-ductility-ratio.json": {
+      "sha256": "0826b36d2a36af7ab308d6158f612bfdbbc981aab9162c77428cb8ea05c44ec1",
+      "bytes": 3698
+    },
+    "animations/points/equal-area-bar-perimeter.json": {
+      "sha256": "257c9b00b0fed17ac7f7667a268058fe828650577cc23ea42b69f2b183defe65",
+      "bytes": 3549
+    },
+    "animations/points/neutral-axis-identities.json": {
+      "sha256": "60da71d3a8b99cee42989712b0f0f906708577c08025e37c609cfc78f1b16ad6",
+      "bytes": 6532
+    },
+    "animations/points/prestress-edge-superposition.json": {
+      "sha256": "ddaeb09371fdb445930c52f0e894ec59250b207987d97e2eb7a27202d84f354c",
+      "bytes": 8268
+    },
+    "animations/points/stress-block-two-constraints.json": {
+      "sha256": "07276e54d2aa5922d1cc9ab71b82e8b976f3d51644572da531b932efb200ddd1",
+      "bytes": 4456
+    },
+    "knowledge/frame.json": {
+      "sha256": "8b292a810b31b955711730c7d4bfad46b438f90133d1eb2b7434d6ccfebe8cdc",
+      "bytes": 12318
+    },
+    "knowledge/index.json": {
+      "sha256": "0fdcf6a26fd43058d8fbc84cdcb9befb66d8a4039749d4a685174e250ed8a168",
+      "bytes": 87794
+    },
+    "knowledge/nodes.json": {
+      "sha256": "e39aceeee4c5b79f895e537fb23e52586d9b8342214b5eeabc1035a66072501f",
+      "bytes": 1150609
+    },
+    "knowledge/relations.json": {
+      "sha256": "6a88ad942c742bf3a8996ab6dd4fa25daedfdcfeb10c9926d0012db3280ec2a7",
+      "bytes": 815211
+    },
+    "knowledge/topics.jsonl": {
+      "sha256": "30555794d272d6a1be835c9602a0fee14fa434b754673003269a129e39405a33",
+      "bytes": 2127704
+    }
+  }
+}

@@ -1,0 +1,931 @@
+{
+  "format": "book-spirit-public-book",
+  "format_version": "1.0",
+  "book_id": "book_1eb47d6d22f54027",
+  "title": "材料力学解题指导及习题集",
+  "edition": "第二版（1984年3月第2版；1986年9月第3次印刷）",
+  "asset_revision": "2026-11-26",
+  "knowledge_snapshot": "read-only-library-2026-11-26",
+  "content_license": "MIT",
+  "source_rights": "Original explanatory knowledge and authored visualizations only. Referenced books remain copyrighted by their respective owners. No textbook pages, scans or OCR are redistributed.",
+  "authority_mode": "this book and edition; course-specific teacher precedence is a separate explicit mode",
+  "coverage": {
+    "registered_pages": 334,
+    "reviewed_pages": 28,
+    "knowledge_covered_pages": 27,
+    "source_review_complete": false,
+    "whole_book_expert_complete": false,
+    "fresh_topics": 117,
+    "unavailable_topics": 0,
+    "animation_points": 36,
+    "animation_segments": 36,
+    "whole_book_animation_complete": false,
+    "original_demo": false
+  },
+  "limitations": [
+    "PDF32及以后未接；2.49所问已核，图未核，不先分类。",
+    "2.47a/b铜的E未指定，附录黄铜行不得静默替代；2.46/2.48钢210GPa为附录应用。",
+    "2.14近似、2.8/2.15条件解和第一章积压保留；书后答案未核。",
+    "57点57段不是逐理解点全覆盖；复合材料柔度、预应力及接触分支等缺口独立列账。",
+    "Source pages are not part of this public asset; addresses alone cannot be re-verified without the corresponding lawful source.",
+    "Existing animations are exported with integrity checks; this release is not a new browser or full-book semantic acceptance."
+  ],
+  "entrypoints": {
+    "frame": "knowledge/frame.json",
+    "index": "knowledge/index.json",
+    "topics": "knowledge/topics.jsonl",
+    "nodes": "knowledge/nodes.json",
+    "relations": "knowledge/relations.json",
+    "animations": "animations/index.json"
+  },
+  "files": {
+    "animations/index.json": {
+      "sha256": "715cc604cfdc3f56d2f8da6947a88d6443aa14a3c0fe5a88c45b291cf3863fe8",
+      "bytes": 32247
+    },
+    "animations/keyframes/axial-cut-below-point-load-000.svg": {
+      "sha256": "d3840b11f4bbef699bcf325309d1bd8779feac6110760df628642aed90894253",
+      "bytes": 1335
+    },
+    "animations/keyframes/axial-cut-below-point-load-050.svg": {
+      "sha256": "0ab9dd91a076a5ce5f89f6e6acd9cef6856f9ba45cbf99a553241840d8eada19",
+      "bytes": 1335
+    },
+    "animations/keyframes/axial-cut-below-point-load-100.svg": {
+      "sha256": "c0536fd758a7b6e1733bdfe18a000dbfce7d28549221610c41cd7665dd24e2af",
+      "bytes": 1334
+    },
+    "animations/keyframes/beam-couple-side-000.svg": {
+      "sha256": "03d36174f1a35079ae9e47441273f924ff577fc3291fe2eaac5541a44045a19a",
+      "bytes": 3644
+    },
+    "animations/keyframes/beam-couple-side-050.svg": {
+      "sha256": "87add455c22b88f9ae151ca01a01a60fdb34ab953f7e5364312eb681dd8ca231",
+      "bytes": 3971
+    },
+    "animations/keyframes/beam-couple-side-100.svg": {
+      "sha256": "87add455c22b88f9ae151ca01a01a60fdb34ab953f7e5364312eb681dd8ca231",
+      "bytes": 3971
+    },
+    "animations/keyframes/beam-force-side-000.svg": {
+      "sha256": "24d904b424e5dd8e7382e66b127a64ffea95b55a22549d1b811e62abf3f36e14",
+      "bytes": 3269
+    },
+    "animations/keyframes/beam-force-side-050.svg": {
+      "sha256": "8c769f2456837572905dfbe9f0f2fa6ea3ac362f970e64da7e25c7174569aa4c",
+      "bytes": 3510
+    },
+    "animations/keyframes/beam-force-side-100.svg": {
+      "sha256": "8c769f2456837572905dfbe9f0f2fa6ea3ac362f970e64da7e25c7174569aa4c",
+      "bytes": 3510
+    },
+    "animations/keyframes/bent-arm-torsion-000.svg": {
+      "sha256": "bdce4a75fd43ab034280a7aee88be7a73a0c800b7a14079228062a4251dee674",
+      "bytes": 1457
+    },
+    "animations/keyframes/bent-arm-torsion-050.svg": {
+      "sha256": "e3d3aacaccf14139a7c20bf38d57d25df315b386ccc203eb7f3aab22c2f4a909",
+      "bytes": 1456
+    },
+    "animations/keyframes/bent-arm-torsion-100.svg": {
+      "sha256": "77c81ee92b1fd47d4ee8d83c657a597efa1690019d9de00eb4548edba8f071f2",
+      "bytes": 1456
+    },
+    "animations/keyframes/cantilever-couple-cut-000.svg": {
+      "sha256": "10939309a7bd617dbbbcdbbe016127453e6eb44b1d3a7f3180dfa79944691d93",
+      "bytes": 3910
+    },
+    "animations/keyframes/cantilever-couple-cut-050.svg": {
+      "sha256": "e3e97ef368606bfcd746e77053413dd39a39047ad72530604a58b724b5e93a61",
+      "bytes": 5813
+    },
+    "animations/keyframes/cantilever-couple-cut-100.svg": {
+      "sha256": "e3e97ef368606bfcd746e77053413dd39a39047ad72530604a58b724b5e93a61",
+      "bytes": 5813
+    },
+    "animations/keyframes/cut-action-pair-000.svg": {
+      "sha256": "59df95734787f84de1c6c1c6cb5e6f518a3ee10a5b62817bda3ae6491e87b4ee",
+      "bytes": 1185
+    },
+    "animations/keyframes/cut-action-pair-050.svg": {
+      "sha256": "80ff7d6629d5feeeaa19e5bb22039696ef9eab6bf61623004003f71a60e43e0a",
+      "bytes": 1185
+    },
+    "animations/keyframes/cut-action-pair-100.svg": {
+      "sha256": "57092e2375977a684660baa125c79427871a8d24c960772278c86603e60aaa45",
+      "bytes": 1185
+    },
+    "animations/keyframes/diagonal-line-strain-000.svg": {
+      "sha256": "96753394d9f366224748d795c98fc269cd8603bfff2fa2b813fe081874864500",
+      "bytes": 1206
+    },
+    "animations/keyframes/diagonal-line-strain-050.svg": {
+      "sha256": "eeca565bf8c6d716ee741751c4d581e439b3cd05abdde95b4e0261155387663e",
+      "bytes": 1253
+    },
+    "animations/keyframes/diagonal-line-strain-100.svg": {
+      "sha256": "58bddcfb4816d514c6a8c0ac005eddd3abb8a86fc1609d916f9a635557a55c81",
+      "bytes": 1247
+    },
+    "animations/keyframes/fixed-bar-stiffness-sharing-000.svg": {
+      "sha256": "db82a264147f2b22843b451ef2c52908e7c26995088c82f7a2acdf3d9e7abaa1",
+      "bytes": 2590
+    },
+    "animations/keyframes/fixed-bar-stiffness-sharing-050.svg": {
+      "sha256": "df9ba6c042dff98b33d8aef05ed245f739143031135adbadb4521ad7d99f7263",
+      "bytes": 2590
+    },
+    "animations/keyframes/fixed-bar-stiffness-sharing-100.svg": {
+      "sha256": "27cbcae3710663ed0e6de703c7b60b9f6bad6ce2100ee1d6a6a8998487e93e97",
+      "bytes": 2590
+    },
+    "animations/keyframes/last-elastic-rod-to-limit-000.svg": {
+      "sha256": "6b12a1a15e0633732e471c24629380fe55ed1bfd691bdfd8b0c8a60f75b251d8",
+      "bytes": 4130
+    },
+    "animations/keyframes/last-elastic-rod-to-limit-050.svg": {
+      "sha256": "ccf2ca0374061f77400cf08bc9f3f9ee1f466c287e7fde8f8c7d34ebf739672a",
+      "bytes": 4113
+    },
+    "animations/keyframes/last-elastic-rod-to-limit-100.svg": {
+      "sha256": "7fbf5ccf5cdedbb2be2d77a9df339d0d406105fcd2f88dbddeb740a35f53b081",
+      "bytes": 4113
+    },
+    "animations/keyframes/linear-section-point-stress-000.svg": {
+      "sha256": "fb9d34976f5fe33b004e3a1dccde55b67c742a02a25a722671b215aba33510f9",
+      "bytes": 991
+    },
+    "animations/keyframes/linear-section-point-stress-050.svg": {
+      "sha256": "c1f4f85b65029a5a3f0732926c4303e311d642a40163f1f1f84c0898e0382b71",
+      "bytes": 832
+    },
+    "animations/keyframes/linear-section-point-stress-100.svg": {
+      "sha256": "7cab357ad6fe3b8cf5587153737207b1effb57bead3e7dbf7c5879d2c9f41c73",
+      "bytes": 883
+    },
+    "animations/keyframes/linear-stress-resultant-000.svg": {
+      "sha256": "3675767dae71e5c807292877ecd0a8dd02bf670ea90edf50fe2c466a8ea7f879",
+      "bytes": 2402
+    },
+    "animations/keyframes/linear-stress-resultant-050.svg": {
+      "sha256": "69763644112a12380788f3b074d7d8f3c582ff30e9389f8548c09fa9a90980c6",
+      "bytes": 2402
+    },
+    "animations/keyframes/linear-stress-resultant-100.svg": {
+      "sha256": "ae1eebb8ee524bff202a8b2f90c1c32f5debd892b8f010bc69bdfc7a97424c0c",
+      "bytes": 2402
+    },
+    "animations/keyframes/local-relative-elongation-000.svg": {
+      "sha256": "05c6979229b8eeed12eda4c6edb29e567f3e5370efa921b955d93caf6ac232a4",
+      "bytes": 922
+    },
+    "animations/keyframes/local-relative-elongation-050.svg": {
+      "sha256": "a58c8cfa6b525be1c94665ca77a09fc42a95de34746ddedd560e6cc1398d2dd8",
+      "bytes": 922
+    },
+    "animations/keyframes/local-relative-elongation-100.svg": {
+      "sha256": "fa8b9d73bae8156d2a7808fcdd7ce74152ce2fb26d9c601d73ce44a145d174a4",
+      "bytes": 922
+    },
+    "animations/keyframes/oblique-plane-normal-stress-000.svg": {
+      "sha256": "3471823fb2e16a6ff040d05676946c7aef9b8ad0381a33a5deb66c142cc88983",
+      "bytes": 1107
+    },
+    "animations/keyframes/oblique-plane-normal-stress-050.svg": {
+      "sha256": "141f0a78c68a72473a7e9180de15e4cd9560039f8518fc36cf14e78b2c3b649f",
+      "bytes": 1442
+    },
+    "animations/keyframes/oblique-plane-normal-stress-100.svg": {
+      "sha256": "c903769cbcde8eb02f7ce2d65904b750d6237e2684ffd3ce06be4d30d73fa069",
+      "bytes": 1371
+    },
+    "animations/keyframes/overhang-support-shear-000.svg": {
+      "sha256": "64f0fe23c92e71675585f5e16608bf647c8c23fc360ea9787bde2f4fc18cc75d",
+      "bytes": 1608
+    },
+    "animations/keyframes/overhang-support-shear-050.svg": {
+      "sha256": "a6a4ec217662abe714679f2fa230f34bc350d88e2fbb5077cd21688423a8b410",
+      "bytes": 1858
+    },
+    "animations/keyframes/overhang-support-shear-100.svg": {
+      "sha256": "a6a4ec217662abe714679f2fa230f34bc350d88e2fbb5077cd21688423a8b410",
+      "bytes": 1858
+    },
+    "animations/keyframes/parabolic-load-centroid-000.svg": {
+      "sha256": "b8d91e9a21ad111a53710abea020ffe6e06d49cf997f1b95592a79e4923e545b",
+      "bytes": 4580
+    },
+    "animations/keyframes/parabolic-load-centroid-050.svg": {
+      "sha256": "582ecc88fb3900908d7ccdf68d94376e0f9983dbd8f249e8e13ebf3ea6b0e12a",
+      "bytes": 4088
+    },
+    "animations/keyframes/parabolic-load-centroid-100.svg": {
+      "sha256": "f92a27a6ad2d0cea365a7aff48a16b945fbb9a7fa58178ff4c78082291050707",
+      "bytes": 4537
+    },
+    "animations/keyframes/point-stress-limit-000.svg": {
+      "sha256": "4ef426aa651eb3f3e8d4b4a69e11636609837e270c3232354ca6651e192d1d67",
+      "bytes": 785
+    },
+    "animations/keyframes/point-stress-limit-050.svg": {
+      "sha256": "39b93c731d2c8b25c6eada5cca507fb80ee66cad7250258a87d5b8f44cf08994",
+      "bytes": 809
+    },
+    "animations/keyframes/point-stress-limit-100.svg": {
+      "sha256": "a9f18b0860c1660eef7cae7a5887099b695e74039a6ca2c12d9b26447acddaf4",
+      "bytes": 811
+    },
+    "animations/keyframes/right-angle-change-000.svg": {
+      "sha256": "4d6dc54d7da9c300f665003e7ee9895907989474e1105dfbedfe62d28ed21a4a",
+      "bytes": 739
+    },
+    "animations/keyframes/right-angle-change-050.svg": {
+      "sha256": "d5a81709214a0a978eaa38accf082ee1b110521068e445bd191f7dd0be8f910c",
+      "bytes": 778
+    },
+    "animations/keyframes/right-angle-change-100.svg": {
+      "sha256": "590b29eb519f3efb76bd4405cafe20538069557b3c1db2cbe989e1a031f9a80d",
+      "bytes": 778
+    },
+    "animations/keyframes/rigid-beam-rod-tension-000.svg": {
+      "sha256": "f1da7f9e1560dbc894ff706e0d44d06478fef68c46a9715f2e4052d9412c74d2",
+      "bytes": 1696
+    },
+    "animations/keyframes/rigid-beam-rod-tension-050.svg": {
+      "sha256": "f3bf4cb2573c61f48800dc0a59d7c85472db552e08ebdfceb5585b8b207612ca",
+      "bytes": 1975
+    },
+    "animations/keyframes/rigid-beam-rod-tension-100.svg": {
+      "sha256": "19c0e7470dfd515b846e16752f7485318a7783aa615fbb56155bf10b5cc459dd",
+      "bytes": 1975
+    },
+    "animations/keyframes/rigid-beam-rotation-compatibility-000.svg": {
+      "sha256": "f364366d6aea08f63cfed49f567430351a9e56ba33c4bdf91781a128273b75c7",
+      "bytes": 3049
+    },
+    "animations/keyframes/rigid-beam-rotation-compatibility-050.svg": {
+      "sha256": "1fb122b9d1a568f8bcecf2cb00d654d15887dd153d435147113e12a587c4a1b7",
+      "bytes": 3598
+    },
+    "animations/keyframes/rigid-beam-rotation-compatibility-100.svg": {
+      "sha256": "71f32a4a819e714cdeee8d19f94eb7376f0ea35e4fcf8172ab1d0fb158ec9f45",
+      "bytes": 3598
+    },
+    "animations/keyframes/ring-cut-torsion-000.svg": {
+      "sha256": "8a99f295daa3ad7f5b2333581353ad8e56bad7cff44dc844aa6ce2e7fabbc0d1",
+      "bytes": 5112
+    },
+    "animations/keyframes/ring-cut-torsion-050.svg": {
+      "sha256": "8084a474cb77f8ca0715fba6928f0de97f2bcaff9cf98de2b2e11caa175ff0b1",
+      "bytes": 5000
+    },
+    "animations/keyframes/ring-cut-torsion-100.svg": {
+      "sha256": "e7a6607936a0fa7128b3c5c990e1dd346c7fe241246650b0eb97873da6f196ef",
+      "bytes": 5184
+    },
+    "animations/keyframes/rotated-angle-opening-000.svg": {
+      "sha256": "3a89817ab571007ec35e511df9c6f9d5e15f641fbbb0aabdd1349fc545e4e977",
+      "bytes": 846
+    },
+    "animations/keyframes/rotated-angle-opening-050.svg": {
+      "sha256": "07d7ee415e96565a1274311db35b9e1ab6a7df2aeebc02ed17961d3f0e65d6f5",
+      "bytes": 1081
+    },
+    "animations/keyframes/rotated-angle-opening-100.svg": {
+      "sha256": "f6a0e8648117acaa3fbe6bcc1261a4182dc67b960d77fe0985df2780281e0dfb",
+      "bytes": 1075
+    },
+    "animations/keyframes/same-resultants-different-stress-000.svg": {
+      "sha256": "6e95be5d0ba6dc8111fa592a791bcb11d061abebac2791d13009fc13ef5b87c8",
+      "bytes": 4164
+    },
+    "animations/keyframes/same-resultants-different-stress-050.svg": {
+      "sha256": "fcd6bca822258b12c4fb96c95a49d42b4ec1b27f3f15e9c64901020e21c38f98",
+      "bytes": 4024
+    },
+    "animations/keyframes/same-resultants-different-stress-100.svg": {
+      "sha256": "000ba40baf930f2523eb704e00215633887f37e217355e2b9d3340f3ba462bae",
+      "bytes": 3992
+    },
+    "animations/keyframes/shear-diagonal-extension-000.svg": {
+      "sha256": "92f57480978de7f5dc8b7b5c118d21bc5b5367a64b8e3b006a3a7fc2fa18ec20",
+      "bytes": 702
+    },
+    "animations/keyframes/shear-diagonal-extension-050.svg": {
+      "sha256": "36a1d087c4c74578ef394e71fdf136c0adf86010513974f2fd49a47fdb7021fb",
+      "bytes": 839
+    },
+    "animations/keyframes/shear-diagonal-extension-100.svg": {
+      "sha256": "7eecf72e4b4722c66ca400dc25a06ee26f1a64ce26c70060e48caabd0da91cd7",
+      "bytes": 840
+    },
+    "animations/keyframes/simple-couple-cut-000.svg": {
+      "sha256": "230745062b59ea1ff22e3f000e33d7e3839483759ffd83fcc1a9ffcec98fbbe9",
+      "bytes": 4903
+    },
+    "animations/keyframes/simple-couple-cut-050.svg": {
+      "sha256": "d115c42d46a5ffa6d64435ac0fed2f73e32bb902bbe1647d15aa357b7ee868de",
+      "bytes": 4890
+    },
+    "animations/keyframes/simple-couple-cut-100.svg": {
+      "sha256": "d115c42d46a5ffa6d64435ac0fed2f73e32bb902bbe1647d15aa357b7ee868de",
+      "bytes": 4890
+    },
+    "animations/keyframes/slotted-bar-axial-extension-000.svg": {
+      "sha256": "5e4c7db7dc550b7cf714f4de850bc9a28c8e8477ff54b92ca4f0283e5b645505",
+      "bytes": 575
+    },
+    "animations/keyframes/slotted-bar-axial-extension-050.svg": {
+      "sha256": "6483d78f8fd2a570e53fe285232d977cdff800991e0f9449e98bda8261eeb787",
+      "bytes": 1356
+    },
+    "animations/keyframes/slotted-bar-axial-extension-100.svg": {
+      "sha256": "5f300292a6e568d59a8d92e2b3715fbb0ef3b568b7a8981d44e0aaf0a0fe7a38",
+      "bytes": 1356
+    },
+    "animations/keyframes/stepped-bar-cut-force-000.svg": {
+      "sha256": "ead2929ad860e9876692d603c618280d031e82f3646d60658df991f737cdd928",
+      "bytes": 2064
+    },
+    "animations/keyframes/stepped-bar-cut-force-050.svg": {
+      "sha256": "8f161093a6c8f6bce6464e9803876b511d8266cfb65b2f24a0acf82ee3615a53",
+      "bytes": 1777
+    },
+    "animations/keyframes/stepped-bar-cut-force-100.svg": {
+      "sha256": "d3cb3d5de66d18447339071a2e1f143244f2cd3412f0350ee23e9b384dddb06e",
+      "bytes": 1488
+    },
+    "animations/keyframes/stepped-bar-point-displacement-000.svg": {
+      "sha256": "a8457fb3faa671d33cd2545a34d9f35c0244a56359a89f332df8da2f3cb50f66",
+      "bytes": 1539
+    },
+    "animations/keyframes/stepped-bar-point-displacement-050.svg": {
+      "sha256": "fe132ec50f5e31bbdbb9aa24c24cda13bc3795318e0c33be4599a87960526780",
+      "bytes": 1865
+    },
+    "animations/keyframes/stepped-bar-point-displacement-100.svg": {
+      "sha256": "713208bf96e66202ad0dfd5b78e30d2fefc31fc2f422fc6ebba33f0ab422c864",
+      "bytes": 1856
+    },
+    "animations/keyframes/stress-normal-projection-000.svg": {
+      "sha256": "1e4e9a0e93a5855a8ee3d8ed8006c07b4b0d9c3de97e82de098716c5056b6208",
+      "bytes": 1103
+    },
+    "animations/keyframes/stress-normal-projection-050.svg": {
+      "sha256": "d6450f994a5c373d65c3305f0194980eb866a9780cd9ec1d34534cc925b4d3d6",
+      "bytes": 1103
+    },
+    "animations/keyframes/stress-normal-projection-100.svg": {
+      "sha256": "eceee115d1f72b9e1250790a8958879cb90d5c3042213dc474284e8597c25661",
+      "bytes": 1103
+    },
+    "animations/keyframes/symmetric-wire-capacity-000.svg": {
+      "sha256": "99d8dc9f23214a7d24cb770dcbc5abda49bcdcd826289679fd72cfa6695fadd2",
+      "bytes": 1604
+    },
+    "animations/keyframes/symmetric-wire-capacity-050.svg": {
+      "sha256": "d487db6c8b4262b2aee501925f2421d0b2c4696911655c11497eec9685159f53",
+      "bytes": 1802
+    },
+    "animations/keyframes/symmetric-wire-capacity-100.svg": {
+      "sha256": "7395e14457c95e0c364e9754bd24c6f74569a855070e64994a647c59beed171a",
+      "bytes": 1802
+    },
+    "animations/keyframes/thin-ring-hoop-stress-000.svg": {
+      "sha256": "7893f470821d21bebb57d2e257359b638dab4a1fac32e09d1ac21c1cf588e8d5",
+      "bytes": 773
+    },
+    "animations/keyframes/thin-ring-hoop-stress-050.svg": {
+      "sha256": "4b19c417247c665d00f51aab1f8571d98b568b04258e00a49a1a2f9acc398d45",
+      "bytes": 2149
+    },
+    "animations/keyframes/thin-ring-hoop-stress-100.svg": {
+      "sha256": "8ae0f506bf90c66f0dc55edd17a9d151a6cf3f472f1b2977f39a9e1740060ee3",
+      "bytes": 2127
+    },
+    "animations/keyframes/triangle-section-centroid-000.svg": {
+      "sha256": "1f729ad0719e3a08afee1380b1f37535605529acc3d5a32509fc7e970da67374",
+      "bytes": 960
+    },
+    "animations/keyframes/triangle-section-centroid-050.svg": {
+      "sha256": "b3a7d75ab2da13cbf7532fa7c66d6b6e0f5ab816bc283af95500fc14e100c4c7",
+      "bytes": 960
+    },
+    "animations/keyframes/triangle-section-centroid-100.svg": {
+      "sha256": "9214a59062e4d8265a9dc067e8e6c224ae2b2abb5a4e35ffa02443fa59ae7a78",
+      "bytes": 898
+    },
+    "animations/keyframes/triangular-load-centroid-000.svg": {
+      "sha256": "fe6f2adfd908c71c7c1a4564948582d22f7033298aae73d200a5d4fb3052cb39",
+      "bytes": 4474
+    },
+    "animations/keyframes/triangular-load-centroid-050.svg": {
+      "sha256": "da6ebeba899d8db77e9d08e9dc2cf6fad2db2fd7ddbff56f0d961aed8d16cf15",
+      "bytes": 3868
+    },
+    "animations/keyframes/triangular-load-centroid-100.svg": {
+      "sha256": "dc1fe14c945f605e221f9058ff1fb683a80f6e894a623c894f24f3534aaa0f68",
+      "bytes": 4455
+    },
+    "animations/keyframes/truss-middle-shortage-000.svg": {
+      "sha256": "1707a0338b070b10374be90e7f68293ef4f764d430977a84a004fed1712d66f9",
+      "bytes": 2717
+    },
+    "animations/keyframes/truss-middle-shortage-050.svg": {
+      "sha256": "65601d53347ef089a0d7f23212969c9c36b18519457fae7a78b87bdbd4116074",
+      "bytes": 3381
+    },
+    "animations/keyframes/truss-middle-shortage-100.svg": {
+      "sha256": "338f802f745a04ac0319454df40728ad1e3791ec6b7d0d7654ddf25407adc9a7",
+      "bytes": 3386
+    },
+    "animations/keyframes/truss-node-projection-000.svg": {
+      "sha256": "1a26d0a14a1e05c491403ad306b1f52fad544785f52449ee59ca659b302b8ef1",
+      "bytes": 2726
+    },
+    "animations/keyframes/truss-node-projection-050.svg": {
+      "sha256": "c73f9427c064d9ed0d81210470af003b7e23e6f1d9413ce2ded788854d21fa3e",
+      "bytes": 3730
+    },
+    "animations/keyframes/truss-node-projection-100.svg": {
+      "sha256": "ec653f409938ae6753924c3d07c7202a681a43cd59f5592a43641327ec292aa8",
+      "bytes": 3724
+    },
+    "animations/keyframes/truss-uniform-heating-000.svg": {
+      "sha256": "6c5e325a2ede6dfe52c779f6c6687fa883fe6aba34ceee4f041b1da841c9a8e2",
+      "bytes": 2717
+    },
+    "animations/keyframes/truss-uniform-heating-050.svg": {
+      "sha256": "9ad1efa5ca8c3c5b40721e5b552288d07741103d3cec460bf8ab4c5006ef9a97",
+      "bytes": 3161
+    },
+    "animations/keyframes/truss-uniform-heating-100.svg": {
+      "sha256": "4f279a3efadf26afaf485e05184f89ea736f15990850c3e86be412759b9318cb",
+      "bytes": 3156
+    },
+    "animations/keyframes/yielded-rod-keeps-force-000.svg": {
+      "sha256": "203d1222975ba8633c77dd14f34de40577b1ef18cd0992119af6ce76e8a17922",
+      "bytes": 4130
+    },
+    "animations/keyframes/yielded-rod-keeps-force-050.svg": {
+      "sha256": "51f5cac1dae2af8e6137b8fb4dbceea6c4f70bd1101782e15a9a3b92ad863c07",
+      "bytes": 4109
+    },
+    "animations/keyframes/yielded-rod-keeps-force-100.svg": {
+      "sha256": "493d70a2080af8fc1021845ebc23a0b6f2b96cf3c89b95d8062c3152d833f490",
+      "bytes": 4130
+    },
+    "animations/knowledge/axial-cut-below-point-load.json": {
+      "sha256": "c8c6849c178c9dfcaa8962685a79fb19dabdc5cee0854c6fc57b34bb2ab962b3",
+      "bytes": 4559
+    },
+    "animations/knowledge/beam-couple-side.json": {
+      "sha256": "880d3fb89bf0e61e84a40d911ef14cef733ea0557a7791a3c08fd710e37f8449",
+      "bytes": 4303
+    },
+    "animations/knowledge/beam-force-side.json": {
+      "sha256": "c4452795186ec4738b38a85d14ac39e8b7cc4896f3d0dd08e3381c288f33d5d1",
+      "bytes": 4860
+    },
+    "animations/knowledge/bent-arm-torsion.json": {
+      "sha256": "940e7142e7ce8ec0dc6f38776066f33f0436c19f049e6e1eda65d7b99dcbfc73",
+      "bytes": 3844
+    },
+    "animations/knowledge/cantilever-couple-cut.json": {
+      "sha256": "e6abdc02d7a06300ba05d745b169cf8f6736e3d193d7d40bdceadc5be14982ea",
+      "bytes": 6728
+    },
+    "animations/knowledge/cut-action-pair.json": {
+      "sha256": "87d8c05845ebeaec56ea436f2ceed729ef5499a3c15abeb5ec0fae3bc84fb067",
+      "bytes": 4334
+    },
+    "animations/knowledge/diagonal-line-strain.json": {
+      "sha256": "5f4d793164a0005e5b0510c5383f0672e9d189bec57e9610330841b213bcddbe",
+      "bytes": 5628
+    },
+    "animations/knowledge/fixed-bar-stiffness-sharing.json": {
+      "sha256": "83b7ee0848daab646cfa1859cb465e6976236be2d5bb63a3b9d3036896150c02",
+      "bytes": 10500
+    },
+    "animations/knowledge/last-elastic-rod-to-limit.json": {
+      "sha256": "8fa13b1d6cf0408e144cef43c146b9d41af4c86f8ba60bdf583755cb42e80a1c",
+      "bytes": 8494
+    },
+    "animations/knowledge/linear-section-point-stress.json": {
+      "sha256": "19d97ef70f51e3787a2ea7755e89f2c68f202a452413bcb12e70db650abb7fb9",
+      "bytes": 6288
+    },
+    "animations/knowledge/linear-stress-resultant.json": {
+      "sha256": "ef850bc4e1a036e95a2a28025fe7974ef4c572eda57eb92934a32ad00c027235",
+      "bytes": 3254
+    },
+    "animations/knowledge/local-relative-elongation.json": {
+      "sha256": "00640b0dbf14294c31661d5b646fde3581bdd4bbcd85e565f3790366ab0cd231",
+      "bytes": 4813
+    },
+    "animations/knowledge/oblique-plane-normal-stress.json": {
+      "sha256": "8f71f0a1d201c62dfca72b176a5d972430a2fb1d2ac0142a070fd13a0810e46d",
+      "bytes": 4404
+    },
+    "animations/knowledge/overhang-support-shear.json": {
+      "sha256": "ce797148746778472bc66b956d9573f142074e06763907970c1c951a37e515c0",
+      "bytes": 6496
+    },
+    "animations/knowledge/parabolic-load-centroid.json": {
+      "sha256": "7ab9170ab227500bb785b8737ab766674cc5914565d4ef9921313b55bf9cbac3",
+      "bytes": 7270
+    },
+    "animations/knowledge/point-stress-limit.json": {
+      "sha256": "114302f4a0f4ea82108af11a66c15a3b56005636fee93e5b5590fcebc07ee8f6",
+      "bytes": 3651
+    },
+    "animations/knowledge/right-angle-change.json": {
+      "sha256": "4a13943357a29bd391c67d89b57e703ddff713078d483b94281758e0661a9bdf",
+      "bytes": 6279
+    },
+    "animations/knowledge/rigid-beam-rod-tension.json": {
+      "sha256": "a89f5448f1838a53fed2fba2683f653ec3987efee8698d7a613be464aeb8a9fb",
+      "bytes": 8106
+    },
+    "animations/knowledge/rigid-beam-rotation-compatibility.json": {
+      "sha256": "27914e128b67b5f6306eb34ab19f63181b69b3281787fb91bed5f3d5cbfd6184",
+      "bytes": 6652
+    },
+    "animations/knowledge/ring-cut-torsion.json": {
+      "sha256": "c3f0fe14431a2b4c0b5374fac0601af0f43c4560ca0ba17cc644e5cbcc14c311",
+      "bytes": 4357
+    },
+    "animations/knowledge/rotated-angle-opening.json": {
+      "sha256": "908285ba7bd9a7da8690bce53eb98b8c9db37c63cb686f3adb3390023392616d",
+      "bytes": 3109
+    },
+    "animations/knowledge/same-resultants-different-stress.json": {
+      "sha256": "88134be4bc4db43f17964dd973538e9bd94e123c62439a8612060077588ce901",
+      "bytes": 4286
+    },
+    "animations/knowledge/shear-diagonal-extension.json": {
+      "sha256": "cf10575ca1f829a4a0136456a6dfa195045142296c2f6bdbcfd27b1fd0e3b216",
+      "bytes": 6592
+    },
+    "animations/knowledge/simple-couple-cut.json": {
+      "sha256": "af2f1fe71a9ce79e8b8ae3a7c9573cae352fd63ba60b05af2258095d336d8c96",
+      "bytes": 6474
+    },
+    "animations/knowledge/slotted-bar-axial-extension.json": {
+      "sha256": "bf8ed9d2116431776678a0c6e6ed869d5fcd3d9565e4f942fb7052a3d74e62f7",
+      "bytes": 7363
+    },
+    "animations/knowledge/stepped-bar-cut-force.json": {
+      "sha256": "c1a1a39d03beecf2c2f40426719b2e47d67a1f7972594118875d4050d4e6ef7e",
+      "bytes": 5101
+    },
+    "animations/knowledge/stepped-bar-point-displacement.json": {
+      "sha256": "4a9b3dd04b50ce340edf86e6843229bd1575e474b001d530fefc1212bc559569",
+      "bytes": 9654
+    },
+    "animations/knowledge/stress-normal-projection.json": {
+      "sha256": "a9ab12365b9d29906e128a9057cbc120396c6a5efe9fb33d594e8fb00a18d620",
+      "bytes": 2857
+    },
+    "animations/knowledge/symmetric-wire-capacity.json": {
+      "sha256": "26ec68ecc5e15c368697a419005e4e92bb323782f9bdef52852a011e55631403",
+      "bytes": 9580
+    },
+    "animations/knowledge/thin-ring-hoop-stress.json": {
+      "sha256": "76ac467614600c064c15e1a1033c25cd9439cd91fddcd946835b856c6f754ce1",
+      "bytes": 5860
+    },
+    "animations/knowledge/triangle-section-centroid.json": {
+      "sha256": "22d998c797e0516bc98c98c031d0a39f3f7688f25627dd40181d88d4682414bf",
+      "bytes": 6366
+    },
+    "animations/knowledge/triangular-load-centroid.json": {
+      "sha256": "8f6cf49979063f580371982e777db77da6b57873a2fe5326e75a0a4c7ce6ff42",
+      "bytes": 7301
+    },
+    "animations/knowledge/truss-middle-shortage.json": {
+      "sha256": "dfd3075a1655d1a66d379a0fa97dde99ee53dbdc6eab407b26c63581a5d28377",
+      "bytes": 8474
+    },
+    "animations/knowledge/truss-node-projection.json": {
+      "sha256": "bfbb83dae46f14b38c3bb9deec24cd7523cfb4869c9f23c5855caaa7f27dafe3",
+      "bytes": 9245
+    },
+    "animations/knowledge/truss-uniform-heating.json": {
+      "sha256": "88786e4eecf76a005f337bf77d6d8b5e72a56d32b33d9491b90f340e4199a7e9",
+      "bytes": 12767
+    },
+    "animations/knowledge/yielded-rod-keeps-force.json": {
+      "sha256": "faca1683285560802feda4996175c2dd84f00b502d5c6128a62904c4273a7bac",
+      "bytes": 6989
+    },
+    "animations/players/axial-cut-below-point-load.html": {
+      "sha256": "65efd3abfc82f9446e313292c794b2e83a663f0472c39d9379d52030b9f616ca",
+      "bytes": 193746
+    },
+    "animations/players/beam-couple-side.html": {
+      "sha256": "a5f00362e5f367fbef7013d9f937df753066956dfb0b34d3bc77511a3a45425b",
+      "bytes": 438731
+    },
+    "animations/players/beam-force-side.html": {
+      "sha256": "a2f32a490ac6ed83966fd332aec9f9e52a8a2da5a702060eaeac5a7c9a57fb6e",
+      "bytes": 392275
+    },
+    "animations/players/bent-arm-torsion.html": {
+      "sha256": "8664b104007d77e540c177504229bd4d62e7450b3eec99f25ddabf889864228c",
+      "bytes": 189349
+    },
+    "animations/players/cantilever-couple-cut.html": {
+      "sha256": "216e223c296420be98c28f4b90623da6aab22c16d49a2ede3163c83179b224a2",
+      "bytes": 544913
+    },
+    "animations/players/cut-action-pair.html": {
+      "sha256": "02b095392bb30af4217df77f3008d4ead674092f35a9f7b8926a7eff6518476a",
+      "bytes": 160085
+    },
+    "animations/players/diagonal-line-strain.html": {
+      "sha256": "0d61467c244414c74c8baec4c6b41e2b3558b65177607ddae1c922bb306caaa7",
+      "bytes": 198548
+    },
+    "animations/players/fixed-bar-stiffness-sharing.html": {
+      "sha256": "8ca1efef48fa97a692f242e9b382738825a9bda1859e6062b1f37ab1234463f0",
+      "bytes": 380426
+    },
+    "animations/players/last-elastic-rod-to-limit.html": {
+      "sha256": "3487194e923cff002bf995e223f2ecd143f57c31b54a5a2663cef67ebd882867",
+      "bytes": 552897
+    },
+    "animations/players/linear-section-point-stress.html": {
+      "sha256": "ab64d07c72fbf1fa024289ebb7256e80f5b9cbe038bef1e2cbf538a87bc62f75",
+      "bytes": 143603
+    },
+    "animations/players/linear-stress-resultant.html": {
+      "sha256": "0a3f40a604976b68e3ea59eac7e9704174053c3a4a775329b2d2aee649ef2adf",
+      "bytes": 302667
+    },
+    "animations/players/local-relative-elongation.html": {
+      "sha256": "a6edd9ab7053b7cc12d6edb5a70da09bef45f1e4f9b88abf75c9dbad51ea69f1",
+      "bytes": 129395
+    },
+    "animations/players/oblique-plane-normal-stress.html": {
+      "sha256": "4d91c4db98e84e3a0798fd6c5ffa63685777216a62a20eea71548aca40dead65",
+      "bytes": 229406
+    },
+    "animations/players/overhang-support-shear.html": {
+      "sha256": "7b6a5a699a2128fda4ce5af389ff7ec6456238f134192b688fae8414441b26da",
+      "bytes": 230579
+    },
+    "animations/players/parabolic-load-centroid.html": {
+      "sha256": "6f73b2d4d49f8b81847c18738e14a190f30208b5e1b5ae744a1eca6f054b7875",
+      "bytes": 511682
+    },
+    "animations/players/point-stress-limit.html": {
+      "sha256": "b47b7fc05cce5e256655d16c692712c1f9cfc30a437925ae2860da2bc005b58c",
+      "bytes": 128461
+    },
+    "animations/players/right-angle-change.html": {
+      "sha256": "c1d547fb0b1656ea86b16ab013205a9def77abfd693ed5589808abe8f9f0b6cf",
+      "bytes": 115149
+    },
+    "animations/players/rigid-beam-rod-tension.html": {
+      "sha256": "ebb21457f6db8b2bf9c37639fa338812bcaff35e693fe66a7d5f311729f725f1",
+      "bytes": 265138
+    },
+    "animations/players/rigid-beam-rotation-compatibility.html": {
+      "sha256": "ee62251fa9c2638cbf257bf0432dded3bf80c4b7dfc99433fc99aee917992eb4",
+      "bytes": 494126
+    },
+    "animations/players/ring-cut-torsion.html": {
+      "sha256": "5eac81c630a40ae9e424d291284bed793ec540dba439b269eafe8c00bbbd503a",
+      "bytes": 566774
+    },
+    "animations/players/rotated-angle-opening.html": {
+      "sha256": "e85067425a898bc391fcfc9c80bb49260393c8574fa4da6d2ea6d6856c90c8ef",
+      "bytes": 179808
+    },
+    "animations/players/same-resultants-different-stress.html": {
+      "sha256": "bfb7eef426f1b8aa28cf9aa83309c4cce7fba38e8710a2b3ab52db8c4337e83f",
+      "bytes": 496150
+    },
+    "animations/players/shear-diagonal-extension.html": {
+      "sha256": "3b60ceda3fbd4264aeb60395aad490a181a4c208b14abade3967a8ee5416f1be",
+      "bytes": 137987
+    },
+    "animations/players/simple-couple-cut.html": {
+      "sha256": "5997e870302d1c29fbf6f2278e6ec026f8d773dfecc3e3cdcbfe7b9988041376",
+      "bytes": 547576
+    },
+    "animations/players/slotted-bar-axial-extension.html": {
+      "sha256": "94257e15cb42dc6a5cc69c5306729b30c76ab3084b6f45856aa23d9778ddef04",
+      "bytes": 229583
+    },
+    "animations/players/stepped-bar-cut-force.html": {
+      "sha256": "03c813cfedda0ae4be03edb2cdf61c7548a7c5056aaf7ca3657651b9b2989dc0",
+      "bytes": 250658
+    },
+    "animations/players/stepped-bar-point-displacement.html": {
+      "sha256": "e7e7b5ceb982ad2778d4ee48a5e3cfc2058ccaf30a07b9cfc3642596e98fec80",
+      "bytes": 266994
+    },
+    "animations/players/stress-normal-projection.html": {
+      "sha256": "443bcc2e366ec5d230a51411efde483ef325b920564f8cc795b9f41ae9e4f2ab",
+      "bytes": 148167
+    },
+    "animations/players/symmetric-wire-capacity.html": {
+      "sha256": "5a6ed332b688c6bddd699ff03699e071514fa2d61d0ac1e3bbefd49fa531fef7",
+      "bytes": 270612
+    },
+    "animations/players/thin-ring-hoop-stress.html": {
+      "sha256": "1b7cfeb27f354e7b46bc0010932f4e27021bec489d8048271bb007aa97e320dd",
+      "bytes": 305201
+    },
+    "animations/players/triangle-section-centroid.html": {
+      "sha256": "1816d9d482863dd2b475f0b1d8403d35b15f6513434d47e2943b2893e4387644",
+      "bytes": 149155
+    },
+    "animations/players/triangular-load-centroid.html": {
+      "sha256": "bbbff681a1b27bfad9d5f0609766944451a98ebc6ea1196195b200592808a706",
+      "bytes": 491532
+    },
+    "animations/players/truss-middle-shortage.html": {
+      "sha256": "a7d7f78bea603cabaa80c42aaea4dc8ee75fffe8f095c55bad1cd400dcbb5ce1",
+      "bytes": 491129
+    },
+    "animations/players/truss-node-projection.html": {
+      "sha256": "8c9a85fd922f04afdc622f3124f719e7239737f8a4e97f8a9cb373e5a0c0ec23",
+      "bytes": 507227
+    },
+    "animations/players/truss-uniform-heating.html": {
+      "sha256": "e3c082633563c4ea05665f1026a2b2df6870c13857a0fcbe3ce1990be964debe",
+      "bytes": 461165
+    },
+    "animations/players/yielded-rod-keeps-force.html": {
+      "sha256": "2d753163e0c1b76544931ebd70737bd4b140b030873643bd6a006f24e2f8a4a9",
+      "bytes": 553309
+    },
+    "animations/points/axial-cut-below-point-load.json": {
+      "sha256": "d6625ebd58e1d40bae926c344ffcf686dafa3187f01f9645332923dc78b29396",
+      "bytes": 62076
+    },
+    "animations/points/beam-couple-side.json": {
+      "sha256": "a749b2b5d8a946561c75065ef90566d895b16d17a7dc23f736c1a794b16d0b15",
+      "bytes": 39703
+    },
+    "animations/points/beam-force-side.json": {
+      "sha256": "d1ad044811d095ec6fc7bec5d1890f558e47a1ef978de10c7c675eca14e288b2",
+      "bytes": 39203
+    },
+    "animations/points/bent-arm-torsion.json": {
+      "sha256": "cd8ea91ceb0a6c3c2afa2f18e8790256c5fcf99f70acb4c43691704a6ce6ba9a",
+      "bytes": 49516
+    },
+    "animations/points/cantilever-couple-cut.json": {
+      "sha256": "27e1b0f63f5ddca77087e189ad9fc519d10a0a49d8951892f363f25a083984fe",
+      "bytes": 49252
+    },
+    "animations/points/cut-action-pair.json": {
+      "sha256": "2b4839d49d6227f7c39640acb4c6b93a514e43ad72d7eab913239bff0c6f5897",
+      "bytes": 42936
+    },
+    "animations/points/diagonal-line-strain.json": {
+      "sha256": "11c77546beab9f2fe72c85458090390e621149473b1fdcd7640f4f8035c24f85",
+      "bytes": 86067
+    },
+    "animations/points/fixed-bar-stiffness-sharing.json": {
+      "sha256": "6733372fc8a28b1549b89df56062a9e1fb8069ef596ac5a37de89da750918711",
+      "bytes": 120584
+    },
+    "animations/points/last-elastic-rod-to-limit.json": {
+      "sha256": "3442e9b3c8e859f60ebc22af3f29020a637619542c5bf2edb9ab89ba6e150f09",
+      "bytes": 154108
+    },
+    "animations/points/linear-section-point-stress.json": {
+      "sha256": "0ef2693394201c4c921cd63693bd10d2d34f2804c45f78bb5d38016db79f3938",
+      "bytes": 51389
+    },
+    "animations/points/linear-stress-resultant.json": {
+      "sha256": "470d2f8578eb5390f9c1ab335d5eaa52d8c4fb25705114ba74f61a57d7c4ee71",
+      "bytes": 60537
+    },
+    "animations/points/local-relative-elongation.json": {
+      "sha256": "45ec14211e2dbcc01be0f7af50cddf8a8de4739129322a7aaf56439ad740906b",
+      "bytes": 40926
+    },
+    "animations/points/oblique-plane-normal-stress.json": {
+      "sha256": "1fac481edd33acab53ad0f2e9e65737c154793104addaa742cd72ea90b6c219f",
+      "bytes": 98775
+    },
+    "animations/points/overhang-support-shear.json": {
+      "sha256": "4d18ee4d57a865eb77348119e6dae7364691a852b78ca35dc7fcfc30c150cc89",
+      "bytes": 62086
+    },
+    "animations/points/parabolic-load-centroid.json": {
+      "sha256": "0b63397a5e9638e60948d401458a2f41a3a3ef9125fb7301ef1064932be92614",
+      "bytes": 61030
+    },
+    "animations/points/point-stress-limit.json": {
+      "sha256": "4e74b35b7102921b5f755e9e0fed5526129fad5a028b3098e8b3709021b52680",
+      "bytes": 54593
+    },
+    "animations/points/right-angle-change.json": {
+      "sha256": "8e253ea19efc49884d07aaffd58ab131af4b3a4e9449be49df298e353538f46c",
+      "bytes": 45538
+    },
+    "animations/points/rigid-beam-rod-tension.json": {
+      "sha256": "7fae0999d9d938eeb3a53688323eeb1e06569102eb5dfbb31168a565b16647ab",
+      "bytes": 58626
+    },
+    "animations/points/rigid-beam-rotation-compatibility.json": {
+      "sha256": "c6a130b68bfe64aee527e3229b29f532fc07c23348542fc246fc3f0e96dd0d92",
+      "bytes": 143517
+    },
+    "animations/points/ring-cut-torsion.json": {
+      "sha256": "a94f01cd5eb6ae74b4bba469f387e8f9aefda37528a6a7f5d40e35a461636db8",
+      "bytes": 47866
+    },
+    "animations/points/rotated-angle-opening.json": {
+      "sha256": "a96b3355624d86f6fc23f6d677837aee76db43de15bfc33ffeb4e2e1e2abf54a",
+      "bytes": 86338
+    },
+    "animations/points/same-resultants-different-stress.json": {
+      "sha256": "cd160ebbe41fa72143b64aedb447714d2f25199d6277e956c0e6b9abedcad989",
+      "bytes": 50614
+    },
+    "animations/points/shear-diagonal-extension.json": {
+      "sha256": "008329d842f93d93c7bafd2d712872f22e85478f9c7d44664afe698bc285f1f8",
+      "bytes": 62874
+    },
+    "animations/points/simple-couple-cut.json": {
+      "sha256": "2f884d4a5a98cca9d1bfd83d082d4ab954165eaff8a47b6636953f7d8218fbf6",
+      "bytes": 56371
+    },
+    "animations/points/slotted-bar-axial-extension.json": {
+      "sha256": "dd621e9a98d2b8e9e45729d5a5703f42b517cc22a5f70c6b2850e15c363d84e1",
+      "bytes": 114332
+    },
+    "animations/points/stepped-bar-cut-force.json": {
+      "sha256": "76d79531c8e1167c482472c2ea5095e8b577d96712307b3ca99f8eab28c8a9bc",
+      "bytes": 84448
+    },
+    "animations/points/stepped-bar-point-displacement.json": {
+      "sha256": "dbd4b50fcfb0b5fb7675af60e3d3eed3be40712a2add735d41d1f815b2a17b7c",
+      "bytes": 84994
+    },
+    "animations/points/stress-normal-projection.json": {
+      "sha256": "e12a21397bd5f19c30d0f8e030135bedab8d62413ec16373bed8f93dbafe613c",
+      "bytes": 42879
+    },
+    "animations/points/symmetric-wire-capacity.json": {
+      "sha256": "caac575423d3be4114df8bedaf80b08aa874bce27421ff861927b4f42884d2b0",
+      "bytes": 117882
+    },
+    "animations/points/thin-ring-hoop-stress.json": {
+      "sha256": "8a4b3cdac307fb267d787a1207d67a46c406cae31e651f2fb83ab41a360d4fa1",
+      "bytes": 92946
+    },
+    "animations/points/triangle-section-centroid.json": {
+      "sha256": "36ebd0d187adeaf4dabfd50f1ede7992f72880ae32a79ce24c20a34dcac02b2f",
+      "bytes": 57025
+    },
+    "animations/points/triangular-load-centroid.json": {
+      "sha256": "77ef5ca120f4abb2f5b6dc576edac8b821be4cfc4863d1c3aaea2e7b711cefde",
+      "bytes": 60370
+    },
+    "animations/points/truss-middle-shortage.json": {
+      "sha256": "6e00712bafa5c3ea50e1e834b6b38808d6fc5123015c692dbe8c32759ad1eeb7",
+      "bytes": 173158
+    },
+    "animations/points/truss-node-projection.json": {
+      "sha256": "31e5c4374b0d4316f8e570220e2c2bb08d1e5f400ff256091d1ed9e87e87d9d8",
+      "bytes": 154055
+    },
+    "animations/points/truss-uniform-heating.json": {
+      "sha256": "f233325890eb4080bf19cee682f11f8572db261ef746969073fbd90dbaf132cd",
+      "bytes": 165621
+    },
+    "animations/points/yielded-rod-keeps-force.json": {
+      "sha256": "fc195ffe7089495bc9141bad88e1f2250d5c0a2bb91b16925eccc878c47fcace",
+      "bytes": 154214
+    },
+    "knowledge/frame.json": {
+      "sha256": "1883f11607935f30b63de9b6230d9ed91009087f27960f8b18c932bf2b410380",
+      "bytes": 1658
+    },
+    "knowledge/index.json": {
+      "sha256": "a569fdf0aa3d64484a469c90c17f8639e52a0af194807d1d7c1897d7cf3da8e5",
+      "bytes": 22464
+    },
+    "knowledge/nodes.json": {
+      "sha256": "6a7a4f16ef128274af08efb04e76cf0ebecec56bd8dbc19b4cff7f0bb7e30c96",
+      "bytes": 306454
+    },
+    "knowledge/relations.json": {
+      "sha256": "d4f71206a714a74c7af2da84f6711b1300cb55fbbf42c761e0766e996784ab9f",
+      "bytes": 570384
+    },
+    "knowledge/topics.jsonl": {
+      "sha256": "b91343d8d4884607d7880c7fb85f27d40020761034061a8d7b1302d4375aa3e7",
+      "bytes": 735657
+    }
+  }
+}

@@ -1,0 +1,233 @@
+{
+  "format": "book-spirit-public-book",
+  "format_version": "1.0",
+  "book_id": "book_089f15db0edc44f7",
+  "title": "徐芝纶弹性力学（上册）",
+  "edition": "第6版·2025年6月第1次印刷·章青主编·ISBN 978-7-04-064601-6",
+  "asset_revision": "2026-11-26",
+  "knowledge_snapshot": "read-only-library-2026-11-26",
+  "content_license": "MIT",
+  "source_rights": "Original explanatory knowledge and authored visualizations only. Referenced books remain copyrighted by their respective owners. No textbook pages, scans or OCR are redistributed.",
+  "authority_mode": "this book and edition; course-specific teacher precedence is a separate explicit mode",
+  "coverage": {
+    "registered_pages": 371,
+    "reviewed_pages": 12,
+    "knowledge_covered_pages": 12,
+    "source_review_complete": false,
+    "whole_book_expert_complete": false,
+    "fresh_topics": 9,
+    "unavailable_topics": 0,
+    "animation_points": 5,
+    "animation_segments": 9,
+    "whole_book_animation_complete": false,
+    "original_demo": false
+  },
+  "limitations": [
+    "PDF99–100接§4-7后续应力函数和教材后文，上册整册目录与其余正文仍待。",
+    "动画按理解点建立",
+    "Source pages are not part of this public asset; addresses alone cannot be re-verified without the corresponding lawful source.",
+    "Existing animations are exported with integrity checks; this release is not a new browser or full-book semantic acceptance."
+  ],
+  "entrypoints": {
+    "frame": "knowledge/frame.json",
+    "index": "knowledge/index.json",
+    "topics": "knowledge/topics.jsonl",
+    "nodes": "knowledge/nodes.json",
+    "relations": "knowledge/relations.json",
+    "animations": "animations/index.json"
+  },
+  "files": {
+    "animations/index.json": {
+      "sha256": "e3eb2b81621fc8dcfbf33950eec6b3dc11486214476bdb1639a56deccb8938c2",
+      "bytes": 6411
+    },
+    "animations/keyframes/closed-ring-return/0.svg": {
+      "sha256": "b5b3dad5943c95087b32fb8f7d1e403339cf9b91ea6c27b8f945d26913128c58",
+      "bytes": 820
+    },
+    "animations/keyframes/closed-ring-return/1.svg": {
+      "sha256": "933c2440689b78a7a9249506af9d43b579e25070d3a665a62138ea2fe13ee7f8",
+      "bytes": 820
+    },
+    "animations/keyframes/closed-ring-return/2.svg": {
+      "sha256": "8ead328a7d601601bb15601457dda4128be5fbec84da9351d7ddcd609ed2164a",
+      "bytes": 835
+    },
+    "animations/keyframes/elastic-axisymmetric-pressure-and-interface/common-interface/0.svg": {
+      "sha256": "91f37692fd95231ccd31b9bc44514a75f2d3292fc8697b437079763a252516c9",
+      "bytes": 909
+    },
+    "animations/keyframes/elastic-axisymmetric-pressure-and-interface/common-interface/1.svg": {
+      "sha256": "85d394bf3cfc36e7f461a029467e5474d45834e2a4d79102cf342e31ac6ecc7d",
+      "bytes": 839
+    },
+    "animations/keyframes/elastic-axisymmetric-pressure-and-interface/common-interface/2.svg": {
+      "sha256": "f9fbb6067c4a127bf97fbdc0550864cb3cddc34ddb78ad61a04fb2e252d1ce1e",
+      "bytes": 909
+    },
+    "animations/keyframes/elastic-axisymmetric-pressure-and-interface/pressure-decay/0.svg": {
+      "sha256": "1d22af730c4e812523acf158afa134b50e8110d79ff6dbe4c0959d1ed9d95dff",
+      "bytes": 698
+    },
+    "animations/keyframes/elastic-axisymmetric-pressure-and-interface/pressure-decay/1.svg": {
+      "sha256": "7a3c04ad5f8db3792de21709b90904f35291c0ab626a310d86c74c7f2feecbe3",
+      "bytes": 818
+    },
+    "animations/keyframes/elastic-axisymmetric-pressure-and-interface/pressure-decay/2.svg": {
+      "sha256": "c5b8deba48bbe8ebf11c3cbae7cf876e897ba87589b444088d62df56d9c1c6fe",
+      "bytes": 819
+    },
+    "animations/keyframes/elastic-contact-and-curved-beam/contact-slip/0.svg": {
+      "sha256": "f01aefe7846a33f4c22e44b58672d42df9980afe82e9dc6a5695aad0bc9afaef",
+      "bytes": 918
+    },
+    "animations/keyframes/elastic-contact-and-curved-beam/contact-slip/1.svg": {
+      "sha256": "8dd6d29b2ab2e377c34095e8a403e3af0c619f2c9659e50922fa1e7d198e3d40",
+      "bytes": 918
+    },
+    "animations/keyframes/elastic-contact-and-curved-beam/contact-slip/2.svg": {
+      "sha256": "c8831c5c7014ca638001036f0d0d57acbc34c34a924cfd020d7ea42f674faeb3",
+      "bytes": 968
+    },
+    "animations/keyframes/elastic-contact-and-curved-beam/curve-cumulative-force/0.svg": {
+      "sha256": "2c69369cdd190e4bca6bd665ea41cf487857d83f1f01ce50f515e1f168ea7ad8",
+      "bytes": 1114
+    },
+    "animations/keyframes/elastic-contact-and-curved-beam/curve-cumulative-force/1.svg": {
+      "sha256": "b7fff435d5bd7a194dcf860394c6b2e8ab111140822d598c8b6db059bbd9324a",
+      "bytes": 1190
+    },
+    "animations/keyframes/elastic-contact-and-curved-beam/curve-cumulative-force/2.svg": {
+      "sha256": "ad67d6cdc6455324403a528fb20ac0d90b55e7da374bc5d6f93d94ebd7c29347",
+      "bytes": 1115
+    },
+    "animations/keyframes/elastic-curved-moment-and-disk-force/disk-body-force/0.svg": {
+      "sha256": "2c65cea179f44928241eb7c8feb21234042424ba43d5a2e8cf6b9e44835b1549",
+      "bytes": 764
+    },
+    "animations/keyframes/elastic-curved-moment-and-disk-force/disk-body-force/1.svg": {
+      "sha256": "79823887d0585526ca9a56a5311296e69db5c5998281dbb8681795424177d998",
+      "bytes": 765
+    },
+    "animations/keyframes/elastic-curved-moment-and-disk-force/disk-body-force/2.svg": {
+      "sha256": "b1f3c31a3de0fdeae0c8e73a55a10d0588b369b645ab16be0d0511426e3dc96d",
+      "bytes": 766
+    },
+    "animations/keyframes/elastic-curved-moment-and-disk-force/section-moment/0.svg": {
+      "sha256": "659113f9a1ffaada274a2dab53852df665bb5368c926667fb91c6f66a642221f",
+      "bytes": 2220
+    },
+    "animations/keyframes/elastic-curved-moment-and-disk-force/section-moment/1.svg": {
+      "sha256": "1729668666455d99c0791dc7332a1753d21778c3889e3a6d7bbdd5ed1f9714ac",
+      "bytes": 974
+    },
+    "animations/keyframes/elastic-curved-moment-and-disk-force/section-moment/2.svg": {
+      "sha256": "fe1cf85ae965d0fac4bc075c750dc1657fbd6e9c15a8b447b5dae02025741e9f",
+      "bytes": 1484
+    },
+    "animations/keyframes/elastic-solid-disk-stress-and-displacement/displacement-profile/0.svg": {
+      "sha256": "8abd49b4796e3699e7e2b4729aa48d7b18dc0fd0730512f6f355db47a7df4abd",
+      "bytes": 4054
+    },
+    "animations/keyframes/elastic-solid-disk-stress-and-displacement/displacement-profile/1.svg": {
+      "sha256": "2b90485b762e6cc024c75b48ab238e764d2a02914d5e48fbb5b8b44476e4ba45",
+      "bytes": 4109
+    },
+    "animations/keyframes/elastic-solid-disk-stress-and-displacement/displacement-profile/2.svg": {
+      "sha256": "13993c6d28a19efc2bdd623e754c862463726652e8ec26c6ef66c3bcc6f911c4",
+      "bytes": 4057
+    },
+    "animations/keyframes/elastic-solid-disk-stress-and-displacement/stress-profile/0.svg": {
+      "sha256": "933f7031860b9398cb26502ee98cc6300aa1ead251b3679059a3906ba40f9616",
+      "bytes": 6162
+    },
+    "animations/keyframes/elastic-solid-disk-stress-and-displacement/stress-profile/1.svg": {
+      "sha256": "1d897b45ae135a577e1973d52b02165570ec9ce08df2558527c3fc1cbff23c98",
+      "bytes": 6218
+    },
+    "animations/keyframes/elastic-solid-disk-stress-and-displacement/stress-profile/2.svg": {
+      "sha256": "b80ca0a0ede509278ecbcff2d8557a68da38ebd5d59aa216181a8ced17831555",
+      "bytes": 6140
+    },
+    "animations/knowledge/closed-ring-return.json": {
+      "sha256": "f963782292c91fe12cabf9d0bb8484cbea5218870380899691e6301218609ae5",
+      "bytes": 896
+    },
+    "animations/knowledge/elastic-axisymmetric-pressure-and-interface.json": {
+      "sha256": "7025b24379be62b6f9b66537be8ca4e65b364c02ec7d55a7e17d527d29313223",
+      "bytes": 4296
+    },
+    "animations/knowledge/elastic-contact-and-curved-beam.json": {
+      "sha256": "c21212e71e134fdda8186b7ece78e95173b31a47a6573d25ddf993d4930b0323",
+      "bytes": 3220
+    },
+    "animations/knowledge/elastic-curved-moment-and-disk-force.json": {
+      "sha256": "447c13c68248cddf748fe302a849c8ef05c0df9597578c413524f905f026f53b",
+      "bytes": 3601
+    },
+    "animations/knowledge/elastic-solid-disk-stress-and-displacement.json": {
+      "sha256": "3142afcbb11c61acaae8c298fcd158f031600ce933de4218b9743302b1d6c7b6",
+      "bytes": 3292
+    },
+    "animations/players/closed-ring-return.html": {
+      "sha256": "77ef7d4869ce4e9bdc4d3d19a5446880bbeb59dc976eb95d3f65ae6027af8c37",
+      "bytes": 15912
+    },
+    "animations/players/elastic-axisymmetric-pressure-and-interface.html": {
+      "sha256": "8933269b8897fe0a41f8e045ab7f5e793230d8562e6412d24021ef1709900c14",
+      "bytes": 11098
+    },
+    "animations/players/elastic-contact-and-curved-beam.html": {
+      "sha256": "d589fbbd2906448ce6555251f87dffcb6cc9f763f2fdad176f7c1492024cf87c",
+      "bytes": 11790
+    },
+    "animations/players/elastic-curved-moment-and-disk-force.html": {
+      "sha256": "9449d26b254a5a535a2363a742e6ab45e54667b359b1d96bec6b6fd4da05883b",
+      "bytes": 11434
+    },
+    "animations/players/elastic-solid-disk-stress-and-displacement.html": {
+      "sha256": "1aaea23d8b0ceed0a5ec5d893cbac9655b3899230f9e24835c08e4a9a1ffa137",
+      "bytes": 10848
+    },
+    "animations/points/closed-ring-return.json": {
+      "sha256": "1f6ae8146860f802aa5003e0f1755cb952b8fc1f7abb68dab0fcbd5ed2c23d5a",
+      "bytes": 2277
+    },
+    "animations/points/elastic-axisymmetric-pressure-and-interface.json": {
+      "sha256": "a208d10bbdca2042f6471d9e8fc9a54dab25785bf1bf722bec966d962dd3cd84",
+      "bytes": 5157
+    },
+    "animations/points/elastic-contact-and-curved-beam.json": {
+      "sha256": "e1ed815f9474d9cfcfa14436d51fec6084409808c3781168048210c7fc257b62",
+      "bytes": 5210
+    },
+    "animations/points/elastic-curved-moment-and-disk-force.json": {
+      "sha256": "8cea8a3b42f8de0f4a716bfc3ee28a93f75ef77a70baba6aa5640bf69b709355",
+      "bytes": 5291
+    },
+    "animations/points/elastic-solid-disk-stress-and-displacement.json": {
+      "sha256": "4f2b237ee58aa9f7be8f2f96d6ea6d96fcbc18180237b278196f33586370f5e4",
+      "bytes": 5012
+    },
+    "knowledge/frame.json": {
+      "sha256": "a3e43e88c1ea1eabd7bc20856671205effc68aa7967bf5cf6dfb89705190892f",
+      "bytes": 545
+    },
+    "knowledge/index.json": {
+      "sha256": "52ac46c7106e4797a9d06aad0f73d010714a2ad98ff4eb0987573c3c1b347d81",
+      "bytes": 2346
+    },
+    "knowledge/nodes.json": {
+      "sha256": "b0ba68aea7b616c663531972b9d2b51511fb685b3d08645d0565bae8d204eaac",
+      "bytes": 32073
+    },
+    "knowledge/relations.json": {
+      "sha256": "ac5e674f571a890f7cd5b6da40b3885d8c6ea67e2cff57bd1b8948d925478171",
+      "bytes": 17747
+    },
+    "knowledge/topics.jsonl": {
+      "sha256": "c752bd9192a5a56dd36c3f54c64b75f22de634049110801ca0437d44679d6540",
+      "bytes": 30215
+    }
+  }
+}

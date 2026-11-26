@@ -1,0 +1,63 @@
+{
+  "format": "book-spirit-public-book",
+  "format_version": "1.0",
+  "book_id": "book_1091d4dc226b4086",
+  "title": "门边的小力学",
+  "edition": "第一版·原创验证书",
+  "asset_revision": "2026-11-26",
+  "knowledge_snapshot": "read-only-library-2026-11-26",
+  "content_license": "MIT",
+  "source_rights": "Original explanatory knowledge and authored visualizations only. Referenced books remain copyrighted by their respective owners. No textbook pages, scans or OCR are redistributed.",
+  "authority_mode": "this book and edition; course-specific teacher precedence is a separate explicit mode",
+  "coverage": {
+    "registered_pages": 2,
+    "reviewed_pages": 2,
+    "knowledge_covered_pages": 2,
+    "source_review_complete": true,
+    "whole_book_expert_complete": false,
+    "fresh_topics": 0,
+    "unavailable_topics": 0,
+    "animation_points": 0,
+    "animation_segments": 0,
+    "whole_book_animation_complete": false,
+    "original_demo": true
+  },
+  "limitations": [
+    "Source pages are not part of this public asset; addresses alone cannot be re-verified without the corresponding lawful source.",
+    "Existing animations are exported with integrity checks; this release is not a new browser or full-book semantic acceptance."
+  ],
+  "entrypoints": {
+    "frame": "knowledge/frame.json",
+    "index": "knowledge/index.json",
+    "topics": "knowledge/topics.jsonl",
+    "nodes": "knowledge/nodes.json",
+    "relations": "knowledge/relations.json",
+    "animations": "animations/index.json"
+  },
+  "files": {
+    "animations/index.json": {
+      "sha256": "3d31c35d6469abfdbccb85f4b36a98dee4c078d78afb27e17fb658dc92427360",
+      "bytes": 228
+    },
+    "knowledge/frame.json": {
+      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+      "bytes": 3
+    },
+    "knowledge/index.json": {
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "bytes": 3
+    },
+    "knowledge/nodes.json": {
+      "sha256": "84c878fd4e514fb4b6d129582f874794b04121a73c1ccc932e429cbc8704bc5a",
+      "bytes": 7171
+    },
+    "knowledge/relations.json": {
+      "sha256": "05ce031fa542be0e95ab5d75de1ed008224c420741db02f0e5a186fe30906d90",
+      "bytes": 4677
+    },
+    "knowledge/topics.jsonl": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    }
+  }
+}

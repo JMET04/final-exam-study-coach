@@ -1,0 +1,677 @@
+{
+  "format": "book-spirit-public-book",
+  "format_version": "1.0",
+  "book_id": "book_0ee9728d0c2a46ef",
+  "title": "佳能 EOS 90D 补充信息",
+  "edition": "简体中文·SI2·CT2-D045-B·2019-09-01修订",
+  "asset_revision": "2026-11-26",
+  "knowledge_snapshot": "read-only-library-2026-11-26",
+  "content_license": "MIT",
+  "source_rights": "Original explanatory knowledge and authored visualizations only. Referenced books remain copyrighted by their respective owners. No textbook pages, scans or OCR are redistributed.",
+  "authority_mode": "this book and edition; course-specific teacher precedence is a separate explicit mode",
+  "coverage": {
+    "registered_pages": 26,
+    "reviewed_pages": 26,
+    "knowledge_covered_pages": 26,
+    "source_review_complete": true,
+    "whole_book_expert_complete": false,
+    "fresh_topics": 8,
+    "unavailable_topics": 0,
+    "animation_points": 10,
+    "animation_segments": 41,
+    "whole_book_animation_complete": false,
+    "original_demo": false
+  },
+  "limitations": [
+    "镜头表为2019版，用户18–200完整型号未知；不能把同焦段镜头直接代入佳能表项。",
+    "表外新镜头、第三方镜头、附件安装和当前软件/App兼容不在本册已核证据内。",
+    "Source pages are not part of this public asset; addresses alone cannot be re-verified without the corresponding lawful source.",
+    "Existing animations are exported with integrity checks; this release is not a new browser or full-book semantic acceptance."
+  ],
+  "entrypoints": {
+    "frame": "knowledge/frame.json",
+    "index": "knowledge/index.json",
+    "topics": "knowledge/topics.jsonl",
+    "nodes": "knowledge/nodes.json",
+    "relations": "knowledge/relations.json",
+    "animations": "animations/index.json"
+  },
+  "files": {
+    "animations/index.json": {
+      "sha256": "a7f08605979de9cf3a9a4c749645726a89383897410f23f0a9d60e749828ed03",
+      "bytes": 12980
+    },
+    "animations/keyframes/af_counts_and_metering-counts-0.svg": {
+      "sha256": "c6a9a530239d1c5aea418273214afebe0e2788d9d1b72f98a8be6c8520e9298e",
+      "bytes": 1134
+    },
+    "animations/keyframes/af_counts_and_metering-counts-1.svg": {
+      "sha256": "5fed928d469de66ec71b11059399c91811b0f894439a10291216be38ef4325e1",
+      "bytes": 1132
+    },
+    "animations/keyframes/af_counts_and_metering-counts-2.svg": {
+      "sha256": "5fed928d469de66ec71b11059399c91811b0f894439a10291216be38ef4325e1",
+      "bytes": 1132
+    },
+    "animations/keyframes/af_counts_and_metering-lv_ev-0.svg": {
+      "sha256": "646df08cc8df3d859a0f7f3a9e4c0a2b2c2e45accfd27135c1e3f9a79a03a5aa",
+      "bytes": 1128
+    },
+    "animations/keyframes/af_counts_and_metering-lv_ev-1.svg": {
+      "sha256": "9f2b0d5304c4cba969707641790169ad4747d9a4d84a76dab772344b4cfa19d4",
+      "bytes": 1133
+    },
+    "animations/keyframes/af_counts_and_metering-lv_ev-2.svg": {
+      "sha256": "be351ba74f3f71fb5c1ba885a1120dfbe982ef48a3a21a433e31a78f5e6c868c",
+      "bytes": 1132
+    },
+    "animations/keyframes/af_counts_and_metering-meter-0.svg": {
+      "sha256": "32ad93fa3542ccfda692ed0357cdfc2b11d9445142bfd42fa69eb65d510cc0ef",
+      "bytes": 1019
+    },
+    "animations/keyframes/af_counts_and_metering-meter-1.svg": {
+      "sha256": "f57b295600fe8437b89c37152df0a7f470a57754b3bb4145ad69a87ab343c0ee",
+      "bytes": 1019
+    },
+    "animations/keyframes/af_counts_and_metering-meter-2.svg": {
+      "sha256": "f57b295600fe8437b89c37152df0a7f470a57754b3bb4145ad69a87ab343c0ee",
+      "bytes": 1019
+    },
+    "animations/keyframes/af_counts_and_metering-vf_ev-0.svg": {
+      "sha256": "1a138134ea34bb685f986d4baa26cc9e23d1c88be7fceaecc7c2d8036e86c772",
+      "bytes": 1128
+    },
+    "animations/keyframes/af_counts_and_metering-vf_ev-1.svg": {
+      "sha256": "e502d04a99e1965c3d2fff62c4d8cfe17b9ae428848c38b0b4c96dad59f6015e",
+      "bytes": 1122
+    },
+    "animations/keyframes/af_counts_and_metering-vf_ev-2.svg": {
+      "sha256": "e502d04a99e1965c3d2fff62c4d8cfe17b9ae428848c38b0b4c96dad59f6015e",
+      "bytes": 1122
+    },
+    "animations/keyframes/af_group_properties-ab-0.svg": {
+      "sha256": "81f7c0b6b9bd78e5ecd618342d94dc5036469c06447aa8d0c6e6f8a9285c194a",
+      "bytes": 908
+    },
+    "animations/keyframes/af_group_properties-ab-1.svg": {
+      "sha256": "c1992707d024768041ad806b13bd5ee2144cf617d8ff404056c7eae43b323cb0",
+      "bytes": 901
+    },
+    "animations/keyframes/af_group_properties-ab-2.svg": {
+      "sha256": "c1992707d024768041ad806b13bd5ee2144cf617d8ff404056c7eae43b323cb0",
+      "bytes": 901
+    },
+    "animations/keyframes/af_group_properties-cde-0.svg": {
+      "sha256": "a43fbbe22173267b5dc271eb7616a7bc44d91b045adba7d07790b5d68cb9b932",
+      "bytes": 1014
+    },
+    "animations/keyframes/af_group_properties-cde-1.svg": {
+      "sha256": "e3dc2146943aabf20eada24e31b5434ac69ef58e1244d089b9a3fe9709fcde56",
+      "bytes": 1018
+    },
+    "animations/keyframes/af_group_properties-cde-2.svg": {
+      "sha256": "9a02bf5156e0029c089811198d5b08a8069164149dc066b842363fda49ff488e",
+      "bytes": 1021
+    },
+    "animations/keyframes/af_group_properties-fgh-0.svg": {
+      "sha256": "6108b1a7b5c0cde14c9d53cb2b0536d7e619be111c560dcbe4e5ade1560400d4",
+      "bytes": 1012
+    },
+    "animations/keyframes/af_group_properties-fgh-1.svg": {
+      "sha256": "24338c689530a82c05e28ed47cd6661a0b3ac0d9ab120904d588a91105a35039",
+      "bytes": 1024
+    },
+    "animations/keyframes/af_group_properties-fgh-2.svg": {
+      "sha256": "8fe5b0640d4d464de9be998085e3f38fca62bf942e04f6f21989ea667a9f3d59",
+      "bytes": 1023
+    },
+    "animations/keyframes/af_line_orientation-dual_cross-0.svg": {
+      "sha256": "74080c6da3328f990ab917de9236b750bf3b8044ff6875e546e8255492c860fb",
+      "bytes": 976
+    },
+    "animations/keyframes/af_line_orientation-dual_cross-1.svg": {
+      "sha256": "70be757bdefef9c81c999e709b2c07d16a8587afa99da83370d2cc73640a2846",
+      "bytes": 979
+    },
+    "animations/keyframes/af_line_orientation-dual_cross-2.svg": {
+      "sha256": "70be757bdefef9c81c999e709b2c07d16a8587afa99da83370d2cc73640a2846",
+      "bytes": 979
+    },
+    "animations/keyframes/af_line_orientation-horizontal_sensor-0.svg": {
+      "sha256": "8f02b1ffef49526d949cf2180ace08185739283ef1d48972390f79c5c4ce4647",
+      "bytes": 1116
+    },
+    "animations/keyframes/af_line_orientation-horizontal_sensor-1.svg": {
+      "sha256": "0609ec8bae355dd50597fa4ecb7151920466548f07cb25df7a9575143052f02e",
+      "bytes": 1116
+    },
+    "animations/keyframes/af_line_orientation-horizontal_sensor-2.svg": {
+      "sha256": "8f02b1ffef49526d949cf2180ace08185739283ef1d48972390f79c5c4ce4647",
+      "bytes": 1116
+    },
+    "animations/keyframes/af_line_orientation-maximum_not_setting-0.svg": {
+      "sha256": "e39017573ce013b77b82b30686fdde788df8b3eddb32882694c63a790f44c712",
+      "bytes": 1012
+    },
+    "animations/keyframes/af_line_orientation-maximum_not_setting-1.svg": {
+      "sha256": "13c34887c2e2c4dcebcebd117472cd32d074a924a469c4f3ed750bae89ad5501",
+      "bytes": 1011
+    },
+    "animations/keyframes/af_line_orientation-maximum_not_setting-2.svg": {
+      "sha256": "13c34887c2e2c4dcebcebd117472cd32d074a924a469c4f3ed750bae89ad5501",
+      "bytes": 1011
+    },
+    "animations/keyframes/af_line_orientation-slower_than_f8-0.svg": {
+      "sha256": "debd85dca210618cdee36a957fc130ee72be0a26acc84ccc6b4a1839ab50744b",
+      "bytes": 905
+    },
+    "animations/keyframes/af_line_orientation-slower_than_f8-1.svg": {
+      "sha256": "f0b66e32a1214b204fb2f21d76851b54bddaa56691a816b1482370fe4f1fe007",
+      "bytes": 906
+    },
+    "animations/keyframes/af_line_orientation-slower_than_f8-2.svg": {
+      "sha256": "f0b66e32a1214b204fb2f21d76851b54bddaa56691a816b1482370fe4f1fe007",
+      "bytes": 906
+    },
+    "animations/keyframes/af_line_orientation-vertical_sensor-0.svg": {
+      "sha256": "8181ef1e3ed9435971a149e14ec2c33e1b8ac51c073a56fb5b5a8ccdf4e6bb10",
+      "bytes": 1116
+    },
+    "animations/keyframes/af_line_orientation-vertical_sensor-1.svg": {
+      "sha256": "c4348dae522d0d105aaf89834b12f38b1a682b4a544ddaea3c6e01dcca50c673",
+      "bytes": 1116
+    },
+    "animations/keyframes/af_line_orientation-vertical_sensor-2.svg": {
+      "sha256": "8181ef1e3ed9435971a149e14ec2c33e1b8ac51c073a56fb5b5a8ccdf4e6bb10",
+      "bytes": 1116
+    },
+    "animations/keyframes/body_weight_environment-environment-0.svg": {
+      "sha256": "97d3732791e17fb92d6e3a34da19e0e3634209211a184f5d3fb3dace89311b07",
+      "bytes": 918
+    },
+    "animations/keyframes/body_weight_environment-environment-1.svg": {
+      "sha256": "84e5d5fd19a6114d86ea213b344e78f77fdb9ac1ca2c450d1859e9fd7a0f89b0",
+      "bytes": 918
+    },
+    "animations/keyframes/body_weight_environment-environment-2.svg": {
+      "sha256": "84e5d5fd19a6114d86ea213b344e78f77fdb9ac1ca2c450d1859e9fd7a0f89b0",
+      "bytes": 918
+    },
+    "animations/keyframes/body_weight_environment-weight-0.svg": {
+      "sha256": "5fd92a2362bdca8deb88cf508e46b9163804a2bc254c92732093dab38e5f37cf",
+      "bytes": 1901
+    },
+    "animations/keyframes/body_weight_environment-weight-1.svg": {
+      "sha256": "df124d4169f71d773bf36ed8dac201cca6386f518638170c95bb4ecb339821d4",
+      "bytes": 1911
+    },
+    "animations/keyframes/body_weight_environment-weight-2.svg": {
+      "sha256": "df124d4169f71d773bf36ed8dac201cca6386f518638170c95bb4ecb339821d4",
+      "bytes": 1911
+    },
+    "animations/keyframes/lens_exact_match-canon_b-0.svg": {
+      "sha256": "ac6899a251e103d57935970516a3854e6838dbf0f88a400df4102bdb8a34c414",
+      "bytes": 1004
+    },
+    "animations/keyframes/lens_exact_match-canon_b-1.svg": {
+      "sha256": "5988597e9d0848a2ff08edfc08f17640cb5113e2b8db64fbfa44c1285dbc254b",
+      "bytes": 1001
+    },
+    "animations/keyframes/lens_exact_match-canon_b-2.svg": {
+      "sha256": "5988597e9d0848a2ff08edfc08f17640cb5113e2b8db64fbfa44c1285dbc254b",
+      "bytes": 1001
+    },
+    "animations/keyframes/lens_exact_match-converter-0.svg": {
+      "sha256": "a2df24f18ae46f4388956fc5510d55a3014929688c120f67ca7a06549227e71c",
+      "bytes": 1022
+    },
+    "animations/keyframes/lens_exact_match-converter-1.svg": {
+      "sha256": "23963724e2953fcf54b0cdcf8b4ed322972e2508947766a97784b0bda21707df",
+      "bytes": 1018
+    },
+    "animations/keyframes/lens_exact_match-converter-2.svg": {
+      "sha256": "23963724e2953fcf54b0cdcf8b4ed322972e2508947766a97784b0bda21707df",
+      "bytes": 1018
+    },
+    "animations/keyframes/lens_exact_match-footnotes-0.svg": {
+      "sha256": "c83821eba28e734d762f2978ca6ed8108df592bc53fe137a1da5fbf21f224c4e",
+      "bytes": 914
+    },
+    "animations/keyframes/lens_exact_match-footnotes-1.svg": {
+      "sha256": "badde615f24e5cf2961375f9ad79d830f0b1c6ad803f4818cdcc66776329e81f",
+      "bytes": 914
+    },
+    "animations/keyframes/lens_exact_match-footnotes-2.svg": {
+      "sha256": "badde615f24e5cf2961375f9ad79d830f0b1c6ad803f4818cdcc66776329e81f",
+      "bytes": 914
+    },
+    "animations/keyframes/lens_exact_match-match-0.svg": {
+      "sha256": "07637d68d4820ed68c357365bb13a7f41268e72de3270b69e4cb32185e9502f6",
+      "bytes": 1137
+    },
+    "animations/keyframes/lens_exact_match-match-1.svg": {
+      "sha256": "2b8e8175bebb5f910108f476a76a617b7e491aec5f73f28bc813341c788fce04",
+      "bytes": 1111
+    },
+    "animations/keyframes/lens_exact_match-match-2.svg": {
+      "sha256": "2b8e8175bebb5f910108f476a76a617b7e491aec5f73f28bc813341c788fce04",
+      "bytes": 1111
+    },
+    "animations/keyframes/lens_exact_match-star_precision-0.svg": {
+      "sha256": "238bab2d02ee4b4dbd2d23d608ce338f7369d538ca24d864d628448578975152",
+      "bytes": 1027
+    },
+    "animations/keyframes/lens_exact_match-star_precision-1.svg": {
+      "sha256": "a8f7538bf1818188e50a4091c931f883877e8d34cf1a33bb8b5dbeb719b4c066",
+      "bytes": 1033
+    },
+    "animations/keyframes/lens_exact_match-star_precision-2.svg": {
+      "sha256": "a8f7538bf1818188e50a4091c931f883877e8d34cf1a33bb8b5dbeb719b4c066",
+      "bytes": 1033
+    },
+    "animations/keyframes/lens_exact_match-ts_e-0.svg": {
+      "sha256": "800ebd24b64b53e119f6438a788decba5d11b5f292119a52ad779d022b3d5cbe",
+      "bytes": 2497
+    },
+    "animations/keyframes/lens_exact_match-ts_e-1.svg": {
+      "sha256": "919fc0d357e9674f02eb0525c60405fd6b6ba2d85b4137cf4a5e5a43b591b3dd",
+      "bytes": 2962
+    },
+    "animations/keyframes/lens_exact_match-ts_e-2.svg": {
+      "sha256": "822a4eb7064151070c117af7b248b2f1c25a4b5d40bad0a3d3c313baf25aaf00",
+      "bytes": 2501
+    },
+    "animations/keyframes/lens_exact_match-unlisted-0.svg": {
+      "sha256": "39a7671dc06df8c43456a0a77ba973839c5471c85544230721f557e1311725f2",
+      "bytes": 1039
+    },
+    "animations/keyframes/lens_exact_match-unlisted-1.svg": {
+      "sha256": "041a4be3d23aa9402cbdaf1b9b8cc0bbbd55b1ace04428490933c7ae8c4ea9f7",
+      "bytes": 1036
+    },
+    "animations/keyframes/lens_exact_match-unlisted-2.svg": {
+      "sha256": "041a4be3d23aa9402cbdaf1b9b8cc0bbbd55b1ace04428490933c7ae8c4ea9f7",
+      "bytes": 1036
+    },
+    "animations/keyframes/movie_battery_totals-servo_off-0.svg": {
+      "sha256": "0137ca68abf56aec654f409f2a1e8c8db0f16c3764a44f71832122b4d6b2d242",
+      "bytes": 1117
+    },
+    "animations/keyframes/movie_battery_totals-servo_off-1.svg": {
+      "sha256": "e4552a05f5ede930bb44b711238e937ef31203a9b8bdce41e9fe8a64234c6af5",
+      "bytes": 1116
+    },
+    "animations/keyframes/movie_battery_totals-servo_off-2.svg": {
+      "sha256": "e4552a05f5ede930bb44b711238e937ef31203a9b8bdce41e9fe8a64234c6af5",
+      "bytes": 1116
+    },
+    "animations/keyframes/movie_battery_totals-stills-0.svg": {
+      "sha256": "9df7f7f1cb43bcdce0f533a45d6156c8de38cd14766867940a213cde509e0a6b",
+      "bytes": 1121
+    },
+    "animations/keyframes/movie_battery_totals-stills-1.svg": {
+      "sha256": "204448080fd042c495e18dbfe3a998624741dd6c999879c04d9d6de95fa33cc6",
+      "bytes": 1120
+    },
+    "animations/keyframes/movie_battery_totals-stills-2.svg": {
+      "sha256": "204448080fd042c495e18dbfe3a998624741dd6c999879c04d9d6de95fa33cc6",
+      "bytes": 1120
+    },
+    "animations/keyframes/ports_paths-car_charging-0.svg": {
+      "sha256": "88069d775131c2110d3f812a798c0c8b8a16353d11850edf585cb549138004d1",
+      "bytes": 1699
+    },
+    "animations/keyframes/ports_paths-car_charging-1.svg": {
+      "sha256": "8dcb109c8e3263ccbf552d83766cc04a5a18d594b88ba69efb58839cd2555dc7",
+      "bytes": 1692
+    },
+    "animations/keyframes/ports_paths-car_charging-2.svg": {
+      "sha256": "8dcb109c8e3263ccbf552d83766cc04a5a18d594b88ba69efb58839cd2555dc7",
+      "bytes": 1692
+    },
+    "animations/keyframes/ports_paths-included-0.svg": {
+      "sha256": "db33f99411c5be90ab999cf2520a83174f563ad0029fec7b16f621c584073d14",
+      "bytes": 1245
+    },
+    "animations/keyframes/ports_paths-included-1.svg": {
+      "sha256": "375b40553b1bca1c28cddb211a35cb4b1f2dd4604f9739fa5729a50bfea6dc5a",
+      "bytes": 1245
+    },
+    "animations/keyframes/ports_paths-included-2.svg": {
+      "sha256": "375b40553b1bca1c28cddb211a35cb4b1f2dd4604f9739fa5729a50bfea6dc5a",
+      "bytes": 1245
+    },
+    "animations/keyframes/ports_paths-mains-0.svg": {
+      "sha256": "28d9c94e6f3c113cd5788f1c153f51ee7c7cd3b9ff921f27e48ded0018ae85eb",
+      "bytes": 1687
+    },
+    "animations/keyframes/ports_paths-mains-1.svg": {
+      "sha256": "86f57f1db7af7b39ab82484a1128be23c067333363d596bf720759da5aade41d",
+      "bytes": 1685
+    },
+    "animations/keyframes/ports_paths-mains-2.svg": {
+      "sha256": "86f57f1db7af7b39ab82484a1128be23c067333363d596bf720759da5aade41d",
+      "bytes": 1685
+    },
+    "animations/keyframes/ports_paths-ports-0.svg": {
+      "sha256": "56613df67588869c5e1f94e1c5f8fe74217c7de918f3b8b32889024f102ac616",
+      "bytes": 1491
+    },
+    "animations/keyframes/ports_paths-ports-1.svg": {
+      "sha256": "3106322f3c6481c1834f83230d8e4f4b0a8ee8d89aad83fa34f5fe720c8d64c1",
+      "bytes": 1488
+    },
+    "animations/keyframes/ports_paths-ports-2.svg": {
+      "sha256": "3106322f3c6481c1834f83230d8e4f4b0a8ee8d89aad83fa34f5fe720c8d64c1",
+      "bytes": 1488
+    },
+    "animations/keyframes/ports_paths-power-0.svg": {
+      "sha256": "6c65b7339d31104df7a98e33c4daee4c02b1184ba5b33a28b23c9f0257432451",
+      "bytes": 1219
+    },
+    "animations/keyframes/ports_paths-power-1.svg": {
+      "sha256": "68850b6fdb054a89724e76f3f59706f7070fc0fb05e03bde0a2b5f07b509f795",
+      "bytes": 1219
+    },
+    "animations/keyframes/ports_paths-power-2.svg": {
+      "sha256": "68850b6fdb054a89724e76f3f59706f7070fc0fb05e03bde0a2b5f07b509f795",
+      "bytes": 1219
+    },
+    "animations/keyframes/ports_paths-radio-0.svg": {
+      "sha256": "23b378dcab0cb887f6382ffeed01ed38097a2cfb55a55031f68246d427b042f5",
+      "bytes": 1576
+    },
+    "animations/keyframes/ports_paths-radio-1.svg": {
+      "sha256": "5aacf6a43d648eccebb9326f6cb1c37b8cbe6aef52d99a679ba0c7120bf6f3cd",
+      "bytes": 1577
+    },
+    "animations/keyframes/ports_paths-radio-2.svg": {
+      "sha256": "5aacf6a43d648eccebb9326f6cb1c37b8cbe6aef52d99a679ba0c7120bf6f3cd",
+      "bytes": 1577
+    },
+    "animations/keyframes/ports_paths-remote-0.svg": {
+      "sha256": "cb164683c859d9559896a5f247d154f39fa6da9bd7edfe9bc51e9b3dd990f3cc",
+      "bytes": 1584
+    },
+    "animations/keyframes/ports_paths-remote-1.svg": {
+      "sha256": "e17ef1cd803ab9dc90bc707a151ead2fe36c501bf241b8bc80eed3a8d36f7a6a",
+      "bytes": 1586
+    },
+    "animations/keyframes/ports_paths-remote-2.svg": {
+      "sha256": "e17ef1cd803ab9dc90bc707a151ead2fe36c501bf241b8bc80eed3a8d36f7a6a",
+      "bytes": 1586
+    },
+    "animations/keyframes/sensor_viewfinder_metrics-fov-0.svg": {
+      "sha256": "92d01b6900b7d0981c8d6e89bed1e774e6fdbec8064262b0ad179459a9522c5f",
+      "bytes": 832
+    },
+    "animations/keyframes/sensor_viewfinder_metrics-fov-1.svg": {
+      "sha256": "ec45a5b1b877951078da9f18b8adb752b316f7f2cc33bfb8aa280e7337c24d37",
+      "bytes": 830
+    },
+    "animations/keyframes/sensor_viewfinder_metrics-fov-2.svg": {
+      "sha256": "ec45a5b1b877951078da9f18b8adb752b316f7f2cc33bfb8aa280e7337c24d37",
+      "bytes": 830
+    },
+    "animations/keyframes/sensor_viewfinder_metrics-pixels-0.svg": {
+      "sha256": "c956246d9196c21b1d60d371501160cb299be99e94f65835971f6155bbc049ca",
+      "bytes": 1180
+    },
+    "animations/keyframes/sensor_viewfinder_metrics-pixels-1.svg": {
+      "sha256": "7a65258c7c6f6ab3f645b28fe3bcb0edc5a86402ee94c6ff58aaad044bed1626",
+      "bytes": 1177
+    },
+    "animations/keyframes/sensor_viewfinder_metrics-pixels-2.svg": {
+      "sha256": "7a65258c7c6f6ab3f645b28fe3bcb0edc5a86402ee94c6ff58aaad044bed1626",
+      "bytes": 1177
+    },
+    "animations/keyframes/sensor_viewfinder_metrics-vf_metrics-0.svg": {
+      "sha256": "e8300fc27e196627d5155d607bb9cbb2241cf9b9b80a7c6171c103d1bf84c123",
+      "bytes": 826
+    },
+    "animations/keyframes/sensor_viewfinder_metrics-vf_metrics-1.svg": {
+      "sha256": "08f59a035616a07ec5faac176746b56a0a2bc3adc70310767dd4d41c33ac34d1",
+      "bytes": 826
+    },
+    "animations/keyframes/sensor_viewfinder_metrics-vf_metrics-2.svg": {
+      "sha256": "08f59a035616a07ec5faac176746b56a0a2bc3adc70310767dd4d41c33ac34d1",
+      "bytes": 826
+    },
+    "animations/keyframes/shutter_speed_buffer-buffer-0.svg": {
+      "sha256": "001aa95ab1cf7e2bc6116ed4b495d43488f7c499b9fa8c9ad9cd05e31e5019a6",
+      "bytes": 1013
+    },
+    "animations/keyframes/shutter_speed_buffer-buffer-1.svg": {
+      "sha256": "3d786bb7b7a75afdc18dbff3ea6a5d35b2246192c4f32487fe36ef75cfc91964",
+      "bytes": 1017
+    },
+    "animations/keyframes/shutter_speed_buffer-buffer-2.svg": {
+      "sha256": "3d786bb7b7a75afdc18dbff3ea6a5d35b2246192c4f32487fe36ef75cfc91964",
+      "bytes": 1017
+    },
+    "animations/keyframes/shutter_speed_buffer-flash-0.svg": {
+      "sha256": "01e15c55ef889898c2e85165e8180603f55a8c8528cdd651ad9d87ac94b03cb1",
+      "bytes": 1192
+    },
+    "animations/keyframes/shutter_speed_buffer-flash-1.svg": {
+      "sha256": "f0ebdb035f7d88365649da15816758b553921d335c293f089a872f9e19e7ef79",
+      "bytes": 1192
+    },
+    "animations/keyframes/shutter_speed_buffer-flash-2.svg": {
+      "sha256": "f0ebdb035f7d88365649da15816758b553921d335c293f089a872f9e19e7ef79",
+      "bytes": 1192
+    },
+    "animations/keyframes/shutter_speed_buffer-fps-0.svg": {
+      "sha256": "286350d3c758c268fc15141291e2c01e14e1d072113b86376a413c1b71eb5bef",
+      "bytes": 1112
+    },
+    "animations/keyframes/shutter_speed_buffer-fps-1.svg": {
+      "sha256": "69488fb91c61ccd095326403406a4f50f0d290507657ae615f00fe112e5668fa",
+      "bytes": 1121
+    },
+    "animations/keyframes/shutter_speed_buffer-fps-2.svg": {
+      "sha256": "69488fb91c61ccd095326403406a4f50f0d290507657ae615f00fe112e5668fa",
+      "bytes": 1121
+    },
+    "animations/keyframes/shutter_speed_buffer-shutter-0.svg": {
+      "sha256": "eabf4182b23344bd32c2aeb8c577311f70ecc255c0d35f37e6b10346e61dfac1",
+      "bytes": 998
+    },
+    "animations/keyframes/shutter_speed_buffer-shutter-1.svg": {
+      "sha256": "0deb3fd5530be46f974105e9e40aa15b2ec66b1404469c2e857a4700b8bd7d90",
+      "bytes": 1006
+    },
+    "animations/keyframes/shutter_speed_buffer-shutter-2.svg": {
+      "sha256": "0deb3fd5530be46f974105e9e40aa15b2ec66b1404469c2e857a4700b8bd7d90",
+      "bytes": 1006
+    },
+    "animations/keyframes/video_spec_objects-codec-0.svg": {
+      "sha256": "fa05868add4598b3da0b25700b448a38bd7609950d50be1cda7a39c27cf78388",
+      "bytes": 1110
+    },
+    "animations/keyframes/video_spec_objects-codec-1.svg": {
+      "sha256": "052424d5e2cfc1331d898b15992a236831ee2aec731cab6a31af163d657056da",
+      "bytes": 1110
+    },
+    "animations/keyframes/video_spec_objects-codec-2.svg": {
+      "sha256": "052424d5e2cfc1331d898b15992a236831ee2aec731cab6a31af163d657056da",
+      "bytes": 1110
+    },
+    "animations/keyframes/video_spec_objects-output-0.svg": {
+      "sha256": "b759b294a327c656c2b92e2a6095201a7742d414d33d996f9858c090d4f6e9af",
+      "bytes": 1425
+    },
+    "animations/keyframes/video_spec_objects-output-1.svg": {
+      "sha256": "970f574a1c20ab62ee35d25c815471d883044b3f1411e7afc64831f0a78b45af",
+      "bytes": 1425
+    },
+    "animations/keyframes/video_spec_objects-output-2.svg": {
+      "sha256": "970f574a1c20ab62ee35d25c815471d883044b3f1411e7afc64831f0a78b45af",
+      "bytes": 1425
+    },
+    "animations/keyframes/video_spec_objects-play-0.svg": {
+      "sha256": "3546bd2286fc214cdadc019d1df16ed58dda4fc72e883196116f7fdce3e8fbb6",
+      "bytes": 1384
+    },
+    "animations/keyframes/video_spec_objects-play-1.svg": {
+      "sha256": "3a08b074a27358d0a4763c0efff902456ee77927323656584663cdf22a987d39",
+      "bytes": 1384
+    },
+    "animations/keyframes/video_spec_objects-play-2.svg": {
+      "sha256": "3a08b074a27358d0a4763c0efff902456ee77927323656584663cdf22a987d39",
+      "bytes": 1384
+    },
+    "animations/keyframes/video_spec_objects-screen-0.svg": {
+      "sha256": "7773b0fb663590b12c7239bb7ee4591188c0c7818396c0e454e2a5c355323d15",
+      "bytes": 1084
+    },
+    "animations/keyframes/video_spec_objects-screen-1.svg": {
+      "sha256": "6d03e1d0996c6f8702af92a8fd8a1dcf6952e33591048bf880b4b5e93b26373a",
+      "bytes": 1081
+    },
+    "animations/keyframes/video_spec_objects-screen-2.svg": {
+      "sha256": "6d03e1d0996c6f8702af92a8fd8a1dcf6952e33591048bf880b4b5e93b26373a",
+      "bytes": 1081
+    },
+    "animations/knowledge/af_counts_and_metering.json": {
+      "sha256": "175ab7d51dbc8b06a13541578fdcaa103ff4d6d0d90ee6a7f0e91f33b7cc12ae",
+      "bytes": 10602
+    },
+    "animations/knowledge/af_group_properties.json": {
+      "sha256": "398c148680d81a4268dca3769dea8b204f3fe07858e3764f32a5316bfdf2717a",
+      "bytes": 8005
+    },
+    "animations/knowledge/af_line_orientation.json": {
+      "sha256": "e17b26017af0b544ecd5d52a344b0db2a5c427163867ec9c90823a8904aa1a6a",
+      "bytes": 4889
+    },
+    "animations/knowledge/body_weight_environment.json": {
+      "sha256": "c9a7f13ab5d9169920f69fdf16963b4469c85065789f1c5139e84d6c6a1ef0ae",
+      "bytes": 5720
+    },
+    "animations/knowledge/lens_exact_match.json": {
+      "sha256": "9ba4e008b2f4c17027740a0a39aaa16aa1ee4729a23c065cf199ae2c3d745baf",
+      "bytes": 15509
+    },
+    "animations/knowledge/movie_battery_totals.json": {
+      "sha256": "84021b3396de92a1f4b86624bc8474840f4761a8280cf6227407cdf13b1098a4",
+      "bytes": 5764
+    },
+    "animations/knowledge/ports_paths.json": {
+      "sha256": "29e6a33408bc90a8d4b2d46a2acbd79b467021f5631c0f6e2d7859e6f8d865a6",
+      "bytes": 13381
+    },
+    "animations/knowledge/sensor_viewfinder_metrics.json": {
+      "sha256": "b62cb410ab8a50dbe3d9931cc2117d656305dc8757ec65ee515249f8034056a7",
+      "bytes": 5774
+    },
+    "animations/knowledge/shutter_speed_buffer.json": {
+      "sha256": "1e92992c07559ba3266dcc0678e261da9e1169640fc2772115138c5dd9af2912",
+      "bytes": 11149
+    },
+    "animations/knowledge/video_spec_objects.json": {
+      "sha256": "3e0106eb063715672915b2585132e0fee419c22fdadfb73a7efc51986e22c49f",
+      "bytes": 10768
+    },
+    "animations/players/af_counts_and_metering.html": {
+      "sha256": "b2714689ab5ce4e589d34bd3317a4f100a744de4643af901e83e94ae91d696a5",
+      "bytes": 13204
+    },
+    "animations/players/af_group_properties.html": {
+      "sha256": "af1392fbb3a818bd9f7dc4b6ba6684ea2ac03880cf29f1abc7db5c51aea26cc7",
+      "bytes": 11410
+    },
+    "animations/players/af_line_orientation.html": {
+      "sha256": "0270e068ac364b91b88da82fe03eea998c3dbafa90af33e82e725fe38baa02fb",
+      "bytes": 15048
+    },
+    "animations/players/body_weight_environment.html": {
+      "sha256": "64b134f6a80a69cfff40f56adcb8147c2183d4964d735b76c7cd8b8740199b10",
+      "bytes": 9938
+    },
+    "animations/players/lens_exact_match.html": {
+      "sha256": "15f4781acfa720173e9a2940318d4f057612d1253aacf5477219d66d793f8a31",
+      "bytes": 16669
+    },
+    "animations/players/movie_battery_totals.html": {
+      "sha256": "81a1f878a8d9968674c8403f936faf66166f38f8a3619c0157e21e464c90ce05",
+      "bytes": 9738
+    },
+    "animations/players/ports_paths.html": {
+      "sha256": "111045cce74a8465ea544199d250d29da16f69bce1e6eebd3de10c11c7b32e6a",
+      "bytes": 18024
+    },
+    "animations/players/sensor_viewfinder_metrics.html": {
+      "sha256": "61a0eb72e9e32952b286df0482d0de226495302956a60ec30f520af5db28a446",
+      "bytes": 11157
+    },
+    "animations/players/shutter_speed_buffer.html": {
+      "sha256": "c7e042c06edfe304bcadcd82f9254763d5c5491531b40231afead23ab3e185e3",
+      "bytes": 12530
+    },
+    "animations/players/video_spec_objects.html": {
+      "sha256": "a63fc9b6a47ad49fdb413287dcbd05580559be824d240b788e2b7c779bb79223",
+      "bytes": 12477
+    },
+    "animations/points/af_counts_and_metering.json": {
+      "sha256": "c236d81c934e0de876bb202026dc46900c242613e6d1f3e1877486237e466b96",
+      "bytes": 17685
+    },
+    "animations/points/af_group_properties.json": {
+      "sha256": "0b48bdb2b84050c000b7c751a3aafd8165ee3a18b439772941a3150ba7993604",
+      "bytes": 12896
+    },
+    "animations/points/af_line_orientation.json": {
+      "sha256": "162b0c71ec94daba821764e7d51111813c36ee0dc17b5321acf634bf1f392697",
+      "bytes": 21572
+    },
+    "animations/points/body_weight_environment.json": {
+      "sha256": "8e77bf5b045e626cd917203955b3cc5510f990156121ec23f8c5261bfe9c3a20",
+      "bytes": 8668
+    },
+    "animations/points/lens_exact_match.json": {
+      "sha256": "f6116a7a079cb3c17023bed48797f4c009224bba76f57da4b0f1b69358e3afc3",
+      "bytes": 26387
+    },
+    "animations/points/movie_battery_totals.json": {
+      "sha256": "c0165b89bc8d67848fe9267585159a7a2e9f3a05b8db3a1197971720a22475c9",
+      "bytes": 8477
+    },
+    "animations/points/ports_paths.json": {
+      "sha256": "889d25c4009c09b30e48253d5c987a85da993b7465294d2eddcf7f01227487af",
+      "bytes": 30130
+    },
+    "animations/points/sensor_viewfinder_metrics.json": {
+      "sha256": "73d004d1c2a84561eed6dd9665c8c04e8acc6817c1b48132c2d7e6e4a6685cc4",
+      "bytes": 11917
+    },
+    "animations/points/shutter_speed_buffer.json": {
+      "sha256": "0fb93b8fda0df124dc485aa324aa220691be0a67efa72867bcc9e18c823c22bd",
+      "bytes": 15616
+    },
+    "animations/points/video_spec_objects.json": {
+      "sha256": "dc06625d87943950186153927245ab350da83cb1e5a4890d6677c2d558dc269c",
+      "bytes": 15764
+    },
+    "knowledge/frame.json": {
+      "sha256": "78767a4c43d8ae2ec0368795f37a70ee0984a9091b6f9797ec3288342c457e90",
+      "bytes": 2027
+    },
+    "knowledge/index.json": {
+      "sha256": "9bb67eafbf59cc377ce35f8e86ec0c81f44f01bea4e63ca20f817cfa5172d661",
+      "bytes": 1032
+    },
+    "knowledge/nodes.json": {
+      "sha256": "8d8a58aaa938e5a26012ec22c311fb030c291730ac15138e588af2f7436e949e",
+      "bytes": 44264
+    },
+    "knowledge/relations.json": {
+      "sha256": "38a7e85a3c06efe162abcaed3980a38f467527b1f2867aac3d2606eb46521848",
+      "bytes": 23989
+    },
+    "knowledge/topics.jsonl": {
+      "sha256": "4effee2a1254e37973304ee1956533197a9177ad643dbb467498432d4cfe8bb2",
+      "bytes": 41561
+    }
+  }
+}

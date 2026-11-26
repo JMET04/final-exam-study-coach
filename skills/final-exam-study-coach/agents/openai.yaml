@@ -1,0 +1,4 @@
+interface:
+  display_name: "期末复习与大学带学"
+  short_description: "用途原理、整题路线、来源查表、图示与独立学习断点；书灵按需选用。"
+  default_prompt: "Use $final-exam-study-coach 根据当前课程材料和学习断点带我学。先说明用途与原理，建立整体知识或整题路线；解释新术语、符号、单位和位置，按需配极简图。保留未学输出和后台暂停状态，依据学生新证据记录进度。"
